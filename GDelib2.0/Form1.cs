@@ -16,5 +16,10 @@ namespace GDelib2._0
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
