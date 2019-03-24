@@ -21,5 +21,11 @@ namespace GDelib2._0
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Text = "hello every one !!!";
+            button1.Text = "Hello  world !!!!";
+        }
     }
 }
