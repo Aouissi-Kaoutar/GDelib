@@ -41,7 +41,7 @@ namespace GDelib2._0
                     if (dt.Rows.Count > 0)
                     {
                         string s = dt.Rows[0].ItemArray.GetValue(1).ToString();
-                        MessageBox.Show(s);
+                      //  MessageBox.Show(s);
                         if (textL.ToString().Equals("ensao"))
                         {
                             admin A = new admin();
