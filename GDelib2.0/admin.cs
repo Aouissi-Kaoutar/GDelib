@@ -29,6 +29,7 @@ namespace GDelib2._0
         {
             InitializeComponent();
             ListeEtd.Hide();
+            acceuil.Show();
         }
         DataSet result;
         private void button4_Click(object sender, EventArgs e)
@@ -87,9 +88,8 @@ namespace GDelib2._0
         {
             string pth = @"Provider=Microsoft.Jet.Oledb.4.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 8.0;";
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+textBox1.Text+";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
-            string pat = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+textBox1.Text + ";Extended Properties=\"Excel 12.0 Xml;HDR=YES;IMEX=1\";";
-
-            OleDbConnection conn = new OleDbConnection(path);
+            string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
+        OleDbConnection conn = new OleDbConnection(pat);
             OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + textBox2.Text + "$]", conn);
            DataSet dt = new DataSet();
 
