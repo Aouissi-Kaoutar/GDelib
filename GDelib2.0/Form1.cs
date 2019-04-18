@@ -13,7 +13,7 @@ namespace GDelib2._0
 {
     public partial class Form1 : Form
     {
-        public SqlConnection con = new SqlConnection(@"Data Source=KAWTAR\SQLEXPRESS04;Initial Catalog=GDeleb2.0;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Form1()
         {
@@ -51,7 +51,8 @@ namespace GDelib2._0
                         }
                         else
                         {
-                            user B = new user();
+                           
+                            user B = new user(dt.Rows[0][2].ToString());
                             this.Hide();
                             B.Show();
 

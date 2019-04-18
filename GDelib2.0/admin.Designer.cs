@@ -29,24 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ListeEtd = new System.Windows.Forms.Panel();
-            this.acceuil = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.acceuil = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.A = new System.Windows.Forms.TextBox();
-            this.B = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.ListeEtd.SuspendLayout();
@@ -65,41 +63,6 @@
             this.panel1.Size = new System.Drawing.Size(210, 502);
             this.panel1.TabIndex = 0;
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Image = global::GDelib2._0.Properties.Resources._908815;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 356);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(239, 101);
-            this.button7.TabIndex = 6;
-            this.button7.Text = " Gerer les diplomes";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = global::GDelib2._0.Properties.Resources.reliability_0;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 249);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(214, 101);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Resulta final";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -111,24 +74,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "GDelib2.0";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::GDelib2._0.Properties.Resources.product_template_170;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 101);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Liste des etudiant";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -166,6 +111,7 @@
             // 
             // ListeEtd
             // 
+            this.ListeEtd.Controls.Add(this.button9);
             this.ListeEtd.Controls.Add(this.button5);
             this.ListeEtd.Controls.Add(this.button3);
             this.ListeEtd.Controls.Add(this.textBox2);
@@ -175,29 +121,23 @@
             this.ListeEtd.Controls.Add(this.label1);
             this.ListeEtd.Location = new System.Drawing.Point(216, 54);
             this.ListeEtd.Name = "ListeEtd";
-            this.ListeEtd.Size = new System.Drawing.Size(589, 447);
+            this.ListeEtd.Size = new System.Drawing.Size(589, 427);
             this.ListeEtd.TabIndex = 6;
             // 
-            // acceuil
+            // button9
             // 
-            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
-            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.acceuil.Controls.Add(this.label3);
-            this.acceuil.Location = new System.Drawing.Point(216, 37);
-            this.acceuil.Name = "acceuil";
-            this.acceuil.Size = new System.Drawing.Size(576, 419);
-            this.acceuil.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(56, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(457, 57);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Bienvenu sur GDelib2.0";
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(48)))), ((int)(((byte)(43)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.Location = new System.Drawing.Point(247, 391);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(149, 31);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "Suprimer";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button5
             // 
@@ -246,6 +186,27 @@
             this.textBox1.Size = new System.Drawing.Size(389, 24);
             this.textBox1.TabIndex = 6;
             // 
+            // acceuil
+            // 
+            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
+            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.acceuil.Controls.Add(this.label3);
+            this.acceuil.Location = new System.Drawing.Point(223, 41);
+            this.acceuil.Name = "acceuil";
+            this.acceuil.Size = new System.Drawing.Size(576, 419);
+            this.acceuil.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(56, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(457, 57);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Bienvenu sur GDelib2.0";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(98)))), ((int)(((byte)(94)))));
@@ -261,34 +222,59 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // A
+            // button7
             // 
-            this.A.Location = new System.Drawing.Point(31, 507);
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(766, 20);
-            this.A.TabIndex = 7;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Image = global::GDelib2._0.Properties.Resources._908815;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 356);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(239, 101);
+            this.button7.TabIndex = 6;
+            this.button7.Text = " Gerer les diplomes";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // B
+            // button6
             // 
-            this.B.Location = new System.Drawing.Point(31, 543);
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(766, 20);
-            this.B.TabIndex = 8;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Image = global::GDelib2._0.Properties.Resources.reliability_0;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 249);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(214, 101);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Resulta final";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button8
+            // button1
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(48)))), ((int)(((byte)(43)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(612, 600);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(149, 31);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "gggg";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::GDelib2._0.Properties.Resources.product_template_170;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 142);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 101);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Liste des etudiant";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // admin
             // 
@@ -296,11 +282,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(98)))), ((int)(((byte)(94)))));
-            this.ClientSize = new System.Drawing.Size(802, 643);
+            this.ClientSize = new System.Drawing.Size(808, 497);
             this.Controls.Add(this.acceuil);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.B);
-            this.Controls.Add(this.A);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ListeEtd);
             this.Controls.Add(this.panel1);
@@ -315,7 +298,6 @@
             this.acceuil.ResumeLayout(false);
             this.acceuil.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -337,8 +319,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox A;
-        private System.Windows.Forms.TextBox B;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
