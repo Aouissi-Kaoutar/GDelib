@@ -232,8 +232,8 @@ namespace GDelib2._0
 
             for(int i =0;i<dataGridView1.Rows.Count-1;i++)
             {
-
-                String query = "INSERT INTO dbo.eleve (id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
+                try { 
+                String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
                 SqlCommand command = new SqlCommand(query, conX);
                 command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value );
                 command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
@@ -248,7 +248,12 @@ namespace GDelib2._0
                 conX.Open();
                 command.ExecuteNonQuery();
                 conX.Close();
-               
+                }catch(System.Data.SqlClient.SqlException expe) {
+                    MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
+                }
+
+
+
                 /* SqlCommand cmd = new SqlCommand(@"INSERT INTO eleve (id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (
                      '"+dataGridView1.Rows[i].Cells[0].Value+"','"
                      + dataGridView1.Rows[i].Cells[1].Value+"','"
@@ -275,7 +280,7 @@ namespace GDelib2._0
 
         private void button9_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand(@"DELETE FROM eleve WHERE claS='GI3' ", conX);
+            SqlCommand cmd = new SqlCommand(@"DELETE FROM Eleves WHERE claS='GI3' ", conX);
             conX.Open();
             cmd.ExecuteNonQuery();
             conX.Close();
@@ -285,6 +290,11 @@ namespace GDelib2._0
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
