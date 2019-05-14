@@ -74,6 +74,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsrNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsrNote.resx">
       <DependentUpon>InsrNote.cs</DependentUpon>
@@ -182,6 +191,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\144-512 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\284-2849807_the-time-for-mobile-site-is-now-digital-learning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\640531_14138396_2623888_6b9a5839_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-information-technology-consulting-consultant-manag-5af11f74cda371.3158595015257516688423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\611551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\611552.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492790945-39minimize_84242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492790945-39minimize_842421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492790945-39minimize_842422.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-winter-snow-lights-bridges-blurred-branches-cities-pics-183284.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-analysis5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nnnnn.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nnnnn1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nnnnn2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_e729%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_e729%280%29_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%281%29_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_2699%280%29_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

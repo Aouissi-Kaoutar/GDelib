@@ -16,17 +16,21 @@ namespace GDelib2._0
     {
         public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public string ss;
-
+        public string clas;
+        public string semes;
+        public string elemP;
+        public string miS;
         public InsrNote()
         {
             InitializeComponent();
         }
 
-        public InsrNote(string s)
+        public InsrNote(string s,string c,string k)
         {
             InitializeComponent();
-            this.ss = s;
+            this.clas = s;
+            this.semes = c;
+            this.elemP = k;
         }
 
         private void InsrNote_Load(object sender, EventArgs e)
@@ -35,9 +39,9 @@ namespace GDelib2._0
 
             SqlCommand command = new SqlCommand();
             command.Connection = con;
-            //String query = "SELECT (id_eleve,nom,prenom,claS) FROM  deleve WHERE claS=\"" + ss + "\"";
-
-            String query = "SELECT * FROM  Eleves WHERE claS='" + ss + "'";
+           
+            //String query = "SELECT * FROM  Eleves WHERE claS='" + clas+ "'";
+            String query = "SELECT * FROM  Eleves WHERE claS='GI3'";
 
             command.CommandText = query;
 
@@ -53,11 +57,14 @@ namespace GDelib2._0
 
                 dataGridView1.Rows[i].Cells["prenom"].Value = d["prenom"];
 
-                dataGridView1.Rows[i].Cells["claS"].Value = d["claS"];
+                dataGridView1.Rows[i].Cells["filier"].Value = d["claS"];
 
-                //  dataGridView1.Rows[i].Cells["id_eleve"].Value = ;
+                dataGridView1.Rows[i].Cells["nomElementPeda"].Value = elemP;
 
             }
+
+
+
             con.Close();
 
 
@@ -72,28 +79,58 @@ namespace GDelib2._0
 
         private void button5_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            String query;
+            con.Open();
+            try
             {
-                try
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                    String query = "INSERT INTO dbo.note (id_eleve,nom,prenom,claS,nomElemPeda,note) VALUES (@id_eleve,@nom,@prenom,@claS,@nomElemPeda,@note)";
+                    /*string query = "UPDATE dbo.notes SET" +
+                        " id_eleve = @id_eleve," +
+                        " nom = @nom," +
+                        "prenom = @prenom," +
+                        "claS = @claS, " +
+                        " nomElemPeda= @nomElemPeda," +
+                        "note = @note," +
+                        " WHERE id_eleve = @id_eleve";        
+                      */
+                     query = "INSERT INTO  dbo.notes" +
+                        "(id_eleve,nom,prenom,claS,miS,nomElemPeda,note) " +
+                        "VALUES (@id_eleve,@nom,@prenom,@claS,@miS,@nomElemPeda,@note)";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
                     command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
                     command.Parameters.AddWithValue("@claS", dataGridView1.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@miS", miS);
                     command.Parameters.AddWithValue("@nomElemPeda", dataGridView1.Rows[i].Cells[4].Value);
                     command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[5].Value);
-                    con.Open();
-                    command.ExecuteNonQuery();
-                    con.Close();
-                }
-                catch (System.Data.SqlClient.SqlException expe)
-                {
-                    MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
-                }
 
+                    command.ExecuteNonQuery();
+                    
+                }
             }
+           
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            this.miS = "1";
+        }
+
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+            this.miS = "2";
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

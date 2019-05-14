@@ -13,7 +13,7 @@ namespace GDelib2._0
 {
     public partial class Form1 : Form
     {
-        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Form1()
         {
@@ -51,8 +51,8 @@ namespace GDelib2._0
                         }
                         else
                         {
-                           
-                            user B = new user(dt.Rows[0][2].ToString());
+
+                            user B = new user();// dt.Rows[0][2].ToString());
                             this.Hide();
                             B.Show();
 
@@ -79,6 +79,88 @@ namespace GDelib2._0
             {
                 con.Close();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            string textL = textLogin.Text.Trim();
+            string textP = textPassword.Text.Trim();
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From users where login='" + textLogin.Text + "' and password='" + textPassword.Text + "'", con);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                if (textL != "" && textP != "")
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        string s = dt.Rows[0].ItemArray.GetValue(1).ToString();
+                        //  MessageBox.Show(s);
+                        if (textL.ToString().Equals("ensao"))
+                        {
+                             admin A = new admin();
+                              this.Hide();
+                              A.Show();
+
+
+                           
+                        }
+                        else
+                        {
+
+                            user B = new user();//dt.Rows[0][2].ToString());
+                            this.Hide();
+                            B.Show();
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("login ou mot de passe est incorte");
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("login ou mot de passe nexiste pas,veuiller le saisire  s'il vous plais");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Erreur");
+            }
+            finally
+            {
+                con.Close();
+            }
+
         }
     }
 }

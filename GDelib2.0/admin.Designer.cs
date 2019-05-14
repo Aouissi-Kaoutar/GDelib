@@ -121,7 +121,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::GDelib2._0.Properties.Resources.product_template_170;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 142);
+            this.button1.Location = new System.Drawing.Point(-7, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 101);
             this.button1.TabIndex = 0;
@@ -163,20 +163,22 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(583, 303);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ListeEtd
             // 
+            this.ListeEtd.Controls.Add(this.acceuil);
             this.ListeEtd.Controls.Add(this.button9);
             this.ListeEtd.Controls.Add(this.button5);
+            this.ListeEtd.Controls.Add(this.textBox1);
             this.ListeEtd.Controls.Add(this.button3);
             this.ListeEtd.Controls.Add(this.textBox2);
-            this.ListeEtd.Controls.Add(this.textBox1);
             this.ListeEtd.Controls.Add(this.dataGridView1);
             this.ListeEtd.Controls.Add(this.button4);
             this.ListeEtd.Controls.Add(this.label1);
-            this.ListeEtd.Location = new System.Drawing.Point(216, 54);
+            this.ListeEtd.Location = new System.Drawing.Point(213, 41);
             this.ListeEtd.Name = "ListeEtd";
-            this.ListeEtd.Size = new System.Drawing.Size(589, 427);
+            this.ListeEtd.Size = new System.Drawing.Size(580, 427);
             this.ListeEtd.TabIndex = 6;
             // 
             // button9
@@ -236,19 +238,20 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 0);
+            this.textBox1.Location = new System.Drawing.Point(41, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(389, 24);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // acceuil
             // 
             this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
             this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.acceuil.Controls.Add(this.label3);
-            this.acceuil.Location = new System.Drawing.Point(219, 54);
+            this.acceuil.Location = new System.Drawing.Point(32, 50);
             this.acceuil.Name = "acceuil";
-            this.acceuil.Size = new System.Drawing.Size(576, 419);
+            this.acceuil.Size = new System.Drawing.Size(489, 333);
             this.acceuil.TabIndex = 7;
             // 
             // label3
@@ -256,7 +259,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(56, 270);
+            this.label3.Location = new System.Drawing.Point(28, 228);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(457, 57);
             this.label3.TabIndex = 8;
@@ -282,15 +285,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(98)))), ((int)(((byte)(94)))));
-            this.ClientSize = new System.Drawing.Size(808, 497);
-            this.Controls.Add(this.acceuil);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.ClientSize = new System.Drawing.Size(808, 503);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.ListeEtd);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ListeEtd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "admin";
             this.Text = "admin";
+            this.Load += new System.EventHandler(this.admin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -4,12 +4,13 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using Excel;
-using Microsoft.Office.Interop.Excel;
-using _Excel = Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
+//using _Excel = Microsoft.Office.Interop.Excel;
 using System.Data.OleDb;
 using ExcelDataReader.Log;
 using System.Data.SqlClient;
 using DataTable = System.Data.DataTable;
+using System.Drawing;
 
 namespace GDelib2._0
 {
@@ -33,7 +34,7 @@ namespace GDelib2._0
             ListeEtd.Hide();
             acceuil.Show();
         }
-        DataSet result;
+       // DataSet result;
         private void button4_Click(object sender, EventArgs e)
         {
             /* using (OpenFileDialog ofd = new OpenFileDialog() { Filter= "Excel Files|*.xls;*.xlsx", ValidateNames = true })
@@ -296,6 +297,33 @@ namespace GDelib2._0
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void admin_Load(object sender, EventArgs e)
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
 
         }
     }
