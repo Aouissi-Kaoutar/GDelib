@@ -11,12 +11,48 @@ using ExcelDataReader.Log;
 using System.Data.SqlClient;
 using DataTable = System.Data.DataTable;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace GDelib2._0
 {
 
     public partial class admin : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+             (
+                int nLeftRect,
+                int nTopRect,
+                int nRightRect,
+                int nBottomRect,
+                int nWidthEllipse,
+                int nHeightEllipse
+             );
+        private Control _cntrl;
+        private int _CornerRadius = 30;
+
+        public Control TargetControl
+        {
+            get { return _cntrl; }
+            set
+            {
+                _cntrl = value;
+                _cntrl.SizeChanged += (sender, eventArgs) => _cntrl.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, _cntrl.Width, _cntrl.Height, _CornerRadius, _CornerRadius));
+            }
+        }
+
+        public int CornerRadius
+        {
+            get { return _CornerRadius; }
+            set
+            {
+                _CornerRadius = value;
+                if (_cntrl != null)
+                    _cntrl.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, _cntrl.Width, _cntrl.Height, _CornerRadius, _CornerRadius));
+            }
+        }
+
+    
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         
         public int[] id_eleve;
@@ -31,8 +67,9 @@ namespace GDelib2._0
         public admin()
         {
             InitializeComponent();
-            ListeEtd.Hide();
-            acceuil.Show();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
         }
        // DataSet result;
         private void button4_Click(object sender, EventArgs e)
@@ -72,12 +109,12 @@ namespace GDelib2._0
 
         private void label2_Click(object sender, EventArgs e)
         {
-            acceuil.Show();
-            ListeEtd.Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             ListeEtd.Show();
             acceuil.Hide();
 
@@ -325,6 +362,20 @@ namespace GDelib2._0
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            GestiobModule A = new GestiobModule();
+            this.Hide();
+            A.Show();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            admin A = new admin();
+            this.Hide();
+            A.Show();
         }
     }
 }
