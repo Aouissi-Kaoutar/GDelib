@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +16,45 @@ namespace GDelib2._0
     {
         public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public Form1()
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+              (
+                 int nLeftRect,
+                 int nTopRect,
+                 int nRightRect,
+                 int nBottomRect,
+                 int nWidthEllipse,
+                 int nHeightEllipse
+              );
+        private Control _cntrl;
+        private int _CornerRadius = 30;
+
+        public Control TargetControl
+        {
+            get { return _cntrl; }
+            set
+            {
+                _cntrl = value;
+                _cntrl.SizeChanged += (sender, eventArgs) => _cntrl.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, _cntrl.Width, _cntrl.Height, _CornerRadius, _CornerRadius));
+            }
+        }
+
+        public int CornerRadius
+        {
+            get { return _CornerRadius; }
+            set
+            {
+                _CornerRadius = value;
+                if (_cntrl != null)
+                    _cntrl.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, _cntrl.Width, _cntrl.Height, _CornerRadius, _CornerRadius));
+            }
+        }
+    
+    public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -123,7 +160,7 @@ namespace GDelib2._0
                         //  MessageBox.Show(s);
                         if (textL.ToString().Equals("ensao"))
                         {
-                             admin A = new admin();
+                             acceuil A = new acceuil();
                               this.Hide();
                               A.Show();
 
@@ -160,6 +197,16 @@ namespace GDelib2._0
             {
                 con.Close();
             }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
