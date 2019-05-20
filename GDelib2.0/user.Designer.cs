@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.ListeEtd = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.ListeEtd.SuspendLayout();
             this.acceuil.SuspendLayout();
@@ -70,9 +70,9 @@
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button10);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 502);
+            this.panel1.Size = new System.Drawing.Size(212, 488);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -163,12 +163,23 @@
             this.ListeEtd.Controls.Add(this.radioButton1);
             this.ListeEtd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ListeEtd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ListeEtd.Location = new System.Drawing.Point(209, 1);
+            this.ListeEtd.Location = new System.Drawing.Point(209, -1);
             this.ListeEtd.Name = "ListeEtd";
             this.ListeEtd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ListeEtd.Size = new System.Drawing.Size(625, 477);
+            this.ListeEtd.Size = new System.Drawing.Size(631, 487);
             this.ListeEtd.TabIndex = 13;
             this.ListeEtd.Paint += new System.Windows.Forms.PaintEventHandler(this.ListeEtd_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(17, 259);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "list des notes";
             // 
             // textBox1
             // 
@@ -295,7 +306,7 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(155)))), ((int)(((byte)(153)))));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(181, 186);
+            this.comboBox1.Location = new System.Drawing.Point(214, 181);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox1.Size = new System.Drawing.Size(312, 37);
@@ -468,17 +479,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Bienvenu sur GDelib2.0";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(17, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 20);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "list des notes";
-            // 
             // user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,7 +494,7 @@
             this.Controls.Add(this.button4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "user";
-            this.Text = "user";
+            this.Text = "è";
             this.Load += new System.EventHandler(this.user_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
