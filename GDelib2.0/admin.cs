@@ -366,10 +366,12 @@ namespace GDelib2._0
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            GestiobModule A = new GestiobModule();
+            /*GestiobModule A = new GestiobModule();
             this.Hide();
             A.Show();
-        }
+            */
+
+    }
 
         private void button8_Click_1(object sender, EventArgs e)
         {

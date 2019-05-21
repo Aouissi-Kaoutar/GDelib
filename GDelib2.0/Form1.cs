@@ -160,12 +160,10 @@ namespace GDelib2._0
                         //  MessageBox.Show(s);
                         if (textL.ToString().Equals("ensao"))
                         {
-                             acceuil A = new acceuil();
+                             GestiobModule A = new GestiobModule();
                               this.Hide();
                               A.Show();
-
-
-                           
+                            
                         }
                         else
                         {
