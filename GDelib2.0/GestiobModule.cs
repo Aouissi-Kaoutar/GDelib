@@ -282,7 +282,7 @@ namespace GDelib2._0
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = ofd.FileName;
+                textBox3.Text = ofd.FileName;
 
 
             }
@@ -349,7 +349,7 @@ namespace GDelib2._0
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = ofd.FileName;
+                textBox3.Text = ofd.FileName;
 
 
             }
