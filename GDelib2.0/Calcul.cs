@@ -19,13 +19,13 @@ namespace GDelib2._0
         {
             InitializeComponent();
         }
-        private float Rechercher_Note_Etudiant(int IdEleve, int IdelmP) //fonction qui permet de retourner la note d'un étudiant donné dans un module donné
+        private float Rechercher_Note_Etudiant(int id_eleve, int id_elem_PDG) //fonction qui permet de retourner la note d'un étudiant donné dans un module donné
         {
             float note = -1;
             //   Program.cn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = Program.cn;
-            cmd.CommandText = "select note from note where IdEleve='" + IdEleve + "' and IdElmP='" + IdelmP + "'";
+            cmd.CommandText = "select note from notes where IdEleve='" + id_eleve + "' and id_elem_PDG='" + id_elem_PDG + "'";
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -42,7 +42,7 @@ namespace GDelib2._0
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = Program.cn;
-            cmd.CommandText = "select IdElmP from elmPedagogique where nomElmP='" + nom + "'";
+            cmd.CommandText = "select id_elem_PDG from ElementPDG where nom_elemPDG='" + nom + "'";
             num = int.Parse(cmd.ExecuteScalar().ToString());
             //Program.cn.Close();
             return num;
@@ -53,7 +53,7 @@ namespace GDelib2._0
             //
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = Program.cn;
-            cmd.CommandText = " Select IdEleve, avg( note) as moy from  ( SELECT n.IdEleve ,  n.note from note n, elmPedagogique e where n.IdElmP = e.IdElmP   and e.Type = 'semiModule' and e.ElmPere = '" + textBox1.Text.ToString() + "' union all SELECT n.IdEleve ,  n.note from note n, elmPedagogique e where n.IdElmP = e.IdElmP   and e.Type = 'semiModule' and e.ElmPere = '" + textBox1.Text.ToString() + "' )s  group by IdEleve";
+            cmd.CommandText = " Select id_eleve, avg( note) as moy from  ( SELECT n.id_eleve ,  n.note from notes n, ElementPDG e where n.id_elem_PDG = e.id_elem_PDG   and e.type = 'semiModule' and e.ElmPere = '" + textBox1.Text.ToString() + "' union all SELECT n.id_eleve ,  n.note from notes n, ElementPDG e where n.id_elem_PDG = e.id_elem_PDG   and e.Type = 'semiModule' and e.ElmPere = '" + textBox1.Text.ToString() + "' )s  group by id_eleve";
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable t = new DataTable();
             t.Load(dr);
@@ -70,12 +70,12 @@ namespace GDelib2._0
                 {
 
 
-                    SqlCommand cmd2 = new SqlCommand("INSERT INTO note VALUES(@idEleve, @IdElmP, @annee, @session , @Note , @res) ", Program.cn);
+                    SqlCommand cmd2 = new SqlCommand("INSERT INTO notes VALUES(@id_eleve, @id_elem_PDG, @note , @session , @res) ", Program.cn);
 
                     /*****************************************************************/
-                    int IdEleve;
+                    int id_eleve;
 
-                    if (row.Cells["IdEleve"].Value == null)
+                    if (row.Cells["id_eleve"].Value == null)
                     {
                         // MessageBox.Show("insertion des notes effectuer avec succes / verfier que tous les donnees  des etudiants inserés sont valides !!", "champ invalide", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
                         break;
@@ -83,12 +83,12 @@ namespace GDelib2._0
                     }
 
                     StringBuilder output = new StringBuilder();
-                    output.AppendFormat("{0} ", row.Cells["IdEleve"].Value);
+                    output.AppendFormat("{0} ", row.Cells["id_eleve"].Value);
                     output.AppendLine();
-                    IdEleve = int.Parse(output.ToString());
+                    id_eleve = int.Parse(output.ToString());
 
 
-                    cmd2.Parameters.AddWithValue("@IdEleve", IdEleve);
+                    cmd2.Parameters.AddWithValue("@id_eleve", id_eleve);
                     /********************************************************************/
                     if (comboBox4.SelectedIndex == -1)
                     {
@@ -100,9 +100,9 @@ namespace GDelib2._0
                     // output.AppendLine();
                     int idElm = int.Parse(textBox1.Text);
 
-                    cmd2.Parameters.AddWithValue("@IdElmP", idElm);
+                    cmd2.Parameters.AddWithValue("@id_elem_PDG", idElm);
                     /**************************************************************/
-                    cmd2.Parameters.AddWithValue("@annee", comboBox1.SelectedItem.ToString());
+                    /* cmd2.Parameters.AddWithValue("@annee", comboBox3.SelectedItem.ToString()); */
                     /**************************************************************/
                     if (radioButton1.Checked) { cmd2.Parameters.AddWithValue("@session", 0); }
                     else if (radioButton2.Checked) { cmd2.Parameters.AddWithValue("@session", 1); }
@@ -121,13 +121,13 @@ namespace GDelib2._0
                     }
                     else if (note < 0 || note > 20)
                     { MessageBox.Show("Champ Note invalide!!", "champ invalide", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                    else if (Rechercher_Note_Etudiant(IdEleve, num_module(comboBox4.SelectedItem.ToString())) != -1) //vérification de l'existence de la note
+                    else if (Rechercher_Note_Etudiant(id_eleve, num_module(comboBox4.SelectedItem.ToString())) != -1) //vérification de l'existence de la note
                     {
 
                         MessageBox.Show("Note déja attribuée", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         break;
                     }
-                    else { cmd2.Parameters.AddWithValue("@Note", row.Cells["moy"].Value); }
+                    else { cmd2.Parameters.AddWithValue("@note", row.Cells["moy"].Value); }
                     /*****************************************************/
 
                     if (note >= 12 && note <= 20) { cmd2.Parameters.AddWithValue("@res", "validé"); }
@@ -158,7 +158,7 @@ namespace GDelib2._0
             //panel5.Visible = false;
 
             SqlCommand cmidmodule = new SqlCommand();
-            cmidmodule.CommandText = " SELECT IdElmP from elmPedagogique where nomElmP= '" + comboBox4.Text.ToString() + "'";
+            cmidmodule.CommandText = " SELECT id_elem_PDG from ElementPDG where nom_elemPDG= '" + comboBox4.Text.ToString() + "'";
             cmidmodule.Connection = Program.cn;
             int idModule = int.Parse(cmidmodule.ExecuteScalar().ToString());
             textBox1.Text = idModule.ToString();
@@ -166,13 +166,13 @@ namespace GDelib2._0
             {
                 String elmP = comboBox4.SelectedItem.ToString();
 
-                SqlCommand cm1 = new SqlCommand("select IdElmP from elmPedagogique where nomElmP=@nom ", Program.cn);
+                SqlCommand cm1 = new SqlCommand("select id_elem_PDG from ElementPDG where nom_elemPDG=@nom ", Program.cn);
 
                 cm1.Parameters.AddWithValue("@nom", elmP);
-                int IdElmP = (int)cm1.ExecuteScalar();
-                SqlCommand cm2 = new SqlCommand("select nApogee,CNE,Nom,Prenom,note,resultat from eleve,note,elmPedagogique where note.IdElmP=@IdElmP and note.session=@session and elmPedagogique.IdElmP=@IdElmP and eleve.IdEleve = note.IdEleve", Program.cn);
-                //SqlCommand cm2 = new SqlCommand("select note as noteModule from note where IdElmP=?", cn);
-                cm2.Parameters.AddWithValue("@IdElmP", IdElmP);
+                int id_elem_PDG = (int)cm1.ExecuteScalar();
+                SqlCommand cm2 = new SqlCommand("select Nappog,cne ,nom,prenom,note,res from Eleves,notes,ElementPDG where note.id_elem_PDG=@id_elem_PDG and note.session=@session and ElementPDG.id_elem_PDG=@id_elem_PDG and Eleves.id_eleve = note.IdEleve", Program.cn);
+                //SqlCommand cm2 = new SqlCommand("select note as noteModule from notes where id_elem_PDG=?", cn);
+                cm2.Parameters.AddWithValue("@IdElmP", id_elem_PDG);
                 cm2.Parameters.AddWithValue("@session", session);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder scb = new SqlCommandBuilder(sda);
@@ -186,6 +186,16 @@ namespace GDelib2._0
                 sda.Update(dt);
                 //Program.cn.Close();
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
