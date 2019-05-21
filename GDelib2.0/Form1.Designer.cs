@@ -92,7 +92,7 @@
             this.textPassword.Location = new System.Drawing.Point(169, 156);
             this.textPassword.Name = "textPassword";
             this.textPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textPassword.Size = new System.Drawing.Size(336, 26);
+            this.textPassword.Size = new System.Drawing.Size(347, 26);
             this.textPassword.TabIndex = 14;
             this.textPassword.Text = "Password";
             this.textPassword.UseSystemPasswordChar = true;
