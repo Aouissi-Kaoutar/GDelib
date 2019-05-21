@@ -207,5 +207,58 @@ namespace GDelib2._0
         {
 
         }
+
+        private void login(object sender, EventArgs e)
+        {
+            if (textLogin.Text == "Login") {
+
+                textLogin.Text = "";
+                textLogin.ForeColor = Color.Black;
+            };
+
+        }
+
+        private void loginLeave(object sender, EventArgs e)
+        {
+
+            if (textLogin.Text == "")
+            {
+
+                textLogin.Text = "Login";
+                textLogin.ForeColor = Color.Silver;
+            };
+
+
+        }
+
+        private void textPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            if (textLogin.Text == "Password")
+            {
+
+                textPassword.Text = "";
+                textPassword.ForeColor = Color.Black;
+              //  textPassword.UseSystemPasswordChar = true;
+            };
+
+
+        }
+
+        private void password_leave(object sender, EventArgs e)
+        {
+
+            if (textLogin.Text == "")
+            {
+
+                textPassword.Text = "password";
+                textPassword.ForeColor = Color.Silver;
+               // textPassword.UseSystemPasswordChar = false;
+            };
+        }
     }
 }

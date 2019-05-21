@@ -61,7 +61,8 @@ namespace GDelib2._0
 
         private void button7_Click(object sender, EventArgs e)
         {
-           
+
+            //ListeEtd.BringToFront();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -78,9 +79,7 @@ namespace GDelib2._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Calcul A = new Calcul();
-            this.Hide();
-            A.Show();
+            aaa2.BringToFront();
         }
     }
 }

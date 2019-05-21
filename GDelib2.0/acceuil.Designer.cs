@@ -41,6 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.acceuile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -225,5 +226,7 @@
             private System.Windows.Forms.Panel panel2;
             private System.Windows.Forms.Label label2;
             private System.Windows.Forms.Label label1;
-        }
+            private InsrNote aaa2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+    }
     }

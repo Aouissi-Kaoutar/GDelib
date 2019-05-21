@@ -74,25 +74,31 @@
             // 
             this.textLogin.BackColor = System.Drawing.SystemColors.Control;
             this.textLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLogin.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textLogin.Location = new System.Drawing.Point(169, 112);
             this.textLogin.Name = "textLogin";
             this.textLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textLogin.Size = new System.Drawing.Size(336, 26);
             this.textLogin.TabIndex = 12;
-            this.textLogin.Text = "User Name";
+            this.textLogin.Text = "Login";
+            this.textLogin.Enter += new System.EventHandler(this.login);
+            this.textLogin.Leave += new System.EventHandler(this.loginLeave);
             // 
             // textPassword
             // 
             this.textPassword.BackColor = System.Drawing.SystemColors.Control;
             this.textPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textPassword.Location = new System.Drawing.Point(169, 156);
             this.textPassword.Name = "textPassword";
-            this.textPassword.PasswordChar = '*';
-            this.textPassword.Text = "Password";
             this.textPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textPassword.Size = new System.Drawing.Size(336, 26);
             this.textPassword.TabIndex = 14;
-            this.textPassword.UseSystemPasswordChar = true;
+            this.textPassword.Text = "Password";
+            this.textPassword.UseWaitCursor = true;
+            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
+            this.textPassword.Enter += new System.EventHandler(this.password_Enter);
+            this.textPassword.Leave += new System.EventHandler(this.password_leave);
             // 
             // button6
             // 

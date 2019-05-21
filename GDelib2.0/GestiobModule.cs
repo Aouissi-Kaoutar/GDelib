@@ -191,6 +191,7 @@ namespace GDelib2._0
         {
             panel5.Show();
            tabControl1.Hide();
+            
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -211,7 +212,7 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + textBox2.Text + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + comboBox4.SelectedItem.ToString() + "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);
@@ -246,7 +247,7 @@ namespace GDelib2._0
                 }
 
             }
-            MessageBox.Show("enregistrement est bient efectuer pour les " + textBox2.Text);
+            MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
 
         }
 
@@ -257,7 +258,7 @@ namespace GDelib2._0
             cmd.ExecuteNonQuery();
             conX.Close();
 
-            MessageBox.Show("vous avez suprimer les donee du class" + textBox2.Text);
+            MessageBox.Show("vous avez suprimer les donee du class" + comboBox4.SelectedItem.ToString());
 
         }
 
@@ -291,15 +292,16 @@ namespace GDelib2._0
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            string pth = @"Provider=Microsoft.Jet.Oledb.4.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 8.0;";
-            string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
-            string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
+            string pth = @"Provider=Microsoft.Jet.Oledb.4.0;Data Source=" + textBox3.Text + ";Extended Properties=Excel 8.0;";
+            string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox3.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
+            string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox3.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + textBox2.Text + "$]", conn);
+            string s = comboBox4.SelectedItem.ToString();
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + "GI-3"+ "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView2.DataSource = dt;
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -330,7 +332,7 @@ namespace GDelib2._0
                     MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
                 }
             }
-            MessageBox.Show("enregistrement est bient efectuer pour les " + textBox2.Text);
+            MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
 
         }
 
@@ -341,7 +343,7 @@ namespace GDelib2._0
             cmd.ExecuteNonQuery();
             conX.Close();
 
-            MessageBox.Show("vous avez suprimer les donee du class" + textBox2.Text);
+            MessageBox.Show("vous avez suprimer les donee du class" + comboBox4.SelectedItem.ToString());
         }
 
         private void button8_Click_1(object sender, EventArgs e)
@@ -349,7 +351,7 @@ namespace GDelib2._0
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                textBox3.Text = ofd.FileName;
+                textBox1.Text = ofd.FileName;
 
 
             }
@@ -361,7 +363,7 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + textBox2.Text + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" +"Feuil1"+ "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);
@@ -374,12 +376,12 @@ namespace GDelib2._0
             {
                 try
                 {
-                    String query = "INSERT INTO dbo.ElementPDG (id_elem_PDG,nom_elemPDG,filiere,niveau,type,coefficient,noteElim,seuil_valida) VALUES (@id_elem_PDG,@nom_elemPDG,@filiere,@niveau,@type,@coefficient,@noteElim,@seuil_valida)";
+                    String query = "INSERT INTO dbo.ElementPDG (id_elem_PDG,nom_elemPDG,clas,semestre,type,coefficient,noteElim,seuil_valida) VALUES (@id_elem_PDG,@nom_elemPDG,@clas,@semestre,@type,@coefficient,@noteElim,@seuil_valida)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_elem_PDG", dataGridView1.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom_elemPDG", dataGridView1.Rows[i].Cells[1].Value);
-                    command.Parameters.AddWithValue("@filiere", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@niveau", dataGridView1.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@clas", dataGridView1.Rows[i].Cells[2].Value);
+                    command.Parameters.AddWithValue("@semestre", dataGridView1.Rows[i].Cells[3].Value);
                     command.Parameters.AddWithValue("@type", dataGridView1.Rows[i].Cells[4].Value);
                     command.Parameters.AddWithValue("@coefficient", dataGridView1.Rows[i].Cells[5].Value);
                     command.Parameters.AddWithValue("@noteElim", dataGridView1.Rows[i].Cells[6].Value);
@@ -393,7 +395,7 @@ namespace GDelib2._0
                 {
                     MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
                 }
-
+                MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox1.SelectedItem.ToString());
             }
         }
 
@@ -457,6 +459,11 @@ namespace GDelib2._0
             {
                 MessageBox.Show("manque un champ\n \n \n" + eee.Message);
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
