@@ -30,13 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.acceuil = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ListeEtd = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -44,15 +46,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.acceuil = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.ListeEtd.SuspendLayout();
             this.acceuil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.ListeEtd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +70,27 @@
             this.panel1.Size = new System.Drawing.Size(196, 530);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // acceuil
+            // 
+            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
+            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.acceuil.Controls.Add(this.label3);
+            this.acceuil.Location = new System.Drawing.Point(494, 487);
+            this.acceuil.Name = "acceuil";
+            this.acceuil.Size = new System.Drawing.Size(576, 419);
+            this.acceuil.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(56, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(457, 57);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Bienvenu sur GDelib2.0";
             // 
             // pictureBox1
             // 
@@ -131,38 +155,36 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
+            // tabControl1
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(632, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 32);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(202, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(756, 454);
+            this.tabControl1.TabIndex = 10;
             // 
-            // label1
+            // tabPage1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "choisir une feuil de stile";
+            this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.Controls.Add(this.ListeEtd);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(748, 428);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
             // 
-            // dataGridView1
+            // tabPage2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(712, 303);
-            this.dataGridView1.TabIndex = 5;
+            this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(748, 428);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
             // 
             // ListeEtd
             // 
@@ -176,10 +198,10 @@
             this.ListeEtd.Controls.Add(this.dataGridView1);
             this.ListeEtd.Controls.Add(this.button4);
             this.ListeEtd.Controls.Add(this.label1);
-            this.ListeEtd.Location = new System.Drawing.Point(202, 35);
+            this.ListeEtd.Location = new System.Drawing.Point(5, 6);
             this.ListeEtd.Name = "ListeEtd";
-            this.ListeEtd.Size = new System.Drawing.Size(739, 422);
-            this.ListeEtd.TabIndex = 6;
+            this.ListeEtd.Size = new System.Drawing.Size(739, 416);
+            this.ListeEtd.TabIndex = 7;
             // 
             // panel2
             // 
@@ -201,7 +223,6 @@
             this.button9.TabIndex = 10;
             this.button9.Text = "Delete";
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button5
             // 
@@ -216,7 +237,6 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -231,7 +251,6 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Display";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox2
             // 
@@ -250,48 +269,37 @@
             this.textBox1.Size = new System.Drawing.Size(458, 24);
             this.textBox1.TabIndex = 6;
             // 
-            // acceuil
+            // dataGridView1
             // 
-            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
-            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.acceuil.Controls.Add(this.label3);
-            this.acceuil.Location = new System.Drawing.Point(494, 487);
-            this.acceuil.Name = "acceuil";
-            this.acceuil.Size = new System.Drawing.Size(576, 419);
-            this.acceuil.TabIndex = 7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(712, 303);
+            this.dataGridView1.TabIndex = 5;
             // 
-            // label3
+            // button4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(56, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(457, 57);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Bienvenu sur GDelib2.0";
+            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(632, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(93, 32);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Add";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(365, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Gestion de module";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(202, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(168, 23);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Liste des etudiants";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "choisir une feuil de stile";
             // 
             // admin
             // 
@@ -299,22 +307,22 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(970, 469);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.acceuil);
-            this.Controls.Add(this.ListeEtd);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ListeEtd.ResumeLayout(false);
-            this.ListeEtd.PerformLayout();
             this.acceuil.ResumeLayout(false);
             this.acceuil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.ListeEtd.ResumeLayout(false);
+            this.ListeEtd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,22 +331,23 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel ListeEtd;
         private System.Windows.Forms.Panel acceuil;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel ListeEtd;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

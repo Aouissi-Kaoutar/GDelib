@@ -75,5 +75,12 @@ namespace GDelib2._0
             this.Hide();
             A.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Calcul A = new Calcul();
+            this.Hide();
+            A.Show();
+        }
     }
 }
