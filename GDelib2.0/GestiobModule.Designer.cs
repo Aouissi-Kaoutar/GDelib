@@ -90,7 +90,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -105,7 +104,7 @@
             // 
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Location = new System.Drawing.Point(3, 413);
+            this.panel6.Location = new System.Drawing.Point(12, 590);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(834, 501);
             this.panel6.TabIndex = 27;
@@ -235,7 +234,7 @@
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel5.Location = new System.Drawing.Point(212, 5);
+            this.panel5.Location = new System.Drawing.Point(241, 518);
             this.panel5.Name = "panel5";
             this.panel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel5.Size = new System.Drawing.Size(768, 460);
@@ -387,7 +386,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(748, 423);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "liste des etudiants";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -627,6 +626,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(970, 692);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
