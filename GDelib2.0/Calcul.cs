@@ -174,16 +174,16 @@ namespace GDelib2._0
                 //SqlCommand cm2 = new SqlCommand("select note as noteModule from notes where id_elem_PDG=?", cn);
                 cm2.Parameters.AddWithValue("@IdElmP", id_elem_PDG);
                 cm2.Parameters.AddWithValue("@session", session);
-                SqlDataAdapter sda = new SqlDataAdapter();
-                SqlCommandBuilder scb = new SqlCommandBuilder(sda);
-                sda.SelectCommand = cm2;
+                SqlDataAdapter sdb = new SqlDataAdapter();
+                SqlCommandBuilder scb = new SqlCommandBuilder(sdb);
+                sdb.SelectCommand = cm2;
                 DataTable dt = new DataTable();
-                sda.Fill(dt);
+                sdb.Fill(dt);
                 BindingSource bsource = new BindingSource();
                 bsource.DataSource = dt;
                 dataGridView1.DataSource = bsource;
                 dataGridView1.AutoGenerateColumns = false;
-                sda.Update(dt);
+                sdb.Update(dt);
                 //Program.cn.Close();
             }
         }
