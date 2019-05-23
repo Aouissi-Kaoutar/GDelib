@@ -238,12 +238,13 @@ namespace GDelib2._0
 
         private void password_Enter(object sender, EventArgs e)
         {
-            if (textLogin.Text == "Password")
+            if (textPassword.Text == "Password")
             {
-
+                textPassword.UseSystemPasswordChar = true;
                 textPassword.Text = "";
                 textPassword.ForeColor = Color.Black;
-              //  textPassword.UseSystemPasswordChar = true;
+               
+             
             };
 
 
@@ -252,12 +253,14 @@ namespace GDelib2._0
         private void password_leave(object sender, EventArgs e)
         {
 
-            if (textLogin.Text == "")
+            if (textPassword.Text == "")
             {
-
+                textPassword.UseSystemPasswordChar = false;
                 textPassword.Text = "password";
                 textPassword.ForeColor = Color.Silver;
-               // textPassword.UseSystemPasswordChar = false;
+
+               
+
             };
         }
     }

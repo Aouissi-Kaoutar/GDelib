@@ -79,7 +79,12 @@ namespace GDelib2._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-            aaa2.BringToFront();
+           // aaa2.BringToFront();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

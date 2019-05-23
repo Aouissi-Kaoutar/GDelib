@@ -13,7 +13,7 @@ namespace GDelib2._0
 {
     public partial class Calcul : Form
     {
-        private object session;
+       // private object session;
 
         public Calcul()
         {
@@ -173,7 +173,7 @@ namespace GDelib2._0
                 SqlCommand cm2 = new SqlCommand("select nApogee,CNE,Nom,Prenom,note,resultat from eleve,note,elmPedagogique where note.IdElmP=@IdElmP and note.session=@session and elmPedagogique.IdElmP=@IdElmP and eleve.IdEleve = note.IdEleve", Program.cn);
                 //SqlCommand cm2 = new SqlCommand("select note as noteModule from note where IdElmP=?", cn);
                 cm2.Parameters.AddWithValue("@IdElmP", IdElmP);
-                cm2.Parameters.AddWithValue("@session", session);
+               // cm2.Parameters.AddWithValue("@session", session);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder scb = new SqlCommandBuilder(sda);
                 sda.SelectCommand = cm2;
@@ -186,6 +186,11 @@ namespace GDelib2._0
                 sda.Update(dt);
                 //Program.cn.Close();
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

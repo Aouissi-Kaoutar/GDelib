@@ -68,6 +68,12 @@
     <Compile Include="acceuil.Designer.cs">
       <DependentUpon>acceuil.cs</DependentUpon>
     </Compile>
+    <Compile Include="acceuilCntrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="acceuilCntrol.Designer.cs">
+      <DependentUpon>acceuilCntrol.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,18 @@
     </Compile>
     <Compile Include="Calcul.Designer.cs">
       <DependentUpon>Calcul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="collecteNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="collecteNotes.Designer.cs">
+      <DependentUpon>collecteNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurationFilier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configurationFilier.Designer.cs">
+      <DependentUpon>configurationFilier.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -121,11 +139,20 @@
     <EmbeddedResource Include="acceuil.resx">
       <DependentUpon>acceuil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="acceuilCntrol.resx">
+      <DependentUpon>acceuilCntrol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calcul.resx">
       <DependentUpon>Calcul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="collecteNotes.resx">
+      <DependentUpon>collecteNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurationFilier.resx">
+      <DependentUpon>configurationFilier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -299,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Entypo_2699%280%29_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web_-_Design_-_Device_128-5121.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

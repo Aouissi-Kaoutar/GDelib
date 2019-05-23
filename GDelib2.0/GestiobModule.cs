@@ -61,6 +61,7 @@ namespace GDelib2._0
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -189,9 +190,17 @@ namespace GDelib2._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-            panel5.Show();
-           tabControl1.Hide();
-            
+            // panel5.Show();
+            // tabControl1.Hide();
+            panel8.BackColor = Color.Black;
+            panel9.BackColor = Color.FromArgb(215, 4, 51);          
+            panel10.BackColor = Color.Black;
+
+            configurationFilier1.Visible = false;
+            acceuilCntrol1.Visible=false;
+            collecteNotes1.Show();
+
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -269,13 +278,24 @@ namespace GDelib2._0
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            panel6.Show();
+
+            configurationFilier1.Hide();
+            acceuilCntrol1.Show();
+            collecteNotes1.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControl1.Show();
-            panel5.Hide();
+            // tabControl1.Show();
+            // panel5.Hide();
+
+            configurationFilier1.Show();
+            acceuilCntrol1.Hide();
+            collecteNotes1.Hide();
+            panel8.BackColor = Color.FromArgb(215, 4, 51);
+            panel9.BackColor = Color.Black;
+            panel10.BackColor = Color.Black;
         }
 
         private void button12_Click_1(object sender, EventArgs e)
@@ -416,7 +436,7 @@ namespace GDelib2._0
 
             for (int i = 0; d.Read(); i++)
             {
-                comboBox1.Items.Add(d["nomElemPeda"]);
+                comboBox1.Items.Add(d["nom_elemPDG"]);
             }
             conX.Close();
         }
@@ -452,8 +472,8 @@ namespace GDelib2._0
         {
             try
             {
-                Form2 c = new Form2(comboBox2.SelectedItem.ToString(), semestre, comboBox1.SelectedItem.ToString(), ofd);
-                c.Show();
+              //  Form2 c = new Form2(comboBox2.SelectedItem.ToString(), ofd);
+              //  c.Show();
             }
             catch (System.NullReferenceException eee)
             {
@@ -462,6 +482,55 @@ namespace GDelib2._0
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel8.BackColor = Color.Black;
+            panel9.BackColor = Color.Black;
+            panel10.BackColor = Color.FromArgb(215, 4, 51);
+        }
+
+        private void GestiobModule_Load(object sender, EventArgs e)
+        {
+            acceuilCntrol1.BringToFront();
+        }
+
+        private void acceuilCntrol1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void close_Enter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Red;
+        }
+
+        private void close_leave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Black;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+
+            button2.BackColor = Color.Red;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+
+            button2.BackColor = Color.Black;
+        }
+
+        private void collecteNotes1_Load(object sender, EventArgs e)
         {
 
         }

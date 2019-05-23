@@ -33,12 +33,12 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button2 = new System.Windows.Forms.Button();
             this.textLogin = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -83,23 +83,6 @@
             this.textLogin.Text = "Login";
             this.textLogin.Enter += new System.EventHandler(this.login);
             this.textLogin.Leave += new System.EventHandler(this.loginLeave);
-            // 
-            // textPassword
-            // 
-            this.textPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.textPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textPassword.Location = new System.Drawing.Point(169, 156);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textPassword.Size = new System.Drawing.Size(347, 26);
-            this.textPassword.TabIndex = 14;
-            this.textPassword.Text = "Password";
-            this.textPassword.UseSystemPasswordChar = true;
-            this.textPassword.UseWaitCursor = true;
-            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
-            this.textPassword.Enter += new System.EventHandler(this.password_Enter);
-            this.textPassword.Leave += new System.EventHandler(this.password_leave);
             // 
             // button6
             // 
@@ -165,6 +148,22 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "GDelib2.0";
             // 
+            // textPassword
+            // 
+            this.textPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.textPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textPassword.Location = new System.Drawing.Point(169, 156);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textPassword.Size = new System.Drawing.Size(336, 26);
+            this.textPassword.TabIndex = 14;
+            this.textPassword.Text = "Password";
+            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
+            this.textPassword.Enter += new System.EventHandler(this.password_Enter);
+            this.textPassword.Leave += new System.EventHandler(this.password_leave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,12 +191,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textLogin;
-        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textPassword;
     }
 }
 

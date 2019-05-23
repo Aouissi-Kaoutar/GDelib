@@ -400,5 +400,15 @@ namespace GDelib2._0.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Web___Design___Device_128_5121 {
+            get {
+                object obj = ResourceManager.GetObject("Web_-_Design_-_Device_128-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

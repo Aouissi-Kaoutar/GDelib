@@ -28,12 +28,12 @@ namespace GDelib2._0
         }
 
 
-        public Form2(string s, string c, string k, OpenFileDialog ofd)
+        public Form2( string cls, string elmPDG, string s, OpenFileDialog ofd)
         {
             InitializeComponent();
-            this.clas = s;
-            this.semes = c; 
-            this.elemP = k;
+            this.clas = cls;
+           this.semes = s; 
+           this.elemP = elmPDG;
             this.ofd = ofd;
         }
 
@@ -85,19 +85,18 @@ namespace GDelib2._0
                 con.Close();
             }*/
 
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 1; i < dataGridView1.Rows.Count - 1; i++)
             {
                 try
                 {
-                    String query = "INSERT INTO dbo.notes (id_eleve,nom,prenom,claS,miS,nomElemPeda,note) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
+                    String query = "INSERT INTO dbo.notes (id_eleve,nom,prenom,claS,semester,nomElemPeda,note) VALUES (@id_eleve,@nom,@prenom,@claS,@semester,@nomElemPeda,@note)";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
                     command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@claS", dataGridView1.Rows[i].Cells[3].Value);
-                    command.Parameters.AddWithValue("@cne", dataGridView1.Rows[i].Cells[4].Value);
-                    command.Parameters.AddWithValue("@miS", dataGridView1.Rows[i].Cells[5].Value);
-                    command.Parameters.AddWithValue("@nomElemPeda", dataGridView1.Rows[i].Cells[6].Value);
+                    command.Parameters.AddWithValue("@claS", clas);
+                    command.Parameters.AddWithValue("@semester", semes);
+                    command.Parameters.AddWithValue("@nomElemPeda",elemP);
                     command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[7].Value);
 
                     con.Open();
@@ -152,7 +151,7 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ofd.FileName + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
 
              OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" +clas + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" +"GI-3" + "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);

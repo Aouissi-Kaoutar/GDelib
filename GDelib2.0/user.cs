@@ -178,8 +178,8 @@ private void button1_Click(object sender, EventArgs e)
         {
              try
              {
-                 Form2 c = new Form2(comboBox2.SelectedItem.ToString(), semestre, comboBox1.SelectedItem.ToString(), ofd);
-                 c.Show();
+               //  Form2 c = new Form2(comboBox2.SelectedItem.ToString(), semestre, comboBox1.SelectedItem.ToString(), ofd);
+               //  c.Show();
              }
              catch(System.NullReferenceException eee) {
                   MessageBox.Show("manque un champ\n \n \n"+eee.Message);

@@ -177,6 +177,7 @@
             this.label2.Size = new System.Drawing.Size(350, 76);
             this.label2.TabIndex = 1;
             this.label2.Text = "GDelib2.0";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -225,8 +226,8 @@
             private System.Windows.Forms.PictureBox pictureBox2;
             private System.Windows.Forms.Panel panel2;
             private System.Windows.Forms.Label label2;
-            private System.Windows.Forms.Label label1;
-            private InsrNote aaa2;
+           private System.Windows.Forms.Label label1;
+          
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
     }
