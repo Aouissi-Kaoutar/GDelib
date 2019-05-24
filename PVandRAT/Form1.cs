@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GDelib2._0
+namespace PVandRAT
 {
-    public partial class Form3 : Form
+    public partial class Form1 : Form
     {
-        public Form3()
+        public Form1()
         {
             InitializeComponent();
         }

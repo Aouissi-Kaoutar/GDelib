@@ -63,7 +63,7 @@ namespace GDelib2._0
 
             SqlDataReader d = command.ExecuteReader();
 
-            comboBox1.Items.Clear();
+            comboBox6.Items.Clear();
 
             for (int i = 0; d.Read(); i++)
             {
@@ -115,6 +115,17 @@ namespace GDelib2._0
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PV pv = new PV(comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString(),"Liste des rattrapage pour les "+ comboBox2.SelectedItem.ToString());
+            pv.Show();
         }
     }
 }

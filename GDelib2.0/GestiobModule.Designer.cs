@@ -30,14 +30,10 @@
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiobModule));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.acceuilCntrol1 = new GDelib2._0.acceuilCntrol();
-            this.configurationFilier2 = new GDelib2._0.configurationFilier();
-            this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,7 +59,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -75,17 +70,21 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.acceuilCntrol1 = new GDelib2._0.acceuilCntrol();
+            this.configurationFilier2 = new GDelib2._0.configurationFilier();
+            this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,10 +92,11 @@
             this.tabPage2.SuspendLayout();
             this.ListeEtd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,33 +120,6 @@
             this.panel1.Size = new System.Drawing.Size(196, 612);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // acceuilCntrol1
-            // 
-            this.acceuilCntrol1.AllowDrop = true;
-            this.acceuilCntrol1.AutoSize = true;
-            this.acceuilCntrol1.Location = new System.Drawing.Point(3, 413);
-            this.acceuilCntrol1.Margin = new System.Windows.Forms.Padding(9);
-            this.acceuilCntrol1.Name = "acceuilCntrol1";
-            this.acceuilCntrol1.Size = new System.Drawing.Size(1016, 594);
-            this.acceuilCntrol1.TabIndex = 1;
-            this.acceuilCntrol1.Load += new System.EventHandler(this.acceuilCntrol1_Load);
-            // 
-            // configurationFilier2
-            // 
-            this.configurationFilier2.Location = new System.Drawing.Point(46, 374);
-            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(9);
-            this.configurationFilier2.Name = "configurationFilier2";
-            this.configurationFilier2.Size = new System.Drawing.Size(992, 592);
-            this.configurationFilier2.TabIndex = 3;
-            // 
-            // configurationFilier1
-            // 
-            this.configurationFilier1.Location = new System.Drawing.Point(464, 31);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(9);
-            this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(2345, 1316);
-            this.configurationFilier1.TabIndex = 3;
             // 
             // panel6
             // 
@@ -188,16 +161,6 @@
             this.label8.Size = new System.Drawing.Size(338, 31);
             this.label8.TabIndex = 0;
             this.label8.Text = "Gestion de Déliberation";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 101);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(769, 367);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
             // 
             // tabControl1
             // 
@@ -476,16 +439,6 @@
             this.panel8.Size = new System.Drawing.Size(11, 63);
             this.panel8.TabIndex = 29;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 92);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel5
             // 
             this.panel5.AllowDrop = true;
@@ -639,6 +592,57 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.collecteNotes1);
+            this.panel11.Location = new System.Drawing.Point(202, 42);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1019, 617);
+            this.panel11.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(1181, -8);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(36, 44);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "x";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Enter += new System.EventHandler(this.close_Enter);
+            this.button2.Leave += new System.EventHandler(this.close_leave);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 101);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(769, 367);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 92);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Black;
@@ -694,45 +698,41 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(-17, -43);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(12);
+            this.collecteNotes1.Location = new System.Drawing.Point(10, 0);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(2352, 654);
+            this.collecteNotes1.Size = new System.Drawing.Size(7433, 1912);
             this.collecteNotes1.TabIndex = 2;
             this.collecteNotes1.Load += new System.EventHandler(this.collecteNotes1_Load);
             // 
-            // panel11
+            // acceuilCntrol1
             // 
-            this.panel11.Controls.Add(this.collecteNotes1);
-            this.panel11.Location = new System.Drawing.Point(202, 42);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1019, 617);
-            this.panel11.TabIndex = 4;
+            this.acceuilCntrol1.AllowDrop = true;
+            this.acceuilCntrol1.AutoSize = true;
+            this.acceuilCntrol1.Location = new System.Drawing.Point(9, 1207);
+            this.acceuilCntrol1.Margin = new System.Windows.Forms.Padding(28, 27, 28, 27);
+            this.acceuilCntrol1.Name = "acceuilCntrol1";
+            this.acceuilCntrol1.Size = new System.Drawing.Size(3212, 1738);
+            this.acceuilCntrol1.TabIndex = 1;
+            this.acceuilCntrol1.Load += new System.EventHandler(this.acceuilCntrol1_Load);
             // 
-            // button2
+            // configurationFilier2
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1181, -8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 44);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "x";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            this.button2.Enter += new System.EventHandler(this.close_Enter);
-            this.button2.Leave += new System.EventHandler(this.close_leave);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            this.configurationFilier2.Location = new System.Drawing.Point(144, 1093);
+            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(28, 27, 28, 27);
+            this.configurationFilier2.Name = "configurationFilier2";
+            this.configurationFilier2.Size = new System.Drawing.Size(3136, 1730);
+            this.configurationFilier2.TabIndex = 3;
+            // 
+            // configurationFilier1
+            // 
+            this.configurationFilier1.Location = new System.Drawing.Point(1467, 93);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(28, 27, 28, 27);
+            this.configurationFilier1.Name = "configurationFilier1";
+            this.configurationFilier1.Size = new System.Drawing.Size(7412, 3850);
+            this.configurationFilier1.TabIndex = 3;
             // 
             // GestiobModule
             // 
@@ -754,7 +754,6 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -764,11 +763,12 @@
             this.ListeEtd.ResumeLayout(false);
             this.ListeEtd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
             }

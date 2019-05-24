@@ -213,6 +213,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Entypo_2709_0__64 {
+            get {
+                object obj = ResourceManager.GetObject("Entypo_2709(0)_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Entypo_d83d_0_ {
             get {
                 object obj = ResourceManager.GetObject("Entypo_d83d(0)", resourceCulture);
@@ -226,6 +236,16 @@ namespace GDelib2._0.Properties {
         internal static System.Drawing.Bitmap Entypo_d83d_1__64 {
             get {
                 object obj = ResourceManager.GetObject("Entypo_d83d(1)_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Entypo_e716_0__64 {
+            get {
+                object obj = ResourceManager.GetObject("Entypo_e716(0)_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
