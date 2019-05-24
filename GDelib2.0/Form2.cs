@@ -20,20 +20,22 @@ namespace GDelib2._0
         public string semes;
         public string elemP;
         public string miS;
+        public string session;
         public OpenFileDialog ofd;
-
+        public float not;
         public Form2()
         {
             InitializeComponent();
         }
 
 
-        public Form2( string cls, string elmPDG, string s, OpenFileDialog ofd)
+        public Form2( string cls, string elmPDG, string s,string session, OpenFileDialog ofd)
         {
             InitializeComponent();
             this.clas = cls;
            this.semes = s; 
            this.elemP = elmPDG;
+            this.session = session;
             this.ofd = ofd;
         }
 
@@ -44,65 +46,81 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            String query;
-            con.Open();
-            try
-            {
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                {
-                    /*string query = "UPDATE dbo.notes SET" +
-                        " id_eleve = @id_eleve," +
-                        " nom = @nom," +
-                        "prenom = @prenom," +
-                        "claS = @claS, " +
-                        " nomElemPeda= @nomElemPeda," +
-                        "note = @note," +
-                        " WHERE id_eleve = @id_eleve";        
-                      
-                    query = "INSERT INTO  dbo.notes" +
-                       "(id_eleve,nom,prenom,claS,miS,nomElemPeda,note) " +
-                       "VALUES (@id_eleve,@nom,@prenom,@claS,@miS,@nomElemPeda,@note)";
-                    SqlCommand command = new SqlCommand(query, con);
-                    command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
-                    command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
-                    command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@claS", dataGridView1.Rows[i].Cells[3].Value);
-                    command.Parameters.AddWithValue("@miS", miS);
-                    command.Parameters.AddWithValue("@nomElemPeda", dataGridView1.Rows[i].Cells[4].Value);
-                    command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[5].Value);
+           
 
-                    command.ExecuteNonQuery();
-
-                }
-            }
-            catch (System.Data.SqlClient.SqlException expe)
-            {
-                MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
-            }
-            finally
-            {
-                con.Close();
-            }*/
-
-            for (int i = 1; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
                 try
                 {
-                    String query = "INSERT INTO dbo.notes (id_eleve,nom,prenom,claS,semester,nomElemPeda,note) VALUES (@id_eleve,@nom,@prenom,@claS,@semester,@nomElemPeda,@note)";
-                    SqlCommand command = new SqlCommand(query, con);
-                    command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
-                    command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
-                    command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@claS", clas);
-                    command.Parameters.AddWithValue("@semester", semes);
-                    command.Parameters.AddWithValue("@nomElemPeda",elemP);
-                    command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[7].Value);
+                  if (session == "ord")
+                    { 
+                        String query = "INSERT INTO dbo.notes (id_eleve,nom,prenom,claS,semester,nomElemPeda,note,session,res) VALUES (@id_eleve,@nom,@prenom,@claS,@semester,@nomElemPeda,@note,@session,@res)";
+                   
+                        SqlCommand command = new SqlCommand(query, con);
+                        command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
+                        command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
+                        command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
+                        command.Parameters.AddWithValue("@claS", clas);
+                        command.Parameters.AddWithValue("@semester", semes);
+                        command.Parameters.AddWithValue("@nomElemPeda",elemP);
+                        command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[3].Value);
+                        not = float.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        if (not != null || not < 20 || not > 0)
+                        {
+                            if (not < 12) { command.Parameters.AddWithValue("@res","rattrape"); }
+                            else { command.Parameters.AddWithValue("@res", "valide"); }
 
-                    con.Open();
-                    command.ExecuteNonQuery();
-                    con.Close();
+                            con.Open();
+                            command.ExecuteNonQuery();
+                            con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("la note du"+ dataGridView1.Rows[i].Cells[1].Value.ToString()+"n'est pas dans la forme entandu");
+                        }
+                        
+                   }
+                  if (session == "rat")
+                    {
+                          string query = "UPDATE notes  SET note =@notr Where id_eleve =@id_eleve";
+
+                        SqlCommand command = new SqlCommand(query, con);
+                        command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
+                        command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
+                        command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
+                        command.Parameters.AddWithValue("@claS", clas);
+                        command.Parameters.AddWithValue("@semester", semes);
+                        command.Parameters.AddWithValue("@nomElemPeda", elemP);
+
+                        command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[3].Value);
+
+                        not = float.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        if (not != null || not < 20 || not > 0)
+                        {
+                            if (not < 12) { command.Parameters.AddWithValue("@res", "non valide"); }
+                            else { command.Parameters.AddWithValue("@res", "valide"); }
+
+                            con.Open();
+                            command.ExecuteNonQuery();
+                            con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("la note du" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "n'est pas dans la forme entandu");
+                        }
+                       
+                    }
+
+
+
+
+
+
+
+
                 }
+
+
                 catch (System.Data.SqlClient.SqlException expe)
                 {
                     MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);

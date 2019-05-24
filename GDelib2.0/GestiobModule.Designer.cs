@@ -30,6 +30,8 @@
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiobModule));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.acceuilCntrol1 = new GDelib2._0.acceuilCntrol();
+            this.configurationFilier2 = new GDelib2._0.configurationFilier();
             this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -77,9 +79,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.configurationFilier2 = new GDelib2._0.configurationFilier();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
-            this.acceuilCntrol1 = new GDelib2._0.acceuilCntrol();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -120,6 +120,25 @@
             this.panel1.Size = new System.Drawing.Size(196, 612);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // acceuilCntrol1
+            // 
+            this.acceuilCntrol1.AllowDrop = true;
+            this.acceuilCntrol1.AutoSize = true;
+            this.acceuilCntrol1.Location = new System.Drawing.Point(3, 413);
+            this.acceuilCntrol1.Margin = new System.Windows.Forms.Padding(9);
+            this.acceuilCntrol1.Name = "acceuilCntrol1";
+            this.acceuilCntrol1.Size = new System.Drawing.Size(1016, 594);
+            this.acceuilCntrol1.TabIndex = 1;
+            this.acceuilCntrol1.Load += new System.EventHandler(this.acceuilCntrol1_Load);
+            // 
+            // configurationFilier2
+            // 
+            this.configurationFilier2.Location = new System.Drawing.Point(46, 374);
+            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(9);
+            this.configurationFilier2.Name = "configurationFilier2";
+            this.configurationFilier2.Size = new System.Drawing.Size(992, 592);
+            this.configurationFilier2.TabIndex = 3;
             // 
             // configurationFilier1
             // 
@@ -629,7 +648,7 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(12, 293);
+            this.button7.Location = new System.Drawing.Point(16, 293);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(177, 64);
             this.button7.TabIndex = 6;
@@ -648,7 +667,7 @@
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 216);
+            this.button6.Location = new System.Drawing.Point(16, 216);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 62);
             this.button6.TabIndex = 5;
@@ -666,7 +685,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 138);
+            this.button1.Location = new System.Drawing.Point(16, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 63);
             this.button1.TabIndex = 0;
@@ -680,33 +699,14 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // configurationFilier2
-            // 
-            this.configurationFilier2.Location = new System.Drawing.Point(46, 374);
-            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.configurationFilier2.Name = "configurationFilier2";
-            this.configurationFilier2.Size = new System.Drawing.Size(992, 592);
-            this.configurationFilier2.TabIndex = 3;
-            // 
             // collecteNotes1
             // 
             this.collecteNotes1.Location = new System.Drawing.Point(-17, -43);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(12);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(2352, 654);
             this.collecteNotes1.TabIndex = 2;
             this.collecteNotes1.Load += new System.EventHandler(this.collecteNotes1_Load);
-            // 
-            // acceuilCntrol1
-            // 
-            this.acceuilCntrol1.AllowDrop = true;
-            this.acceuilCntrol1.AutoSize = true;
-            this.acceuilCntrol1.Location = new System.Drawing.Point(3, 413);
-            this.acceuilCntrol1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.acceuilCntrol1.Name = "acceuilCntrol1";
-            this.acceuilCntrol1.Size = new System.Drawing.Size(1016, 594);
-            this.acceuilCntrol1.TabIndex = 1;
-            this.acceuilCntrol1.Load += new System.EventHandler(this.acceuilCntrol1_Load);
             // 
             // panel11
             // 

@@ -18,7 +18,7 @@ namespace GDelib2._0
         public string semestre;
         public string clas;
         public string ElemPDG;
-
+        public string session;
 
         public OpenFileDialog ofd;
         public collecteNotes()
@@ -82,7 +82,7 @@ namespace GDelib2._0
         {
             try
             {
-                Form2 c = new Form2(clas, ElemPDG, semestre, ofd);
+                Form2 c = new Form2(clas, ElemPDG, semestre,session, ofd);
                  c.Show();
                
             }
@@ -95,6 +95,16 @@ namespace GDelib2._0
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             ElemPDG  = comboBox6.SelectedItem.ToString();
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            session = "ord";
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            session = "rat";
         }
     }
 }
