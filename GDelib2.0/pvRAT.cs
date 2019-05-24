@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace GDelib2._0
 {
-    public partial class PV : Form
+    public partial class pvRAT : Form
     {
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         string clas;
         string semestre;
         string libele;
-        public PV(string clas,string semest,string libele)
+        public pvRAT(string clas,string semest,string libele)
         {
             InitializeComponent();
 
@@ -115,6 +115,11 @@ namespace GDelib2._0
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

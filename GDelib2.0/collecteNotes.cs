@@ -124,7 +124,13 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PV pv = new PV(comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString(),"Liste des rattrapage pour les "+ comboBox2.SelectedItem.ToString());
+            pvRAT pv = new pvRAT(comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString(),"Liste des rattrapage pour les "+ comboBox2.SelectedItem.ToString());
+            pv.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultet  semestrielle pour les " + comboBox2.SelectedItem.ToString());
             pv.Show();
         }
     }
