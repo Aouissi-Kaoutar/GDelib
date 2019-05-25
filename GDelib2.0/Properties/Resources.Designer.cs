@@ -203,6 +203,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap couverture_hp1_1_1300x560 {
+            get {
+                object obj = ResourceManager.GetObject("couverture-hp1-1-1300x560", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Entypo_2699_0__64 {
             get {
                 object obj = ResourceManager.GetObject("Entypo_2699(0)_64", resourceCulture);
@@ -273,6 +283,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Entypo_e758_0__64 {
+            get {
+                object obj = ResourceManager.GetObject("Entypo_e758(0)_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Etudiants {
             get {
                 object obj = ResourceManager.GetObject("Etudiants", resourceCulture);
@@ -317,6 +337,16 @@ namespace GDelib2._0.Properties {
         internal static System.Drawing.Bitmap nnnnn2 {
             get {
                 object obj = ResourceManager.GetObject("nnnnn2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pf_1558798470 {
+            get {
+                object obj = ResourceManager.GetObject("pf_1558798470", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

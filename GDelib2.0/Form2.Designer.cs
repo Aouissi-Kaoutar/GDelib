@@ -34,8 +34,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -49,7 +47,7 @@
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button11);
-            this.panel2.Location = new System.Drawing.Point(836, 1);
+            this.panel2.Location = new System.Drawing.Point(864, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 32);
             this.panel2.TabIndex = 18;
@@ -76,7 +74,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Image = global::GDelib2._0.Properties.Resources._1492790945_39minimize_842421;
-            this.button9.Location = new System.Drawing.Point(39, 0);
+            this.button9.Location = new System.Drawing.Point(30, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(30, 29);
             this.button9.TabIndex = 2;
@@ -103,10 +101,11 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(-1, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(947, 31);
+            this.label1.Size = new System.Drawing.Size(987, 31);
             this.label1.TabIndex = 19;
             this.label1.Text = "la liste des note";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -117,36 +116,15 @@
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button3.Image = global::GDelib2._0.Properties.Resources.Entypo_e729_0__64;
-            this.button3.Location = new System.Drawing.Point(770, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 56);
-            this.button3.TabIndex = 23;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_2699_0__64;
-            this.button2.Location = new System.Drawing.Point(820, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 56);
-            this.button2.TabIndex = 22;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::GDelib2._0.Properties.Resources.Entypo_d83d_1__64;
-            this.button1.Location = new System.Drawing.Point(873, 4);
+            this.button1.Location = new System.Drawing.Point(747, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 56);
+            this.button1.Size = new System.Drawing.Size(196, 60);
             this.button1.TabIndex = 21;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -155,9 +133,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(3, 522);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 60);
@@ -194,8 +170,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
     }
 }

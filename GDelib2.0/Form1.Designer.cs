@@ -75,7 +75,7 @@
             this.textLogin.BackColor = System.Drawing.SystemColors.Control;
             this.textLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLogin.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textLogin.Location = new System.Drawing.Point(169, 112);
+            this.textLogin.Location = new System.Drawing.Point(171, 141);
             this.textLogin.Name = "textLogin";
             this.textLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textLogin.Size = new System.Drawing.Size(336, 26);
@@ -89,8 +89,8 @@
             this.button6.BackColor = System.Drawing.Color.Black;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(169, 225);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(29)))), ((int)(((byte)(47)))));
+            this.button6.Location = new System.Drawing.Point(171, 254);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(332, 42);
             this.button6.TabIndex = 16;
@@ -112,7 +112,7 @@
             this.panel1.Location = new System.Drawing.Point(-2, -3);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(665, 336);
+            this.panel1.Size = new System.Drawing.Size(665, 320);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -121,7 +121,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(197, 69);
+            this.label3.Location = new System.Drawing.Point(199, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(257, 31);
             this.label3.TabIndex = 18;
@@ -134,7 +134,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(-9, -75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(671, 141);
+            this.panel3.Size = new System.Drawing.Size(671, 142);
             this.panel3.TabIndex = 17;
             // 
             // label4
@@ -154,7 +154,7 @@
             this.textPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textPassword.Location = new System.Drawing.Point(169, 156);
+            this.textPassword.Location = new System.Drawing.Point(171, 185);
             this.textPassword.Name = "textPassword";
             this.textPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textPassword.Size = new System.Drawing.Size(336, 26);
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(656, 329);
+            this.ClientSize = new System.Drawing.Size(656, 318);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(162, 133);

@@ -46,7 +46,7 @@ namespace GDelib2._0
 
             String query = "SELECT * FROM dbo.notes WHERE claS='GI-3' and semester=" + semestre;
 
-
+            try { 
             conX.Open();
 
             SqlCommand command = new SqlCommand();
@@ -87,7 +87,7 @@ namespace GDelib2._0
 
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col3, col4, col5, col6 });
 
-            for (int i = 0; d.Read(); i++)
+           /* for (int i = 0; d.Read(); i++)
             {
                 dataGridView1.Rows.Add();
 
@@ -101,6 +101,11 @@ namespace GDelib2._0
 
                 dataGridView1.Rows[i].Cells["RESULTA"].Value = d["note"];
 
+            }*/
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show("manque un champ\n \n \n" + exp.Message);
             }
 
 

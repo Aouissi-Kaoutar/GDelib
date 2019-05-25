@@ -63,16 +63,23 @@ namespace GDelib2._0
                         command.Parameters.AddWithValue("@claS", clas);
                         command.Parameters.AddWithValue("@semester", semes);
                         command.Parameters.AddWithValue("@nomElemPeda",elemP);
+                        command.Parameters.AddWithValue("@session", session);
                         command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[3].Value);
                         not = float.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
                         if (not != null || not < 20 || not > 0)
                         {
                             if (not < 12) { command.Parameters.AddWithValue("@res","rattrape"); }
                             else { command.Parameters.AddWithValue("@res", "valide"); }
-
+                            try { 
                             con.Open();
                             command.ExecuteNonQuery();
+                            }
+                            catch(Exception exp){
+                                MessageBox.Show(exp.Message);
+                            }
+                            finally { 
                             con.Close();
+                            }
                         }
                         else
                         {
@@ -100,9 +107,19 @@ namespace GDelib2._0
                             if (not < 12) { command.Parameters.AddWithValue("@res", "non valide"); }
                             else { command.Parameters.AddWithValue("@res", "valide"); }
 
-                            con.Open();
-                            command.ExecuteNonQuery();
-                            con.Close();
+                            try
+                            {
+                                con.Open();
+                                command.ExecuteNonQuery();
+                            }
+                            catch (Exception exp)
+                            {
+                                MessageBox.Show(exp.Message);
+                            }
+                            finally
+                            {
+                                con.Close();
+                            }
                         }
                         else
                         {
@@ -125,6 +142,7 @@ namespace GDelib2._0
                 {
                     MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
                 }
+                finally { }
 
             }
             MessageBox.Show("enregistrement est bient efectuer pour les " +clas);
@@ -232,6 +250,11 @@ namespace GDelib2._0
                 con.Close();
             }
 
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

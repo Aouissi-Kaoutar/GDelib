@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Configuration;
+using System.IO;
 
 namespace GDelib2._0
 {
@@ -48,6 +51,20 @@ namespace GDelib2._0
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
+
+
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             String query = "SELECT * FROM dbo.notes WHERE res='rattrape' and claS='GI-3' and semester="+semestre ;
 
           
@@ -64,7 +81,7 @@ namespace GDelib2._0
              dt.Columns.Add(new DataColumn("nom", typeof(string)));
              dt.Columns.Add(new DataColumn("prenom", typeof(string)));
              dt.Columns.Add(new DataColumn("RESULTA", typeof(string)));
-             dataGridView1.DataSource = dt;*/
+             dataGridView1.DataSource = dt;
 
             var col3 = new DataGridViewTextBoxColumn();
             var col4 = new DataGridViewCheckBoxColumn();
@@ -89,7 +106,7 @@ namespace GDelib2._0
             col6.Name = "RESULTA";
 
 
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col3, col4, col5,col6 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col3, col4, col5,col6 });*/
 
             for (int i = 0; d.Read(); i++)
               {
@@ -103,7 +120,7 @@ namespace GDelib2._0
 
                 //  dataGridView1.Rows[i].Cells["filier"].Value = d["claS"];
 
-                  dataGridView1.Rows[i].Cells["RESULTA"].Value = d["note"];
+                  dataGridView1.Rows[i].Cells["resulta"].Value = d["note"];
 
             }
 
@@ -122,6 +139,71 @@ namespace GDelib2._0
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void ToExcel(DataGridView dGV,string filename)
+        {
+            string stOutput = "";
+            string sHeaders = "";
+            for(int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+                stOutput += sHeaders + "\r\n";
+
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+                {
+                    string stline = "";
+                    for(int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+                    
+                        stline = stline.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                        stOutput += stline + "\t \n";
+                }
+            Encoding utf16= Encoding.GetEncoding(1254);
+
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length);
+            bw.Flush();
+            bw.Close();
+            fs.Close();
+
+        }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /* if (dataGridView1.Rows.Count > 0)
+             {
+                 Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
+                 xcelApp.Application.Workbooks.Add(Type.Missing);
+                 for (int i =1; i<dataGridView1.Columns.Count+1;i++)
+                 {
+                     xcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+
+                 }
+                 for (int i = 0; i < dataGridView1.Rows.Count- 1; i++)
+                 {
+                     for (int j = 0; j < dataGridView1.Columns.Count-1 ; j++)
+                     {
+                         xcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+
+
+                     }
+
+
+
+                 xcelApp.Columns.AutoFit();
+                 xcelApp.Visible = true;
+
+             }*/
+
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Document(*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+                ToExcel(dataGridView1, sfd.FileName);
         }
     }
 }

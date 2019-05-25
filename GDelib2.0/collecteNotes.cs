@@ -15,7 +15,7 @@ namespace GDelib2._0
     {
 
         public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
-        public string semestre;
+        public string semestre=null;
         public string clas;
         public string ElemPDG;
         public string session;
@@ -57,7 +57,7 @@ namespace GDelib2._0
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
-            String query = "SELECT * FROM  ElementPDG WHERE clas='" + comboBox5.SelectedItem.ToString() + "' and semestre='" + semestre + "'";
+            String query = "SELECT nom_elemPDG FROM  ElementPDG WHERE clas='"+clas+"' and semestre='"+semestre+"'" ;
 
             command.CommandText = query;
 
@@ -132,6 +132,11 @@ namespace GDelib2._0
         {
             pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultet  semestrielle pour les " + comboBox2.SelectedItem.ToString());
             pv.Show();
+        }
+
+        private void ListeEtd_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

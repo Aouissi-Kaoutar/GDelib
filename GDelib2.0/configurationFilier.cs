@@ -27,8 +27,6 @@ namespace GDelib2._0
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 textBox3.Text = ofd.FileName;
-
-
             }
         }
 
@@ -68,7 +66,7 @@ namespace GDelib2._0
             {
                 try
                 {
-                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
+                    String query = "INSERT INTO dbo.Eleves (Id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
@@ -99,7 +97,7 @@ namespace GDelib2._0
 
         private void button9_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand(@"DELETE FROM Eleves WHERE claS='GI3' ", conX);
+            SqlCommand cmd = new SqlCommand(@"DELETE FROM Eleves WHERE claS='GI-3' ", conX);
             conX.Open();
             cmd.ExecuteNonQuery();
             conX.Close();
@@ -120,24 +118,24 @@ namespace GDelib2._0
 
         private void button4_Click(object sender, EventArgs e)
         {
-            dataGridView2.BorderStyle = BorderStyle.None;
-            dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dataGridView2.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView2.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
 
-            dataGridView2.EnableHeadersVisualStyles = false;
-            dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
 
             string pth = @"Provider=Microsoft.Jet.Oledb.4.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 8.0;";
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + "Feuil1" + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + comboBox1.SelectedItem.ToString() + "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);
@@ -173,8 +171,9 @@ namespace GDelib2._0
                 {
                     conX.Close();
                 }
-                MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox1.SelectedItem.ToString());
+               
             }
+            MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox1.SelectedItem.ToString());
 
         }
 

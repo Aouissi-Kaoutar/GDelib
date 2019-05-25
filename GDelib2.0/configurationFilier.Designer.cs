@@ -100,6 +100,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "GI-3",
@@ -107,7 +108,7 @@
             "GI-5"});
             this.comboBox4.Location = new System.Drawing.Point(187, 41);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(288, 21);
+            this.comboBox4.Size = new System.Drawing.Size(288, 26);
             this.comboBox4.TabIndex = 12;
             // 
             // panel4
@@ -198,11 +199,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 47);
+            this.label1.Location = new System.Drawing.Point(59, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "choisir une feuil de stile";
+            this.label1.Text = "choisi la filier";
             // 
             // tabPage2
             // 
@@ -256,11 +257,11 @@
             this.button8.BackColor = System.Drawing.Color.DarkViolet;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(615, 53);
+            this.button8.Location = new System.Drawing.Point(596, 45);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(93, 32);
             this.button8.TabIndex = 29;
-            this.button8.Text = "add";
+            this.button8.Text = "ajouter";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -269,11 +270,11 @@
             this.button4.BackColor = System.Drawing.Color.DodgerBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(638, 91);
+            this.button4.Location = new System.Drawing.Point(606, 91);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 32);
+            this.button4.Size = new System.Drawing.Size(125, 32);
             this.button4.TabIndex = 28;
-            this.button4.Text = "Clear";
+            this.button4.Text = "Afficher";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -286,7 +287,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 32);
             this.button3.TabIndex = 27;
-            this.button3.Text = "Save";
+            this.button3.Text = "Enregistrer";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
