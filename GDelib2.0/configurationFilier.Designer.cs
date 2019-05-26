@@ -129,7 +129,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 32);
             this.button9.TabIndex = 10;
-            this.button9.Text = "Delete";
+            this.button9.Text = "Suprimer";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -144,7 +144,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 32);
             this.button5.TabIndex = 9;
-            this.button5.Text = "Save";
+            this.button5.Text = "Enregistrer";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -159,7 +159,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(93, 32);
             this.button11.TabIndex = 8;
-            this.button11.Text = "Display";
+            this.button11.Text = "Afficher";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -191,7 +191,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(93, 32);
             this.button12.TabIndex = 2;
-            this.button12.Text = "Add";
+            this.button12.Text = "Ajouter";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 

@@ -24,9 +24,7 @@ namespace GDelib2._0
         public collecteNotes()
         {
             InitializeComponent();
-            comboBox2.Items.Add("GI3");
-            comboBox2.Items.Add("GI4");
-            comboBox2.Items.Add("GI5");
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -135,6 +133,11 @@ namespace GDelib2._0
         }
 
         private void ListeEtd_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

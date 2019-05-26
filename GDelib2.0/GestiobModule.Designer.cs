@@ -39,11 +39,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.button2 = new System.Windows.Forms.Button();
-            this.configurationFilier3 = new GDelib2._0.configurationFilier();
-            this.collecteNotes1 = new GDelib2._0.collecteNotes();
-            this.configurationFilier2 = new GDelib2._0.configurationFilier();
-            this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.collecteNotes1 = new GDelib2._0.collecteNotes();
+            this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -52,8 +50,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.configurationFilier2);
-            this.panel1.Controls.Add(this.configurationFilier1);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel8);
@@ -69,23 +65,23 @@
             // 
             // panel10
             // 
-            this.panel10.Location = new System.Drawing.Point(3, 293);
+            this.panel10.Location = new System.Drawing.Point(3, 358);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(11, 64);
+            this.panel10.Size = new System.Drawing.Size(11, 93);
             this.panel10.TabIndex = 30;
             // 
             // panel9
             // 
-            this.panel9.Location = new System.Drawing.Point(3, 216);
+            this.panel9.Location = new System.Drawing.Point(3, 261);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(11, 63);
+            this.panel9.Size = new System.Drawing.Size(11, 92);
             this.panel9.TabIndex = 30;
             // 
             // panel8
             // 
-            this.panel8.Location = new System.Drawing.Point(3, 138);
+            this.panel8.Location = new System.Drawing.Point(3, 163);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(11, 63);
+            this.panel8.Size = new System.Drawing.Size(11, 92);
             this.panel8.TabIndex = 29;
             // 
             // pictureBox1
@@ -107,9 +103,9 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(16, 293);
+            this.button7.Location = new System.Drawing.Point(16, 358);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(177, 64);
+            this.button7.Size = new System.Drawing.Size(177, 93);
             this.button7.TabIndex = 6;
             this.button7.Text = "    Déliberation";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,9 +122,9 @@
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(16, 216);
+            this.button6.Location = new System.Drawing.Point(16, 261);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(177, 62);
+            this.button6.Size = new System.Drawing.Size(177, 91);
             this.button6.TabIndex = 5;
             this.button6.Text = "   Collecte des notes";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,9 +140,9 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 138);
+            this.button1.Location = new System.Drawing.Point(16, 163);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 63);
+            this.button1.Size = new System.Drawing.Size(180, 92);
             this.button1.TabIndex = 0;
             this.button1.Text = " Configuration  filiére";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,39 +172,6 @@
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
-            // configurationFilier3
-            // 
-            this.configurationFilier3.Location = new System.Drawing.Point(195, 43);
-            this.configurationFilier3.Margin = new System.Windows.Forms.Padding(21, 21, 21, 21);
-            this.configurationFilier3.Name = "configurationFilier3";
-            this.configurationFilier3.Size = new System.Drawing.Size(5852, 3153);
-            this.configurationFilier3.TabIndex = 6;
-            // 
-            // collecteNotes1
-            // 
-            this.collecteNotes1.Location = new System.Drawing.Point(195, 34);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(276, 228, 276, 228);
-            this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(6015, 3220);
-            this.collecteNotes1.TabIndex = 2;
-            this.collecteNotes1.Load += new System.EventHandler(this.collecteNotes1_Load);
-            // 
-            // configurationFilier2
-            // 
-            this.configurationFilier2.Location = new System.Drawing.Point(809, 5465);
-            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(155, 133, 155, 133);
-            this.configurationFilier2.Name = "configurationFilier2";
-            this.configurationFilier2.Size = new System.Drawing.Size(17620, 8649);
-            this.configurationFilier2.TabIndex = 3;
-            // 
-            // configurationFilier1
-            // 
-            this.configurationFilier1.Location = new System.Drawing.Point(8241, 467);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(155, 133, 155, 133);
-            this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(41644, 19253);
-            this.configurationFilier1.TabIndex = 3;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(29)))), ((int)(((byte)(47)))));
@@ -217,6 +180,22 @@
             this.panel2.Size = new System.Drawing.Size(1239, 137);
             this.panel2.TabIndex = 7;
             // 
+            // collecteNotes1
+            // 
+            this.collecteNotes1.Location = new System.Drawing.Point(189, 31);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4);
+            this.collecteNotes1.Name = "collecteNotes1";
+            this.collecteNotes1.Size = new System.Drawing.Size(1035, 532);
+            this.collecteNotes1.TabIndex = 8;
+            // 
+            // configurationFilier1
+            // 
+            this.configurationFilier1.Location = new System.Drawing.Point(204, 35);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4);
+            this.configurationFilier1.Name = "configurationFilier1";
+            this.configurationFilier1.Size = new System.Drawing.Size(1035, 588);
+            this.configurationFilier1.TabIndex = 9;
+            // 
             // GestiobModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -224,14 +203,15 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::GDelib2._0.Properties.Resources.pf_1558798470;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1220, 626);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.configurationFilier3);
+            this.ClientSize = new System.Drawing.Size(1217, 618);
+            this.Controls.Add(this.configurationFilier1);
             this.Controls.Add(this.collecteNotes1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(196, 10);
             this.Name = "GestiobModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
@@ -254,12 +234,9 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-       // private acceuilCntrol acceuilCntrol1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
         private configurationFilier configurationFilier1;
         private collecteNotes collecteNotes1;
-        private configurationFilier configurationFilier2;
-        private System.Windows.Forms.Button button2;
-        private configurationFilier configurationFilier3;
-        private System.Windows.Forms.Panel panel2;
     }
     }

@@ -62,7 +62,7 @@ namespace GDelib2._0
         private void button5_Click(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+            for (int i = 1; i < dataGridView2.Rows.Count - 1; i++)
             {
                 try
                 {

@@ -153,7 +153,7 @@ namespace GDelib2._0
             panel9.BackColor = Color.FromArgb(215, 4, 51);          
             panel10.BackColor = Color.Black;
             panel2.Hide();
-            configurationFilier3.Hide();
+            configurationFilier1.Hide();
             this.BackgroundImage = null;
             collecteNotes1.Show();
 
@@ -190,7 +190,7 @@ namespace GDelib2._0
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             panel2.Show();
-            configurationFilier3.Hide();
+            configurationFilier1.Hide();
             this.BackgroundImage = Properties.Resources.pf_1558798470;
             collecteNotes1.Hide();
 
@@ -201,7 +201,7 @@ namespace GDelib2._0
             // tabControl1.Show();
             panel2.Hide();
 
-            configurationFilier3.Show();
+            configurationFilier1.Show();
             this.BackgroundImage = null;
             collecteNotes1.Hide();
             panel8.BackColor = Color.FromArgb(215, 4, 51);
@@ -296,7 +296,7 @@ namespace GDelib2._0
 
         private void GestiobModule_Load(object sender, EventArgs e)
         {
-            configurationFilier3.Hide();
+            configurationFilier1.Hide();
             collecteNotes1.Hide();
         }
 

@@ -293,6 +293,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Entypo_f342_0__64 {
+            get {
+                object obj = ResourceManager.GetObject("Entypo_f342(0)_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Etudiants {
             get {
                 object obj = ResourceManager.GetObject("Etudiants", resourceCulture);
