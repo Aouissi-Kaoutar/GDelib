@@ -102,7 +102,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(185, 85);
             this.button7.TabIndex = 6;
-            this.button7.Text = "    Déliberation";
+            this.button7.Text = "Gestion des diplome";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = false;
@@ -184,18 +184,18 @@
             // 
             // configurationFilier1
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(189, 25);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.configurationFilier1.Location = new System.Drawing.Point(194, 32);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(4361, 2251);
+            this.configurationFilier1.Size = new System.Drawing.Size(1012, 591);
             this.configurationFilier1.TabIndex = 9;
             // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(189, 25);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.collecteNotes1.Location = new System.Drawing.Point(191, 44);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(4361, 2035);
+            this.collecteNotes1.Size = new System.Drawing.Size(1015, 612);
             this.collecteNotes1.TabIndex = 8;
             // 
             // GestiobModule
@@ -203,7 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::GDelib2._0.Properties.Resources.pf_1558798470;
+            this.BackgroundImage = global::GDelib2._0.Properties.Resources.Sans_titre;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1217, 618);
             this.Controls.Add(this.configurationFilier1);

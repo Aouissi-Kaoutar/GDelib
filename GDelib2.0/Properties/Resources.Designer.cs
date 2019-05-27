@@ -404,6 +404,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre {
+            get {
+                object obj = ResourceManager.GetObject("Sans titre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_analysis {
             get {
                 object obj = ResourceManager.GetObject("seo-analysis", resourceCulture);

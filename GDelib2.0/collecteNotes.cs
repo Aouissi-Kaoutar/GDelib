@@ -141,5 +141,12 @@ namespace GDelib2._0
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+            pv.Show();
+        }
     }
 }

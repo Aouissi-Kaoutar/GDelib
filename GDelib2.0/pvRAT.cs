@@ -54,7 +54,7 @@ namespace GDelib2._0
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            String query = "SELECT * FROM dbo.notes WHERE res='rattrape' and claS='GI-3' and semester="+semestre ;
+            String query = "SELECT * FROM dbo.notes WHERE res='non valide' and claS='"+clas+"' and semester="+semestre ;
 
           
              conX.Open();
@@ -191,8 +191,9 @@ namespace GDelib2._0
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Document(*.xls)|*.xls";
             sfd.FileName = "export.xls";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            if (sfd.ShowDialog() == DialogResult.OK) { 
                 ToExcel(dataGridView1, sfd.FileName);
+            }
         }
 
 

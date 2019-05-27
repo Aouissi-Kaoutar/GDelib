@@ -31,16 +31,30 @@ namespace GDelib2._0
             this.libele = libele;
         }
 
+
         private void kkkk2()
         {
+            string query = " SELECT  nom_elemPDG FROM ElementPDG where clas='" + clas + "'and semestre='" + semestre + "'";
+                 listModule = new List<string>();
+                 SqlCommand command1 = new SqlCommand();
+                 command1.Connection = conX;
+                 command1.CommandText = query;
+                 conX.Open();
+                 SqlDataReader d = command1.ExecuteReader();
+                 for (int j = 0; d.Read(); j++)
+                 {
+                     if (d["nom_elemPDG"].ToString() != null)
+                         listModule.Add(@d["nom_elemPDG"].ToString().Replace(" ", string.Empty));
+                     //  listId_Module.Add(d["id_elem_PDG"].ToString());
+                 }
+                 conX.Close();
+
+           
                 conX.Open();
                 string listeEleve = "select Id_eleve from Eleves where claS='" + clas + "'and semester='" + semestre + "'";
-
                 SqlCommand command = new SqlCommand();
                 command.Connection = conX;
                 command.CommandText = listeEleve;
-
-
                 SqlDataReader Eleves = command.ExecuteReader();
                 liseEleves = new List<string>();
                 for (int j = 0; Eleves.Read(); j++)
@@ -49,35 +63,82 @@ namespace GDelib2._0
                 }
                 conX.Close();
             for (int i = 0; i < liseEleves.Count; i++)
-            {
-                string listeNote = "select nom,prenom,nomElemPeda,note,res,id_elem_PDG from notes where claS='" + clas+"' and semester='"+semestre+"' and id_eleve='" + liseEleves[i] + "' ";
+             {   string listeNote = "select nom,prenom,nomElemPeda,note,res,id_elem_PDG from notes where claS='" + clas+"' and semester='"+semestre+"' and id_eleve='" + liseEleves[i] + "' ";
+                //6ROW
+
                 SqlCommand command2 = new SqlCommand();
                 command2.Connection = conX;
                 command2.CommandText = listeNote;
                 conX.Open();
                 SqlDataReader Notes = command2.ExecuteReader();
-
                 dataGridView1.Rows.Add();
-                rrr++;
-
-
+                string f = "";
                 for (int j = 0; Notes.Read(); j++)
                 {
                     String nom = Notes["nom"].ToString();
                     String prenom = Notes.GetString(1);
                     dataGridView1.Rows[i].Cells["Name"].Value = nom + " " + prenom;
                     int k = j+1;
-                    int indic;
-                    String Note = Notes["id_elem_PDG"].ToString();
-                    for (indic = 1; indic < 7; indic++)
-                    {
-                        if (@Note == listModule[j]) { 
-                        dataGridView1.Rows[i].Cells["noteM"+k].Value = Notes["note"];
-                        dataGridView1.Rows[i].Cells["statuM"+k].Value = Notes["res"];
+                   // int indic;
+                    String idModule = Notes["id_elem_PDG"].ToString();
+                    String nomModule = Notes["nomElemPeda"].ToString().Replace(" ", string.Empty);
+                    int b = 1;
+                   
+                    f = f +"*****"+ nomModule;
+                    foreach (String s in listModule)
+                    { 
+                        if (s== nomModule)
+                        {  dataGridView1.Rows[i].Cells["noteM"+b].Value = Notes["note"];
+                            dataGridView1.Rows[i].Cells["statuM"+b].Value = Notes["res"];
+
+                        }
+                        b++;
                     }
-                    }
-                    
+                   
+
+
+                    /* if (nomModule == listModule[0])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM1"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM1"].Value = Notes["res"];
+                     }
+                     if (nomModule == listModule[1])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM2"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM2"].Value = Notes["res"];
+                     }
+                     if (nomModule == listModule[2])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM3"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM3" + k].Value = Notes["res"];
+                     }
+                     if (nomModule == listModule[3])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM4"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM4"].Value = Notes["res"];
+                     }
+                     if (nomModule == listModule[4])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM5"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM5"].Value = Notes["res"];
+                     }
+                     if (nomModule == listModule[5])
+                     {
+                         dataGridView1.Rows[i].Cells["noteM6"].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM6"].Value = Notes["res"];
+                     }
+
+                     /*
+                         for (indic = 1; indic < 7; indic++)
+                     {
+                         if (nomModule == listModule[j]) { 
+                         dataGridView1.Rows[i].Cells["noteM"+k].Value = Notes["note"];
+                         dataGridView1.Rows[i].Cells["statuM"+k].Value = Notes["res"];
+                     }
+                     }*/
+
                 }
+              //  MessageBox.Show(f);
 
                 conX.Close();
             }
@@ -90,7 +151,7 @@ namespace GDelib2._0
         private void pvSEM_Load(object sender, EventArgs e)
         {
 
-
+            kkkk2();
            
 
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -117,7 +178,7 @@ namespace GDelib2._0
                 dataGridView1.Scroll += new ScrollEventHandler(dataDridView1_Scroll);
                 dataGridView1.ColumnWidthChanged +=new DataGridViewColumnEventHandler(dataGridView1_ColumnWhidthChanged);
                 
-
+    
 
             
             }
@@ -140,25 +201,7 @@ namespace GDelib2._0
 
         private void dataDridView1_Paint(object sender, PaintEventArgs e)
         {
-            string query = "select * from ElementPDG where clas='" + clas + "'and semestre='" + semestre + "'";
-
-            try
-            {
-
-                listModule = new List<string>();
-                SqlCommand command = new SqlCommand();
-                command.Connection = conX;
-                command.CommandText = query;
-                conX.Open();
-                SqlDataReader d = command.ExecuteReader();
-
-
-                for (int j = 0; d.Read(); j++)
-                {
-                    listModule.Add(d["nom_elemPDG"].ToString());
-                  //  listId_Module.Add(d["id_elem_PDG"].ToString());
-                }
-
+            try { 
 
                 int k = 0;
             for (int i = 1; i < 12; i = i + 2)
@@ -181,14 +224,14 @@ namespace GDelib2._0
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.Message);
+               // MessageBox.Show(exp.Message);
             }
             finally
             {
                 conX.Close();
             }
 
-            kkkk2();
+           // kkkk2();
           
         }
 
@@ -209,6 +252,11 @@ namespace GDelib2._0
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
