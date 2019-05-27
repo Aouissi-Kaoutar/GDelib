@@ -182,5 +182,28 @@ namespace GDelib2._0
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DB db = new DB("SELECT * From Eleves", @"DELETE FROM Eleves ");
+            db.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DB db = new DB("SELECT * From notes", @"DELETE FROM notes ");
+            db.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DB db = new DB("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
+            db.Show();
+        }
     }
 }

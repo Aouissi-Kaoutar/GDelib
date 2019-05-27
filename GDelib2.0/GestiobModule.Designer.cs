@@ -30,13 +30,13 @@
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiobModule));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,6 +63,24 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(19, 163);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 92);
+            this.button1.TabIndex = 0;
+            this.button1.Text = " Configuration  filiére";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.button7);
@@ -70,31 +88,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(217, 85);
             this.panel10.TabIndex = 30;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.button6);
-            this.panel9.Location = new System.Drawing.Point(0, 261);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(212, 84);
-            this.panel9.TabIndex = 30;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(0, 163);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(49, 92);
-            this.panel8.TabIndex = 29;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GDelib2._0.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 132);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button7
             // 
@@ -115,6 +108,14 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.button6);
+            this.panel9.Location = new System.Drawing.Point(0, 261);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(212, 84);
+            this.panel9.TabIndex = 30;
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Black;
@@ -133,23 +134,22 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button1
+            // panel8
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(19, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 92);
-            this.button1.TabIndex = 0;
-            this.button1.Text = " Configuration  filiére";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel8.Location = new System.Drawing.Point(0, 163);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(49, 92);
+            this.panel8.TabIndex = 29;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GDelib2._0.Properties.Resources.LOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 132);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fileSystemWatcher1
             // 
@@ -184,18 +184,18 @@
             // 
             // configurationFilier1
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(191, 44);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.configurationFilier1.Location = new System.Drawing.Point(189, 25);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
             this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(1380, 769);
+            this.configurationFilier1.Size = new System.Drawing.Size(4361, 2251);
             this.configurationFilier1.TabIndex = 9;
             // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(191, 35);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.collecteNotes1.Location = new System.Drawing.Point(189, 25);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(1380, 696);
+            this.collecteNotes1.Size = new System.Drawing.Size(4361, 2035);
             this.collecteNotes1.TabIndex = 8;
             // 
             // GestiobModule
