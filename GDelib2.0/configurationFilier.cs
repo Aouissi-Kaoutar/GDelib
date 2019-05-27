@@ -62,42 +62,43 @@ namespace GDelib2._0
         private void button5_Click(object sender, EventArgs e)
         {
 
-            for (int i = 1; i < dataGridView2.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
             {
-                try
+               // try
                 {
-                    String query = "INSERT INTO dbo.Eleves (Id_eleve,nom,prenom,claS,cne,NappoG,photo,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
+                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,semester,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
                     SqlCommand command = new SqlCommand(query, conX);
-                    command.Parameters.AddWithValue("@id_eleve", dataGridView1.Rows[i].Cells[0].Value);
-                    command.Parameters.AddWithValue("@nom", dataGridView1.Rows[i].Cells[1].Value);
-                    command.Parameters.AddWithValue("@prenom", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@claS", dataGridView1.Rows[i].Cells[3].Value);
-                    command.Parameters.AddWithValue("@cne", dataGridView1.Rows[i].Cells[4].Value);
-                    command.Parameters.AddWithValue("@NappoG", dataGridView1.Rows[i].Cells[5].Value);
-                    command.Parameters.AddWithValue("@photo", dataGridView1.Rows[i].Cells[6].Value);
-                    command.Parameters.AddWithValue("@date_naissance", dataGridView1.Rows[i].Cells[7].Value);
-                    command.Parameters.AddWithValue("@email", dataGridView1.Rows[i].Cells[8].Value);
+                    command.Parameters.AddWithValue("@id_eleve", dataGridView2.Rows[i].Cells[0].Value);
+                    command.Parameters.AddWithValue("@nom", dataGridView2.Rows[i].Cells[1].Value);
+                    command.Parameters.AddWithValue("@prenom", dataGridView2.Rows[i].Cells[2].Value);
+                    command.Parameters.AddWithValue("@claS", dataGridView2.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@cne", dataGridView2.Rows[i].Cells[4].Value);
+                    command.Parameters.AddWithValue("@NappoG", dataGridView2.Rows[i].Cells[5].Value);
+                    command.Parameters.AddWithValue("@photo", dataGridView2.Rows[i].Cells[6].Value);
+                    command.Parameters.AddWithValue("@date_naissance", dataGridView2.Rows[i].Cells[7].Value);
+                    command.Parameters.AddWithValue("@email", dataGridView2.Rows[i].Cells[8].Value);
 
                     conX.Open();
                     command.ExecuteNonQuery();
-                    
-                   
+                    conX.Close();
                 }
-               
-                catch (System.Data.SqlClient.SqlException expe)
+             //   catch (System.Data.SqlClient.SqlException expe)
                 {
-                    MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
+              //      MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
                 }
-                finally { conX.Close(); }
-                MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
+
+
+
             }
-           
+            MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
+
+
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand(@"DELETE FROM Eleves WHERE claS='GI-3' ", conX);
+            SqlCommand cmd = new SqlCommand(@"DELETE FROM Eleves WHERE claS='"+ comboBox4.SelectedItem.ToString() + "' ", conX);
             conX.Open();
             cmd.ExecuteNonQuery();
             conX.Close();

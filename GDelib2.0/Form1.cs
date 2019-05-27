@@ -225,7 +225,7 @@ namespace GDelib2._0
             {
 
                 textLogin.Text = "Login";
-                textLogin.ForeColor = Color.Silver;
+                textLogin.ForeColor = Color.FromArgb(9, 9, 9);
             };
 
 
@@ -233,7 +233,7 @@ namespace GDelib2._0
 
         private void textPassword_TextChanged(object sender, EventArgs e)
         {
-
+            textPassword.ForeColor = Color.Black;
         }
 
         private void password_Enter(object sender, EventArgs e)
@@ -252,16 +252,47 @@ namespace GDelib2._0
 
         private void password_leave(object sender, EventArgs e)
         {
-
-            if (textPassword.Text == "")
+/*
+            if (textPassword.Text != "Password")
             {
                 textPassword.UseSystemPasswordChar = false;
                 textPassword.Text = "password";
-                textPassword.ForeColor = Color.Silver;
+                textPassword.ForeColor = Color.Silver;}
 
-               
+    */           
 
-            };
+            
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textLogin_TextChanged(object sender, EventArgs e)
+        {
+            textLogin.ForeColor = Color.Black;
+        }
+
+        private void textLogin_MouseEnter(object sender, EventArgs e)
+        {
+            textLogin.ForeColor = Color.FromArgb(215, 4, 51);
+        }
+
+        private void textLogin_MouseLeave(object sender, EventArgs e)
+        {
+            textLogin.ForeColor = Color.FromArgb(90, 90, 90);
+        }
+
+        private void textPassword_MouseEnter(object sender, EventArgs e)
+        {
+            textPassword.ForeColor = Color.FromArgb(215, 4, 51);
+        }
+
+        private void textPassword_MouseLeave(object sender, EventArgs e)
+        {
+
+            textPassword.ForeColor = Color.FromArgb(90, 90, 90);
         }
     }
 }

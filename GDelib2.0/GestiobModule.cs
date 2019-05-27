@@ -33,6 +33,8 @@ namespace GDelib2._0
         private Control _cntrl;
         private int _CornerRadius = 30;
 
+       // public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
 
@@ -149,6 +151,9 @@ namespace GDelib2._0
 
         private void button6_Click(object sender, EventArgs e)
         {
+            button6.ForeColor = Color.FromArgb(215, 4, 51);
+            button1.ForeColor = Color.White;
+            button7.ForeColor = Color.White;
             panel8.BackColor = Color.Black;
             panel9.BackColor = Color.FromArgb(215, 4, 51);          
             panel10.BackColor = Color.Black;
@@ -200,7 +205,9 @@ namespace GDelib2._0
         {
             // tabControl1.Show();
             panel2.Hide();
-
+            button1.ForeColor= Color.FromArgb(215, 4, 51);
+            button6.ForeColor = Color.White;
+            button7.ForeColor = Color.White;
             configurationFilier1.Show();
             this.BackgroundImage = null;
             collecteNotes1.Hide();
@@ -289,6 +296,9 @@ namespace GDelib2._0
 
         private void button7_Click(object sender, EventArgs e)
         {
+            button7.ForeColor = Color.FromArgb(215, 4, 51);
+            button6.ForeColor = Color.White;
+            button1.ForeColor = Color.White;
             panel8.BackColor = Color.Black;
             panel9.BackColor = Color.Black;
             panel10.BackColor = Color.FromArgb(215, 4, 51);
@@ -312,7 +322,7 @@ namespace GDelib2._0
 
         private void close_Enter(object sender, EventArgs e)
         {
-            button2.BackColor = Color.Red;
+            button2.BackColor = Color.FromArgb(215, 4, 51);
         }
 
         private void close_leave(object sender, EventArgs e)
@@ -323,7 +333,7 @@ namespace GDelib2._0
         private void button2_MouseEnter(object sender, EventArgs e)
         {
 
-            button2.BackColor = Color.Red;
+            button2.BackColor = Color.FromArgb(215, 4, 51);
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)

@@ -31,9 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteM1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statuM1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,9 @@
             this.statuM5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteM6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statuM6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,39 +85,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(927, 477);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(6, 574);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 66);
-            this.panel1.TabIndex = 26;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::GDelib2._0.Properties.Resources.Entypo_e716_0__64;
-            this.button1.Location = new System.Drawing.Point(815, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 56);
-            this.button1.TabIndex = 21;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_2709_0__64;
-            this.button2.Location = new System.Drawing.Point(689, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 56);
-            this.button2.TabIndex = 22;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // Name
             // 
@@ -185,6 +152,39 @@
             // 
             this.statuM6.HeaderText = "statu";
             this.statuM6.Name = "statuM6";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(6, 574);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(943, 66);
+            this.panel1.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::GDelib2._0.Properties.Resources.Entypo_e716_0__64;
+            this.button1.Location = new System.Drawing.Point(815, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 56);
+            this.button1.TabIndex = 21;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_2709_0__64;
+            this.button2.Location = new System.Drawing.Point(689, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 56);
+            this.button2.TabIndex = 22;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // pvSEM
             // 

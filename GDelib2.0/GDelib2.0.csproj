@@ -328,5 +328,11 @@
   <ItemGroup>
     <None Include="Resources\Entypo_f342%280%29_64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

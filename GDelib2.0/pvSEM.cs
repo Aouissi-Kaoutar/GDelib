@@ -15,6 +15,10 @@ namespace GDelib2._0
     {
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         List<string> listModule;
+        List<string> listId_Module;
+        
+         List<string> liseEleves;
+        int rrr = 0;
         string clas;
         string semestre;
         string libele;
@@ -27,10 +31,70 @@ namespace GDelib2._0
             this.libele = libele;
         }
 
+        private void kkkk2()
+        {
+                conX.Open();
+                string listeEleve = "select Id_eleve from Eleves where claS='" + clas + "'and semester='" + semestre + "'";
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = conX;
+                command.CommandText = listeEleve;
+
+
+                SqlDataReader Eleves = command.ExecuteReader();
+                liseEleves = new List<string>();
+                for (int j = 0; Eleves.Read(); j++)
+                {
+                    liseEleves.Add(Eleves["Id_eleve"].ToString());
+                }
+                conX.Close();
+            for (int i = 0; i < liseEleves.Count; i++)
+            {
+                string listeNote = "select nom,prenom,nomElemPeda,note,res,id_elem_PDG from notes where claS='" + clas+"' and semester='"+semestre+"' and id_eleve='" + liseEleves[i] + "' ";
+                SqlCommand command2 = new SqlCommand();
+                command2.Connection = conX;
+                command2.CommandText = listeNote;
+                conX.Open();
+                SqlDataReader Notes = command2.ExecuteReader();
+
+                dataGridView1.Rows.Add();
+                rrr++;
+
+
+                for (int j = 0; Notes.Read(); j++)
+                {
+                    String nom = Notes["nom"].ToString();
+                    String prenom = Notes.GetString(1);
+                    dataGridView1.Rows[i].Cells["Name"].Value = nom + " " + prenom;
+                    int k = j+1;
+                    int indic;
+                    String Note = Notes["id_elem_PDG"].ToString();
+                    for (indic = 1; indic < 7; indic++)
+                    {
+                        if (@Note == listModule[j]) { 
+                        dataGridView1.Rows[i].Cells["noteM"+k].Value = Notes["note"];
+                        dataGridView1.Rows[i].Cells["statuM"+k].Value = Notes["res"];
+                    }
+                    }
+                    
+                }
+
+                conX.Close();
+            }
+
+
+
+        }
+
+       
         private void pvSEM_Load(object sender, EventArgs e)
         {
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.ColumnHeadersHeight = 20;
+
+
+           
+
+        dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.ColumnHeadersHeight = 30;
             label1.Text = libele;
 
             dataGridView1.BorderStyle = BorderStyle.None;
@@ -45,87 +109,20 @@ namespace GDelib2._0
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            String query = "SELECT * FROM dbo.notes WHERE claS='"+clas+"'and semester=" + semestre;
 
-            try { 
-            conX.Open();
-
-            SqlCommand command = new SqlCommand();
-            command.Connection = conX;
-            command.CommandText = query;
-
-            SqlDataReader d = command.ExecuteReader();
-
-                /* DataTable dt = new DataTable();
-                 dt.Columns.Add(new DataColumn("id_eleve", typeof(string)));
-                 dt.Columns.Add(new DataColumn("nom", typeof(string)));
-                 dt.Columns.Add(new DataColumn("prenom", typeof(string)));
-                 dt.Columns.Add(new DataColumn("RESULTA", typeof(string)));
-                 dataGridView1.DataSource = dt;*/
-
-                /*  var col3 = new DataGridViewTextBoxColumn();
-                  var col4 = new DataGridViewCheckBoxColumn();
-                  var col5 = new DataGridViewTextBoxColumn();
-                  var col6 = new DataGridViewCheckBoxColumn();
-
-                  col3.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-                  col4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-                  col5.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-                  col6.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-
-                  col3.HeaderText = "id_eleve";
-                  col3.Name = "id_eleve";
-
-                  col4.HeaderText = "nom";
-                  col4.Name = "nom";
-
-                  col5.HeaderText = "prenom";
-                  col5.Name = "prenom";
-
-                  col6.HeaderText = "RESULTA";
-                  col6.Name = "RESULTA";
-
-
-                  dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col3, col4, col5, col6 });*/
-
-                /* for (int i = 0; d.Read(); i++)
-                 {
-                     dataGridView1.Rows.Add();
-
-                     dataGridView1.Rows[i].Cells["id_eleve"].Value = d["id_eleve"];
-
-                     dataGridView1.Rows[i].Cells["nom"].Value = d["nom"];
-
-                     dataGridView1.Rows[i].Cells["prenom"].Value = d["prenom"];
-
-                     //  dataGridView1.Rows[i].Cells["filier"].Value = d["claS"];
-
-                     dataGridView1.Rows[i].Cells["RESULTA"].Value = d["note"];
-
-                 }*/
                 dataGridView1.ColumnHeadersHeight = dataGridView1.ColumnHeadersHeight * 2;
                 dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
                 dataGridView1.CellPainting += new DataGridViewCellPaintingEventHandler(dataGridView1_CellPainting);
                 dataGridView1.Paint += new PaintEventHandler(dataDridView1_Paint);
                 dataGridView1.Scroll += new ScrollEventHandler(dataDridView1_Scroll);
                 dataGridView1.ColumnWidthChanged +=new DataGridViewColumnEventHandler(dataGridView1_ColumnWhidthChanged);
+                
 
 
-
+            
             }
-                 catch(Exception exp)
-                 {
-                     MessageBox.Show("manque un champ\n \n \n" + exp.Message);
-                 }
 
-
-
-                 conX.Close();
-
-         
-
-
-            }
+        
 
         private void dataGridView1_CellPainting(Object sender,DataGridViewCellPaintingEventArgs e) {
             if(e.RowIndex==-1 && e.ColumnIndex> -1)
@@ -159,18 +156,11 @@ namespace GDelib2._0
                 for (int j = 0; d.Read(); j++)
                 {
                     listModule.Add(d["nom_elemPDG"].ToString());
+                  //  listId_Module.Add(d["id_elem_PDG"].ToString());
                 }
-            }
-            catch (Exception exp)
-            {
-                MessageBox.Show(exp.Message);
-            }
-            finally
-            {
-                conX.Close();
-            }
 
-            int k = 0;
+
+                int k = 0;
             for (int i = 1; i < 12; i = i + 2)
             {
 
@@ -188,30 +178,7 @@ namespace GDelib2._0
                 k++;
             }
 
-
-
-
-
-            string query2 = "select * from ElementPDG where clas='" + clas + "'and semestre='" + semestre + "'";
-
-            try
-            {
-                SqlCommand command = new SqlCommand();
-                command.Connection = conX;
-                command.CommandText = query2;
-                conX.Open();
-                SqlDataReader d2 = command.ExecuteReader();
-                for (int i = 0; d2.Read(); i++)
-                {
-                    dataGridView1.Rows.Add();
-
-                    dataGridView1.Rows[i].Cells["id_eleve"].Value = d2["id_eleve"];
-
-                    dataGridView1.Rows[i].Cells["nom"].Value = d2["nom"];
-
-                   
-                }
-             }
+            }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message);
@@ -220,7 +187,13 @@ namespace GDelib2._0
             {
                 conX.Close();
             }
+
+            kkkk2();
+          
         }
+
+
+           
 
             public void dataDridView1_Scroll(object sender, ScrollEventArgs e) {
             Rectangle rtHeader = dataGridView1.DisplayRectangle;
