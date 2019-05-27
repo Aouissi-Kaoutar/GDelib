@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using KimToo;
 namespace GDelib2._0
 {
     public partial class pvSEM : Form
@@ -210,7 +213,64 @@ namespace GDelib2._0
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+             
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = "C: ";
+            saveFileDialog1.Title = "Enregistrer PDF"; 
+            saveFileDialog1.Filter = "PDF Files| *.pdf"; ;
+
+
+            if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                Document doc = new iTextSharp.text.Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+                PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(saveFileDialog1.FileName, System.IO.FileMode.Create));
+                PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+                doc.Open();  //open Document to write
+                             // PdfPCell cell = new PdfPCell(new Phrase("Header spanning 3 columns", new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.YELLOW)));
+
+                //table.AddCell(cell);
+                //  int niv = int.Parse(comboBox8.SelectedValue.ToString());
+                //int annee1 = int.Parse(comboBox6.SelectedValue.ToString());
+                //int annee2 = int.Parse(comboBox6.SelectedValue.ToString()) - 1;
+               
+              
+
+                Paragraph paragraph = new Paragraph(" UNIVERSITE MOHAMMED PREMIER \n Ecole Nationale des Sciences Appliquées(ENSA) \n Oujda-Maroc \n ");
+                paragraph.Alignment = Element.ALIGN_CENTER;
+                doc.Add(paragraph);
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+
+                    table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
+                }
+                table.HeaderRows = 1;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    for (int k = 0; k < dataGridView1.Columns.Count; k++)
+                    {
+                        if (dataGridView1[k, i].Value != null)
+                        {
+                            table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                        }
+                    }
+                }
+
+                doc.Add(table);
+                doc.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            easyHTMLReports1.AddHorizontalRule();
+            easyHTMLReports1.AddDatagridView(dataGridView1);
+            easyHTMLReports1.ShowPrintPreviewDialog();
         }
     }
-}
+
+    }
+

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
     <Reference Include="Excel.Helper, Version=1.0.1.0, Culture=neutral, PublicKeyToken=ab40b1b8217243eb, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReaderHelper.1.0.3.0\lib\Excel.Helper.dll</HintPath>
     </Reference>
@@ -44,10 +47,6 @@
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\..\..\Downloads\itextsharp\itextsharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel1">
-      <HintPath>..\..\..\..\..\Downloads\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -74,6 +73,12 @@
     </Compile>
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="annuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="annuel.Designer.cs">
+      <DependentUpon>annuel.cs</DependentUpon>
     </Compile>
     <Compile Include="collecteNotes.cs">
       <SubType>UserControl</SubType>
@@ -113,6 +118,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PVannuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVannuel.Designer.cs">
+      <DependentUpon>PVannuel.cs</DependentUpon>
+    </Compile>
     <Compile Include="pvRAT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="annuel.resx">
+      <DependentUpon>annuel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="collecteNotes.resx">
       <DependentUpon>collecteNotes.cs</DependentUpon>
@@ -162,6 +176,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PVannuel.resx">
+      <DependentUpon>PVannuel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pvRAT.resx">
       <DependentUpon>pvRAT.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,24 +227,6 @@
     <None Include="Resources\Etudiants.png" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>5</VersionMajor>
@@ -342,6 +341,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\100.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Microsoft\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="itextsharp.xtra.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="itextsharp.pdfa.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="itextsharp.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.Office.Interop.Excel.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dllme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="office.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -56,12 +56,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.ListeEtd.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -77,6 +81,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.button4);
@@ -105,6 +110,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 52);
             this.panel3.TabIndex = 15;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // radioButton5
             // 
@@ -112,10 +118,10 @@
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.Location = new System.Drawing.Point(204, 22);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(92, 22);
+            this.radioButton5.Size = new System.Drawing.Size(98, 22);
             this.radioButton5.TabIndex = 13;
             this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "rattrapage";
+            this.radioButton5.Text = "Rattrapage";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
@@ -125,10 +131,10 @@
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton6.Location = new System.Drawing.Point(70, 22);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(75, 22);
+            this.radioButton6.Size = new System.Drawing.Size(86, 22);
             this.radioButton6.TabIndex = 12;
             this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "ordinair";
+            this.radioButton6.Text = "Ordinaire";
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
@@ -136,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(1, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 11;
@@ -158,10 +164,10 @@
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(204, 32);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(96, 22);
+            this.radioButton4.Size = new System.Drawing.Size(98, 22);
             this.radioButton4.TabIndex = 2;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "semestre2";
+            this.radioButton4.Text = "Semestre2";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
@@ -171,10 +177,10 @@
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(70, 32);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(96, 22);
+            this.radioButton3.Size = new System.Drawing.Size(98, 22);
             this.radioButton3.TabIndex = 1;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "semestre1";
+            this.radioButton3.Text = "Semestre1";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -191,7 +197,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(598, 229);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 33);
@@ -203,10 +209,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(241, 303);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 53);
+            this.button2.Size = new System.Drawing.Size(119, 33);
             this.button2.TabIndex = 9;
             this.button2.Text = "Afficher";
             this.button2.UseVisualStyleBackColor = false;
@@ -215,7 +221,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(213, 232);
+            this.textBox2.Location = new System.Drawing.Point(197, 232);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(390, 29);
             this.textBox2.TabIndex = 8;
@@ -248,32 +254,32 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 242);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(7, 243);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(187, 20);
+            this.label10.Size = new System.Drawing.Size(182, 18);
             this.label10.TabIndex = 5;
-            this.label10.Text = "importer la Liste des note";
+            this.label10.Text = "Importer la Liste des notes";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 190);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(13, 180);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 20);
+            this.label9.Size = new System.Drawing.Size(95, 18);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Element Pedagogique";
+            this.label9.Text = "ElementPDG";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(13, 138);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 20);
+            this.label8.Size = new System.Drawing.Size(47, 18);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Filier";
+            this.label8.Text = "Filiére";
             // 
             // tabPage2
             // 
@@ -306,10 +312,10 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(307, 140);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 45);
+            this.button3.Size = new System.Drawing.Size(185, 45);
             this.button3.TabIndex = 35;
             this.button3.Text = "PV semestrielle";
             this.button3.UseVisualStyleBackColor = false;
@@ -318,10 +324,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(27, 140);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(93, 140);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 45);
+            this.button1.Size = new System.Drawing.Size(185, 45);
             this.button1.TabIndex = 34;
             this.button1.Text = "la liste des rattrapage";
             this.button1.UseVisualStyleBackColor = false;
@@ -383,12 +389,47 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(748, 419);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Calcul annuel";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(168, 132);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 33);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "PV annuel";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(102, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(270, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Filére";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // collecteNotes
             // 
@@ -407,6 +448,8 @@
             this.tabPage2.ResumeLayout(false);
             this.ListeEtd.ResumeLayout(false);
             this.ListeEtd.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +484,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
