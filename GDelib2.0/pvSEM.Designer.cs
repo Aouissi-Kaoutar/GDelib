@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(2, 9);
@@ -98,8 +98,8 @@
             // 
             // statuM1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.statuM1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.statuM1.DefaultCellStyle = dataGridViewCellStyle2;
             this.statuM1.HeaderText = "statuM1";
             this.statuM1.Name = "statuM1";
             // 
@@ -155,7 +155,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(6, 574);
@@ -169,7 +169,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::GDelib2._0.Properties.Resources.Entypo_e716_0__64;
-            this.button1.Location = new System.Drawing.Point(815, 4);
+            this.button1.Location = new System.Drawing.Point(132, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 56);
             this.button1.TabIndex = 21;
@@ -180,12 +180,13 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_2709_0__64;
-            this.button2.Location = new System.Drawing.Point(689, 4);
+            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_e758_0__64;
+            this.button2.Location = new System.Drawing.Point(6, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 56);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pvSEM
             // 
@@ -196,7 +197,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-           // this.Name = "pvSEM";
+            //this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
+
+
 
 namespace GDelib2._0
 {
@@ -260,5 +265,48 @@ namespace GDelib2._0
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Document(*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ToExcel(dataGridView1, sfd.FileName);
+            }
+        }
+
+
+            public void ToExcel(DataGridView dGV, string filename)
+            {
+                string stOutput = "";
+                string sHeaders = "";
+                for (int j = 0; j < dGV.Columns.Count; j++)
+                    sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+                stOutput += sHeaders + "\r\n";
+
+                for (int i = 0; i < dGV.RowCount - 1; i++)
+                {
+                    string stline = "";
+                    for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+
+                        stline = stline.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                    stOutput += stline + "\t \n";
+                }
+                Encoding utf16 = Encoding.GetEncoding(1254);
+
+                byte[] output = utf16.GetBytes(stOutput);
+                FileStream fs = new FileStream(filename, FileMode.Create);
+                BinaryWriter bw = new BinaryWriter(fs);
+                bw.Write(output, 0, output.Length);
+                bw.Flush();
+                bw.Close();
+                fs.Close();
+
+            }
+
+
     }
 }

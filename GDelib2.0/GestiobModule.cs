@@ -196,7 +196,7 @@ namespace GDelib2._0
         {
             panel2.Show();
             configurationFilier1.Hide();
-            this.BackgroundImage = Properties.Resources.Sans_titre;
+           // this.BackgroundImage = Properties.Resources.Sans_titre;
             collecteNotes1.Hide();
 
         }

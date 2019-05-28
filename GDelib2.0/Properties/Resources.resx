@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="seo-analysis3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seo-analysis3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sans_titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans_titre1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +147,9 @@
   </data>
   <data name="Entypo_e716(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e716(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sans titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans_titre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_e729(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e729(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +196,17 @@
   <data name="1492790945-39minimize_84242" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1492790945-39minimize_84242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\100.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ensaoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ensaoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_e758(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e758(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_d83d(1)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_d83d(1)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="couverture-hp1-1-1300x560" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\couverture-hp1-1-1300x560.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_e729(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e729(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -210,6 +216,9 @@
   </data>
   <data name="product_template_170" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product_template_170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seo-analysis3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seo-analysis3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nnnnn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nnnnn1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +247,8 @@
   <data name="seo-analysis2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seo-analysis2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="couverture-hp1-1-1300x560" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\couverture-hp1-1-1300x560.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\100.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_d83d(0)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_d83d(0).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +256,7 @@
   <data name="284-2849807_the-time-for-mobile-site-is-now-digital-learning-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\284-2849807_the-time-for-mobile-site-is-now-digital-learning-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sans titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sans_titre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zzzzzz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zzzzzz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

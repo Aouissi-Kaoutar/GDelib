@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,6 +46,20 @@
             this.statuM5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteM6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statuM6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteM12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuM12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RESULTA_FINAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,7 +67,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(1, 613);
@@ -67,7 +81,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::GDelib2._0.Properties.Resources.Entypo_e716_0__64;
-            this.button1.Location = new System.Drawing.Point(815, 4);
+            this.button1.Location = new System.Drawing.Point(155, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 56);
             this.button1.TabIndex = 21;
@@ -77,12 +91,13 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_2709_0__64;
-            this.button2.Location = new System.Drawing.Point(689, 4);
+            this.button2.Image = global::GDelib2._0.Properties.Resources.Entypo_e758_0__64;
+            this.button2.Location = new System.Drawing.Point(29, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 56);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -100,7 +115,21 @@
             this.noteM5,
             this.statuM5,
             this.noteM6,
-            this.statuM6});
+            this.statuM6,
+            this.noteM7,
+            this.statuM7,
+            this.noteM8,
+            this.statuM8,
+            this.noteM9,
+            this.statuM9,
+            this.noteM10,
+            this.statuM10,
+            this.noteM11,
+            this.statuM11,
+            this.noteM12,
+            this.statuM12,
+            this.NOTE,
+            this.RESULTA_FINAL});
             this.dataGridView1.Location = new System.Drawing.Point(1, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(927, 477);
@@ -118,8 +147,8 @@
             // 
             // statuM1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.statuM1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.statuM1.DefaultCellStyle = dataGridViewCellStyle1;
             this.statuM1.HeaderText = "statuM1";
             this.statuM1.Name = "statuM1";
             // 
@@ -173,9 +202,79 @@
             this.statuM6.HeaderText = "statuM6";
             this.statuM6.Name = "statuM6";
             // 
+            // noteM7
+            // 
+            this.noteM7.HeaderText = "noteM7";
+            this.noteM7.Name = "noteM7";
+            // 
+            // statuM7
+            // 
+            this.statuM7.HeaderText = "statuM7";
+            this.statuM7.Name = "statuM7";
+            // 
+            // noteM8
+            // 
+            this.noteM8.HeaderText = "noteM8";
+            this.noteM8.Name = "noteM8";
+            // 
+            // statuM8
+            // 
+            this.statuM8.HeaderText = "statuM8";
+            this.statuM8.Name = "statuM8";
+            // 
+            // noteM9
+            // 
+            this.noteM9.HeaderText = "noteM9";
+            this.noteM9.Name = "noteM9";
+            // 
+            // statuM9
+            // 
+            this.statuM9.HeaderText = "statuM9";
+            this.statuM9.Name = "statuM9";
+            // 
+            // noteM10
+            // 
+            this.noteM10.HeaderText = "noteM10";
+            this.noteM10.Name = "noteM10";
+            // 
+            // statuM10
+            // 
+            this.statuM10.HeaderText = "statuM10";
+            this.statuM10.Name = "statuM10";
+            // 
+            // noteM11
+            // 
+            this.noteM11.HeaderText = "noteM11";
+            this.noteM11.Name = "noteM11";
+            // 
+            // statuM11
+            // 
+            this.statuM11.HeaderText = "statuM11";
+            this.statuM11.Name = "statuM11";
+            // 
+            // noteM12
+            // 
+            this.noteM12.HeaderText = "noteM12";
+            this.noteM12.Name = "noteM12";
+            // 
+            // statuM12
+            // 
+            this.statuM12.HeaderText = "statuM12";
+            this.statuM12.Name = "statuM12";
+            // 
+            // NOTE
+            // 
+            this.NOTE.HeaderText = "NOTE";
+            this.NOTE.Name = "NOTE";
+            // 
+            // RESULTA_FINAL
+            // 
+            this.RESULTA_FINAL.HeaderText = "RESULTA_FINAL";
+            this.RESULTA_FINAL.Name = "RESULTA_FINAL";
+            // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(-3, 26);
@@ -193,7 +292,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            //this.Name = "PVanuelle";
+        //    this.Name = "PVanuelle";
             this.Text = "PVanuelle";
             this.Load += new System.EventHandler(this.PVanuelle_Load);
             this.panel1.ResumeLayout(false);
@@ -208,6 +307,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteM1;
         private System.Windows.Forms.DataGridViewTextBoxColumn statuM1;
@@ -221,6 +321,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statuM5;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteM6;
         private System.Windows.Forms.DataGridViewTextBoxColumn statuM6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteM12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuM12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RESULTA_FINAL;
     }
 }

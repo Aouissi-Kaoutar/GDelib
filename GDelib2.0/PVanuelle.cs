@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GDelib2._0
 {
@@ -70,7 +71,7 @@ namespace GDelib2._0
                 conX.Open();
                 SqlDataReader Notes = command2.ExecuteReader();
                 dataGridView1.Rows.Add();
-                string f = "";
+                float f = 0;
                 for (int j = 0; Notes.Read(); j++)
                 {
                     String nom = Notes["nom"].ToString();
@@ -82,11 +83,12 @@ namespace GDelib2._0
                     String nomModule = Notes["nomElemPeda"].ToString().Replace(" ", string.Empty);
                     int b = 1;
 
-                    f = f + "*****" + nomModule;
+                    
                     foreach (String s in listModule)
                     {
                         if (s == nomModule)
                         {
+                            f = f +float.Parse( Notes["note"].ToString());
                             dataGridView1.Rows[i].Cells["noteM" + b].Value = Notes["note"];
                             dataGridView1.Rows[i].Cells["statuM" + b].Value = Notes["res"];
 
@@ -94,7 +96,15 @@ namespace GDelib2._0
                         b++;
                     }
 
+                    dataGridView1.Rows[i].Cells["NOTE"].Value = f/12;
+                    if ((f / 12) >= 12) { 
+                    dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value ="VALIDE";
+                    }
+                    else
+                    {
 
+                        dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                    }
 
                 }
 
@@ -205,6 +215,48 @@ namespace GDelib2._0
             rtHeader.Height = dataGridView1.ColumnHeadersHeight / 2;
             dataGridView1.Invalidate(rtHeader);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Document(*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ToExcel(dataGridView1, sfd.FileName);
+            }
+        }
+
+
+        public void ToExcel(DataGridView dGV, string filename)
+        {
+            string stOutput = "";
+            string sHeaders = "";
+            for (int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+            stOutput += sHeaders + "\r\n";
+
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+            {
+                string stline = "";
+                for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+
+                    stline = stline.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                stOutput += stline + "\t \n";
+            }
+            Encoding utf16 = Encoding.GetEncoding(1254);
+
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length);
+            bw.Flush();
+            bw.Close();
+            fs.Close();
+
+        }
+
 
 
     }

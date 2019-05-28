@@ -185,7 +185,7 @@
             // configurationFilier1
             // 
             this.configurationFilier1.Location = new System.Drawing.Point(194, 32);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(5);
             this.configurationFilier1.Name = "configurationFilier1";
             this.configurationFilier1.Size = new System.Drawing.Size(1012, 591);
             this.configurationFilier1.TabIndex = 9;
@@ -193,7 +193,7 @@
             // collecteNotes1
             // 
             this.collecteNotes1.Location = new System.Drawing.Point(191, 44);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(5);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(1015, 612);
             this.collecteNotes1.TabIndex = 8;
@@ -203,7 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::GDelib2._0.Properties.Resources.Sans_titre;
+            this.BackgroundImage = global::GDelib2._0.Properties.Resources.zzzzzz;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1217, 618);
             this.Controls.Add(this.configurationFilier1);
