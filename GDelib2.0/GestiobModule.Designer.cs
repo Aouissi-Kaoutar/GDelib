@@ -40,18 +40,20 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.configurationFilier1 = new GDelib2._0.configurationFilier();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
+            this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel9);
@@ -65,11 +67,11 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.PowderBlue;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gray;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(19, 163);
@@ -91,11 +93,11 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.BackColor = System.Drawing.Color.PowderBlue;
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Gray;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(19, 0);
@@ -118,11 +120,11 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.BackColor = System.Drawing.Color.PowderBlue;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(58)))), ((int)(((byte)(57)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Font = new System.Drawing.Font("Century Schoolbook", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Gray;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(19, 0);
@@ -143,8 +145,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GDelib2._0.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 25);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 132);
             this.pictureBox1.TabIndex = 7;
@@ -162,7 +164,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1181, -8);
+            this.button2.Location = new System.Drawing.Point(1174, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(43, 44);
             this.button2.TabIndex = 5;
@@ -176,38 +178,49 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(29)))), ((int)(((byte)(47)))));
+            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
             this.panel2.Location = new System.Drawing.Point(0, 559);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1239, 137);
             this.panel2.TabIndex = 7;
             // 
-            // configurationFilier1
+            // pictureBox2
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(194, 32);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(5);
-            this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(1012, 591);
-            this.configurationFilier1.TabIndex = 9;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(198, 67);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1019, 556);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(191, 44);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(5);
+            this.collecteNotes1.Location = new System.Drawing.Point(198, -1);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(1015, 612);
-            this.collecteNotes1.TabIndex = 8;
+            this.collecteNotes1.Size = new System.Drawing.Size(1019, 624);
+            this.collecteNotes1.TabIndex = 10;
+            // 
+            // configurationFilier1
+            // 
+            this.configurationFilier1.Location = new System.Drawing.Point(198, -1);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.configurationFilier1.Name = "configurationFilier1";
+            this.configurationFilier1.Size = new System.Drawing.Size(1019, 624);
+            this.configurationFilier1.TabIndex = 11;
+            this.configurationFilier1.Load += new System.EventHandler(this.configurationFilier1_Load);
             // 
             // GestiobModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::GDelib2._0.Properties.Resources.zzzzzz;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1217, 618);
             this.Controls.Add(this.configurationFilier1);
             this.Controls.Add(this.collecteNotes1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
@@ -223,6 +236,7 @@
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
             }
@@ -240,6 +254,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private configurationFilier configurationFilier1;
         private collecteNotes collecteNotes1;
     }

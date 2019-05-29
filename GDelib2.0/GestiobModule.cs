@@ -35,7 +35,7 @@ namespace GDelib2._0
 
        // public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         public Control TargetControl
@@ -348,6 +348,11 @@ namespace GDelib2._0
         }
 
         private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void configurationFilier1_Load(object sender, EventArgs e)
         {
 
         }
