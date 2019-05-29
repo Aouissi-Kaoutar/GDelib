@@ -294,5 +294,10 @@ namespace GDelib2._0
 
             textPassword.ForeColor = Color.FromArgb(90, 90, 90);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

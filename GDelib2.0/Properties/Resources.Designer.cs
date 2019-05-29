@@ -221,6 +221,15 @@ namespace GDelib2._0.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à This file has been downloaded from https://www.dllme.com..
+        /// </summary>
+        internal static string dllme {
+            get {
+                return ResourceManager.GetString("dllme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ensaoo {
@@ -331,6 +340,36 @@ namespace GDelib2._0.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp_pdfa {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp_pdfa", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp_xtra {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp_xtra", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap kisspng_information_technology_consulting_consultant_manag_5af11f74cda371_3158595015257516688423 {
@@ -348,6 +387,26 @@ namespace GDelib2._0.Properties {
             get {
                 object obj = ResourceManager.GetObject("LOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] Microsoft_Office_Interop_Excel {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Office_Interop_Excel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] Microsoft_Office_Interop_Excel1 {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Office_Interop_Excel1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -378,6 +437,16 @@ namespace GDelib2._0.Properties {
             get {
                 object obj = ResourceManager.GetObject("nnnnn2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] office {
+            get {
+                object obj = ResourceManager.GetObject("office", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
