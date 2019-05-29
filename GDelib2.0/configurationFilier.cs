@@ -196,14 +196,14 @@ namespace GDelib2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dbEleve db = new dbEleve("SELECT * From notes", @"DELETE FROM notes ");
-            db.Show();
+          //  dbEleve db = new dbEleve("SELECT * From notes", @"DELETE FROM notes ");
+           // db.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            dbEleve db = new dbEleve("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
-            db.Show();
+         //dbEleve db = new dbEleve("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
+           // db.Show();
         }
     }
 }
