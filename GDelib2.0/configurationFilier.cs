@@ -190,19 +190,19 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DB db = new DB("SELECT * From Eleves", @"DELETE FROM Eleves ");
+            dbEleve db = new dbEleve("SELECT * From Eleves", @"DELETE FROM Eleves ");
             db.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DB db = new DB("SELECT * From notes", @"DELETE FROM notes ");
+            dbEleve db = new dbEleve("SELECT * From notes", @"DELETE FROM notes ");
             db.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            DB db = new DB("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
+            dbEleve db = new dbEleve("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
             db.Show();
         }
 

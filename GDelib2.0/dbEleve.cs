@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace GDelib2._0
 {
-    public partial class DB : Form
+    public partial class dbEleve : Form
     {
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         public string query;
         public string SupretionQuery;
-        public DB(string s,string k)
+        public dbEleve(string s,string k)
         {
             InitializeComponent();
             this.query = s;
