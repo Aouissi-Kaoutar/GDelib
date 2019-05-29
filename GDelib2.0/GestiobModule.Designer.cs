@@ -43,6 +43,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
             this.configurationFilier1 = new GDelib2._0.configurationFilier();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -196,20 +197,31 @@
             // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(198, -1);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.collecteNotes1.Location = new System.Drawing.Point(198, 3);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(1019, 624);
             this.collecteNotes1.TabIndex = 10;
             // 
             // configurationFilier1
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(198, -1);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.configurationFilier1.Location = new System.Drawing.Point(198, -5);
+            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4);
             this.configurationFilier1.Name = "configurationFilier1";
             this.configurationFilier1.Size = new System.Drawing.Size(1019, 624);
             this.configurationFilier1.TabIndex = 11;
             this.configurationFilier1.Load += new System.EventHandler(this.configurationFilier1_Load);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(413, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(543, 43);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Gestion de Déliberation 2.0";
             // 
             // GestiobModule
             // 
@@ -218,6 +230,7 @@
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1217, 618);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.configurationFilier1);
             this.Controls.Add(this.collecteNotes1);
             this.Controls.Add(this.pictureBox2);
@@ -238,6 +251,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
             }
 
@@ -257,5 +271,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private configurationFilier configurationFilier1;
         private collecteNotes collecteNotes1;
+        private System.Windows.Forms.Label label1;
     }
     }

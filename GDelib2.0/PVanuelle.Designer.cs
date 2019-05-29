@@ -326,7 +326,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PVanuelle";
+           // this.Name = "PVanuelle";
             this.Text = "PVanuelle";
             this.Load += new System.EventHandler(this.PVanuelle_Load);
             this.panel1.ResumeLayout(false);
