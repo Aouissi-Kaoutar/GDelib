@@ -87,11 +87,17 @@
     <Compile Include="configurationFilier.Designer.cs">
       <DependentUpon>configurationFilier.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB.cs">
+    <Compile Include="dbEleve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DB.Designer.cs">
-      <DependentUpon>DB.cs</DependentUpon>
+    <Compile Include="dbEleve.Designer.cs">
+      <DependentUpon>dbEleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diplome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diplome.Designer.cs">
+      <DependentUpon>Diplome.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -146,8 +152,11 @@
     <EmbeddedResource Include="configurationFilier.resx">
       <DependentUpon>configurationFilier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DB.resx">
-      <DependentUpon>DB.cs</DependentUpon>
+    <EmbeddedResource Include="dbEleve.resx">
+      <DependentUpon>dbEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diplome.resx">
+      <DependentUpon>Diplome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
