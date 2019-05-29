@@ -169,7 +169,7 @@ namespace GDelib2._0
             {
 
                 int k = 0;
-                for (int i = 1; i < 12; i = i + 2)
+                for (int i = 1; i < 24; i = i + 2)
                 {
 
                     Rectangle r1 = dataGridView1.GetCellDisplayRectangle(i, -1, true);
