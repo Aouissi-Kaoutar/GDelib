@@ -379,5 +379,10 @@ namespace GDelib2._0
             this.Hide();
             A.Show();
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

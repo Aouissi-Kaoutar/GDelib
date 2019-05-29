@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.acceuil = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.acceuil = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ListeEtd = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -49,9 +48,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
-            this.acceuil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.acceuil.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.ListeEtd.SuspendLayout();
@@ -70,27 +70,6 @@
             this.panel1.Size = new System.Drawing.Size(196, 530);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // acceuil
-            // 
-            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
-            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.acceuil.Controls.Add(this.label3);
-            this.acceuil.Location = new System.Drawing.Point(494, 487);
-            this.acceuil.Name = "acceuil";
-            this.acceuil.Size = new System.Drawing.Size(576, 419);
-            this.acceuil.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(56, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(457, 57);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Bienvenu sur GDelib2.0";
             // 
             // pictureBox1
             // 
@@ -155,6 +134,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // acceuil
+            // 
+            this.acceuil.BackgroundImage = global::GDelib2._0.Properties.Resources.Etudiants;
+            this.acceuil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.acceuil.Controls.Add(this.label3);
+            this.acceuil.Location = new System.Drawing.Point(494, 487);
+            this.acceuil.Name = "acceuil";
+            this.acceuil.Size = new System.Drawing.Size(576, 419);
+            this.acceuil.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(56, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(457, 57);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Bienvenu sur GDelib2.0";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -175,16 +175,6 @@
             this.tabPage1.Size = new System.Drawing.Size(748, 428);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.Black;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(748, 428);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
             // 
             // ListeEtd
             // 
@@ -276,6 +266,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(712, 303);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // button4
             // 
@@ -301,6 +292,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "choisir une feuil de stile";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(748, 428);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
             // admin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -315,9 +316,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.acceuil.ResumeLayout(false);
             this.acceuil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ListeEtd.ResumeLayout(false);

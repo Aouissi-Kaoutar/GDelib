@@ -14,7 +14,7 @@ namespace GDelib2._0
 {
     public partial class configurationFilier : UserControl
     {
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         public configurationFilier()
         {
@@ -204,6 +204,11 @@ namespace GDelib2._0
         {
          //dbEleve db = new dbEleve("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
            // db.Show();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

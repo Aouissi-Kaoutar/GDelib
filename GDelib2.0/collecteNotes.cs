@@ -14,7 +14,7 @@ namespace GDelib2._0
     public partial class collecteNotes : UserControl
     {
 
-        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         public string semestre=null;
         public string clas;
         public string ElemPDG;
@@ -147,6 +147,11 @@ namespace GDelib2._0
 
             PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
             pv.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

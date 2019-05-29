@@ -46,7 +46,7 @@
             // 
             // textLogin
             // 
-            this.textLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.textLogin.BackColor = System.Drawing.Color.White;
             this.textLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.textLogin.Location = new System.Drawing.Point(171, 141);
@@ -63,10 +63,10 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.BackColor = System.Drawing.Color.PowderBlue;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(29)))), ((int)(((byte)(47)))));
+            this.button6.ForeColor = System.Drawing.Color.Gray;
             this.button6.Location = new System.Drawing.Point(171, 254);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(332, 42);
@@ -77,7 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel3);
@@ -97,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(199, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(257, 31);
@@ -106,43 +106,43 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Location = new System.Drawing.Point(-9, -75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(671, 157);
+            this.panel3.Size = new System.Drawing.Size(671, 160);
             this.panel3.TabIndex = 17;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(167, 106);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.ForeColor = System.Drawing.Color.PowderBlue;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(619, 75);
+            this.button3.Location = new System.Drawing.Point(609, 78);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 46);
+            this.button3.Size = new System.Drawing.Size(57, 48);
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textPassword
             // 
-            this.textPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.textPassword.BackColor = System.Drawing.Color.White;
             this.textPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
