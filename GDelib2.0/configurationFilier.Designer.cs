@@ -112,7 +112,7 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(29, 79);
+            this.dataGridView2.Location = new System.Drawing.Point(29, 72);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(696, 299);
             this.dataGridView2.TabIndex = 13;
@@ -125,7 +125,7 @@
             "GI-3",
             "GI-4",
             "GI-5"});
-            this.comboBox4.Location = new System.Drawing.Point(187, 47);
+            this.comboBox4.Location = new System.Drawing.Point(186, 40);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(218, 26);
             this.comboBox4.TabIndex = 12;
@@ -144,7 +144,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Gray;
-            this.button9.Location = new System.Drawing.Point(519, 384);
+            this.button9.Location = new System.Drawing.Point(520, 377);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 32);
             this.button9.TabIndex = 10;
@@ -159,7 +159,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(632, 384);
+            this.button5.Location = new System.Drawing.Point(632, 377);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 32);
             this.button5.TabIndex = 9;
@@ -209,7 +209,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(116, 49);
+            this.label1.Location = new System.Drawing.Point(116, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 3;
@@ -257,7 +257,7 @@
             "GI-3",
             "GI-4",
             "GI-5"});
-            this.comboBox1.Location = new System.Drawing.Point(187, 47);
+            this.comboBox1.Location = new System.Drawing.Point(187, 36);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(218, 21);
             this.comboBox1.TabIndex = 30;
@@ -282,7 +282,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Gray;
-            this.button4.Location = new System.Drawing.Point(632, 41);
+            this.button4.Location = new System.Drawing.Point(632, 36);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 32);
             this.button4.TabIndex = 28;
@@ -296,7 +296,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(632, 384);
+            this.button3.Location = new System.Drawing.Point(632, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 32);
             this.button3.TabIndex = 27;
@@ -309,7 +309,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 54);
+            this.label2.Location = new System.Drawing.Point(107, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 12;
@@ -326,7 +326,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(696, 299);
             this.dataGridView1.TabIndex = 5;

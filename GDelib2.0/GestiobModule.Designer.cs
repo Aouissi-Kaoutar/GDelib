@@ -49,6 +49,7 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,6 +181,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel2.Controls.Add(this.collecteNotes1);
             this.panel2.Location = new System.Drawing.Point(0, 559);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1239, 137);
@@ -197,18 +199,19 @@
             // 
             // collecteNotes1
             // 
-            this.collecteNotes1.Location = new System.Drawing.Point(198, 3);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4);
+            this.collecteNotes1.Location = new System.Drawing.Point(198, -514);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(1019, 624);
+            this.collecteNotes1.Size = new System.Drawing.Size(1019, 578);
             this.collecteNotes1.TabIndex = 10;
+            this.collecteNotes1.Load += new System.EventHandler(this.collecteNotes1_Load_1);
             // 
             // configurationFilier1
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(198, -5);
+            this.configurationFilier1.Location = new System.Drawing.Point(198, 46);
             this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4);
             this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(1019, 624);
+            this.configurationFilier1.Size = new System.Drawing.Size(1019, 577);
             this.configurationFilier1.TabIndex = 11;
             this.configurationFilier1.Load += new System.EventHandler(this.configurationFilier1_Load);
             // 
@@ -217,7 +220,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(413, 12);
+            this.label1.Location = new System.Drawing.Point(360, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(543, 43);
             this.label1.TabIndex = 12;
@@ -232,7 +235,6 @@
             this.ClientSize = new System.Drawing.Size(1217, 618);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.configurationFilier1);
-            this.Controls.Add(this.collecteNotes1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
@@ -249,6 +251,7 @@
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
