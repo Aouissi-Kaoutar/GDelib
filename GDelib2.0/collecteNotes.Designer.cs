@@ -415,7 +415,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(132, 117);
+            this.button5.Location = new System.Drawing.Point(112, 116);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 43);
             this.button5.TabIndex = 35;

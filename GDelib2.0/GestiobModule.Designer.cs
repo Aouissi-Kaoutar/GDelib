@@ -40,16 +40,15 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.collecteNotes1 = new GDelib2._0.collecteNotes();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.configurationFilier1 = new GDelib2._0.configurationFilier();
-            this.collecteNotes1 = new GDelib2._0.collecteNotes();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +92,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(217, 89);
             this.panel3.TabIndex = 30;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button3
             // 
@@ -109,7 +107,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(193, 88);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Gestion des diplome";
+            this.button3.Text = "    Gestion des diplomes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -185,11 +183,20 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel2.Controls.Add(this.collecteNotes1);
             this.panel2.Location = new System.Drawing.Point(0, 559);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1239, 137);
             this.panel2.TabIndex = 7;
+            // 
+            // collecteNotes1
+            // 
+            this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
+            this.collecteNotes1.Location = new System.Drawing.Point(198, -1);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
+            this.collecteNotes1.Name = "collecteNotes1";
+            this.collecteNotes1.Size = new System.Drawing.Size(10181, 5228);
+            this.collecteNotes1.TabIndex = 13;
+            this.collecteNotes1.Load += new System.EventHandler(this.collecteNotes1_Load_1);
             // 
             // pictureBox2
             // 
@@ -200,23 +207,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
-            // collecteNotes1
-            // 
-            this.collecteNotes1.Location = new System.Drawing.Point(198, 3);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(4);
-            this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(1019, 624);
-            this.collecteNotes1.TabIndex = 10;
-            // 
-            // configurationFilier1
-            // 
-            this.configurationFilier1.Location = new System.Drawing.Point(198, -5);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(4);
-            this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(1019, 624);
-            this.configurationFilier1.TabIndex = 11;
-            this.configurationFilier1.Load += new System.EventHandler(this.configurationFilier1_Load);
             // 
             // label1
             // 
@@ -231,20 +221,12 @@
             // 
             // configurationFilier1
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(198, 65);
+            this.configurationFilier1.Location = new System.Drawing.Point(198, -1);
             this.configurationFilier1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
             this.configurationFilier1.Name = "configurationFilier1";
             this.configurationFilier1.Size = new System.Drawing.Size(10337, 5096);
             this.configurationFilier1.TabIndex = 14;
-            // 
-            // collecteNotes1
-            // 
-            this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
-            this.collecteNotes1.Location = new System.Drawing.Point(198, 65);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
-            this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(10181, 5228);
-            this.collecteNotes1.TabIndex = 13;
+            this.configurationFilier1.Load += new System.EventHandler(this.configurationFilier1_Load);
             // 
             // GestiobModule
             // 
@@ -271,10 +253,8 @@
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
             }
 

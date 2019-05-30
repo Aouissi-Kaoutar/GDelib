@@ -62,5 +62,10 @@ namespace GDelib2._0
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

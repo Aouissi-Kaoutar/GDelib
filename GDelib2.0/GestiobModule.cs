@@ -367,5 +367,10 @@ namespace GDelib2._0
         {
 
         }
+
+        private void collecteNotes1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

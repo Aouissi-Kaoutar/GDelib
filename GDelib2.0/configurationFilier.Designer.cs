@@ -88,7 +88,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(748, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "La liste des Etudiants";
+            this.tabPage1.Text = "La Liste Des Etudiants";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -139,27 +139,25 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.Gray;
+            this.button9.BackColor = System.Drawing.Color.PowderBlue;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Gray;
-            this.button9.Location = new System.Drawing.Point(519, 384);
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(533, 377);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 32);
             this.button9.TabIndex = 10;
             this.button9.Text = "Supprimer";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            this.button9.MouseEnter += new System.EventHandler(this.button9_MouseEnter);
-            this.button9.MouseLeave += new System.EventHandler(this.button9_MouseLeave);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Gray;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Location = new System.Drawing.Point(632, 377);
             this.button5.Name = "button5";
@@ -168,25 +166,21 @@
             this.button5.Text = "Enregistrer";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Gray;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button11.Location = new System.Drawing.Point(632, 41);
+            this.button11.Location = new System.Drawing.Point(632, 36);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(93, 32);
             this.button11.TabIndex = 8;
             this.button11.Text = "Afficher";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            this.button11.MouseEnter += new System.EventHandler(this.button11_MouseEnter);
-            this.button11.MouseLeave += new System.EventHandler(this.button11_MouseLeave);
             // 
             // textBox3
             // 
@@ -198,10 +192,10 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.Gray;
+            this.button12.BackColor = System.Drawing.Color.PowderBlue;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(632, 3);
             this.button12.Name = "button12";
@@ -210,8 +204,6 @@
             this.button12.Text = "Ajouter";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
-            this.button12.MouseEnter += new System.EventHandler(this.button12_MouseEnter);
-            this.button12.MouseLeave += new System.EventHandler(this.button12_MouseLeave);
             // 
             // label1
             // 
@@ -231,7 +223,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(748, 427);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Gestion des filiéres";
+            this.tabPage2.Text = "Gestion Des Filiéres";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // ListeEtd
@@ -272,9 +264,9 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Gray;
+            this.button8.BackColor = System.Drawing.Color.PowderBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(632, 3);
             this.button8.Name = "button8";
@@ -283,30 +275,26 @@
             this.button8.Text = "Ajouter";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            this.button8.MouseEnter += new System.EventHandler(this.button8_MouseEnter);
-            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Gray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Gray;
-            this.button4.Location = new System.Drawing.Point(632, 41);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(632, 36);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 32);
             this.button4.TabIndex = 28;
             this.button4.Text = "Afficher";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Gray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(632, 379);
             this.button3.Name = "button3";
@@ -315,8 +303,6 @@
             this.button3.Text = "Enregistrer";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // label2
             // 
@@ -357,22 +343,20 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(748, 427);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Visualisation de la base de donnee";
+            this.tabPage3.Text = "Visualisation de La Base De Donnee";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.PowderBlue;
+            this.button6.BackColor = System.Drawing.Color.White;
             this.button6.Font = new System.Drawing.Font("Century Schoolbook", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(483, 123);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(242, 233);
             this.button6.TabIndex = 4;
-            this.button6.Text = "Element Pedagogoque";
+            this.button6.Text = "Element Pédagogique";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
-            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
             // 
             // button2
             // 
@@ -385,8 +369,6 @@
             this.button2.Text = "Notes";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // panel1
             // 
@@ -403,14 +385,14 @@
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(196, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(432, 38);
+            this.label3.Size = new System.Drawing.Size(475, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "les tables des base de donne ";
+            this.label3.Text = "les tables de La  base de donne ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Century Schoolbook", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(26, 123);
             this.button1.Name = "button1";
@@ -419,8 +401,6 @@
             this.button1.Text = "Liste des etudiants";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // configurationFilier
             // 
