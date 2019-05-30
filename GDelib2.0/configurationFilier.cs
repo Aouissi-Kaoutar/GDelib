@@ -66,17 +66,18 @@ namespace GDelib2._0
             {
                // try
                 {
-                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,semester,date_naissance,email) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email)";
+                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,semester,date_naissance,email,etat) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email,@,etat)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView2.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView2.Rows[i].Cells[1].Value);
                     command.Parameters.AddWithValue("@prenom", dataGridView2.Rows[i].Cells[2].Value);
                     command.Parameters.AddWithValue("@claS", comboBox4.SelectedItem.ToString());
-                    command.Parameters.AddWithValue("@cne", dataGridView2.Rows[i].Cells[4].Value);
-                    command.Parameters.AddWithValue("@NappoG", dataGridView2.Rows[i].Cells[5].Value);
-                    command.Parameters.AddWithValue("@photo", dataGridView2.Rows[i].Cells[6].Value);
-                    command.Parameters.AddWithValue("@date_naissance", dataGridView2.Rows[i].Cells[7].Value);
-                    command.Parameters.AddWithValue("@email", dataGridView2.Rows[i].Cells[8].Value);
+                    command.Parameters.AddWithValue("@cne", dataGridView2.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@NappoG", dataGridView2.Rows[i].Cells[4].Value);
+                    command.Parameters.AddWithValue("@photo", dataGridView2.Rows[i].Cells[5].Value);
+                    command.Parameters.AddWithValue("@date_naissance", dataGridView2.Rows[i].Cells[6].Value);
+                    command.Parameters.AddWithValue("@email", dataGridView2.Rows[i].Cells[7].Value);
+                    command.Parameters.AddWithValue("@etat", dataGridView2.Rows[i].Cells[8].Value);
 
                     conX.Open();
                     command.ExecuteNonQuery();
@@ -149,15 +150,16 @@ namespace GDelib2._0
             {
                 try
                 {
+                    
                     String query = "INSERT INTO dbo.ElementPDG (id_elem_PDG,nom_elemPDG,clas,semestre,type,coefficient,noteElim,seuil_valida) VALUES (@id_elem_PDG,@nom_elemPDG,@clas,@semestre,@type,@coefficient,@noteElim,@seuil_valida)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_elem_PDG", dataGridView1.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom_elemPDG", dataGridView1.Rows[i].Cells[1].Value);
-                    command.Parameters.AddWithValue("@clas", dataGridView1.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@semestre", dataGridView1.Rows[i].Cells[3].Value);
-                    command.Parameters.AddWithValue("@type", dataGridView1.Rows[i].Cells[4].Value);
-                    command.Parameters.AddWithValue("@coefficient", dataGridView1.Rows[i].Cells[5].Value);
-                    command.Parameters.AddWithValue("@noteElim", dataGridView1.Rows[i].Cells[6].Value);
+                    command.Parameters.AddWithValue("@clas", comboBox1.SelectedItem.ToString());
+                    command.Parameters.AddWithValue("@semestre", dataGridView1.Rows[i].Cells[2].Value);
+                    command.Parameters.AddWithValue("@type", dataGridView1.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@coefficient", dataGridView1.Rows[i].Cells[4].Value);
+                    command.Parameters.AddWithValue("@noteElim", dataGridView1.Rows[i].Cells[5].Value);
                     command.Parameters.AddWithValue("@seuil_valida", dataGridView1.Rows[i].Cells[7].Value);
 
                     conX.Open();

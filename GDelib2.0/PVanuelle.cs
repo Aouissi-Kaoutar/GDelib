@@ -14,7 +14,7 @@ namespace GDelib2._0
 {
     public partial class PVanuelle : Form
     {
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         string clas;
         string libele;
@@ -22,7 +22,7 @@ namespace GDelib2._0
         List<string> listModule;
         List<string> listId_Module;
         List<string> liseEleves;
-
+        List<string> listEtat;
         public PVanuelle(string clas,string libele)
         {
             InitializeComponent();
@@ -55,9 +55,17 @@ namespace GDelib2._0
             command.CommandText = listeEleve;
             SqlDataReader Eleves = command.ExecuteReader();
             liseEleves = new List<string>();
+            listEtat = new List<string>();
             for (int j = 0; Eleves.Read(); j++)
             {
                 liseEleves.Add(Eleves["Id_eleve"].ToString());
+               //istEtat.Add(Eleves["etat"].ToString());
+            }
+
+            for (int j = 0; Eleves.Read(); j++)
+            {
+                //seEleves.Add(Eleves["Id_eleve"].ToString());
+                listEtat.Add(Eleves["etat"].ToString());
             }
             conX.Close();
             for (int i = 0; i < liseEleves.Count; i++)
@@ -129,8 +137,17 @@ namespace GDelib2._0
                             dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
 
                         }
-                        else { 
-                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                        else {
+                            if (listEtat[i] == "doublan")
+                            {
+                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "Exclus";
+
+                            }
+                            else
+                            {
+                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                            }
+                          
                         }
                     }
 

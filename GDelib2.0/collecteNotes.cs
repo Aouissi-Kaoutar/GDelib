@@ -123,14 +123,29 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pvRAT pv = new pvRAT(comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString(),"Liste des rattrapage pour les "+ comboBox2.SelectedItem.ToString());
-            pv.Show();
+            try
+            {
+                pvRAT pv = new pvRAT(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des rattrapage pour les " + comboBox2.SelectedItem.ToString());
+                pv.Show();
+            }
+            catch(System.NullReferenceException exx) {
+                MessageBox.Show("Monque un champ");
+            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultet  semestrielle pour les " + comboBox2.SelectedItem.ToString());
-            pv.Show();
+            try
+            {
+                pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultet  semestrielle pour les " + comboBox2.SelectedItem.ToString());
+                pv.Show();
+
+            }
+            catch (System.NullReferenceException exx)
+            {
+                MessageBox.Show("Monque un champ");
+            }
         }
 
         private void ListeEtd_Paint(object sender, PaintEventArgs e)
@@ -145,9 +160,17 @@ namespace GDelib2._0
 
         private void button5_Click(object sender, EventArgs e)
         {
+            try
+            {
+                PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+                pv.Show();
 
-            PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
-            pv.Show();
+            }
+            catch (System.NullReferenceException exx)
+            {
+                MessageBox.Show("Monque un champ");
+            }
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
