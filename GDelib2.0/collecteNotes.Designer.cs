@@ -73,10 +73,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(3, 20);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(756, 445);
+            this.tabControl1.Size = new System.Drawing.Size(756, 462);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -96,7 +96,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(748, 419);
+            this.tabPage1.Size = new System.Drawing.Size(748, 436);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Import";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -106,7 +106,7 @@
             this.panel3.Controls.Add(this.radioButton5);
             this.panel3.Controls.Add(this.radioButton6);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(389, 18);
+            this.panel3.Location = new System.Drawing.Point(26, 95);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(353, 57);
             this.panel3.TabIndex = 15;
@@ -153,7 +153,7 @@
             this.panel1.Controls.Add(this.radioButton4);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(19, 18);
+            this.panel1.Location = new System.Drawing.Point(26, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(353, 57);
             this.panel1.TabIndex = 14;
@@ -196,17 +196,19 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.PowderBlue;
+            this.button4.BackColor = System.Drawing.Color.Gray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(639, 255);
+            this.button4.Location = new System.Drawing.Point(639, 300);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 32);
             this.button4.TabIndex = 10;
             this.button4.Text = "Ajouter";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // button2
             // 
@@ -221,11 +223,13 @@
             this.button2.Text = "Afficher";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(231, 258);
+            this.textBox2.Location = new System.Drawing.Point(231, 303);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(390, 29);
             this.textBox2.TabIndex = 8;
@@ -235,7 +239,7 @@
             // 
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(154, 165);
+            this.comboBox6.Location = new System.Drawing.Point(161, 243);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(218, 32);
             this.comboBox6.TabIndex = 7;
@@ -249,7 +253,7 @@
             "GI-3",
             "GI-4",
             "GI-5"});
-            this.comboBox5.Location = new System.Drawing.Point(154, 99);
+            this.comboBox5.Location = new System.Drawing.Point(161, 177);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(218, 32);
             this.comboBox5.TabIndex = 6;
@@ -259,7 +263,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 267);
+            this.label10.Location = new System.Drawing.Point(15, 312);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(198, 20);
             this.label10.TabIndex = 5;
@@ -269,7 +273,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 177);
+            this.label9.Location = new System.Drawing.Point(22, 255);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.TabIndex = 4;
@@ -279,7 +283,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 105);
+            this.label8.Location = new System.Drawing.Point(22, 183);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 20);
             this.label8.TabIndex = 3;
@@ -326,10 +330,12 @@
             this.button3.Text = "PV semestrielle";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -340,6 +346,8 @@
             this.button1.Text = "La liste des rattrapages";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // comboBox3
             // 
@@ -422,6 +430,8 @@
             this.button5.Text = " PV annuel";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
             // comboBox1
             // 
@@ -451,6 +461,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.Controls.Add(this.tabControl1);
             this.Name = "collecteNotes";
             this.Size = new System.Drawing.Size(761, 468);

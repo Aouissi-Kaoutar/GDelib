@@ -14,8 +14,8 @@ namespace GDelib2._0
 {
     public partial class configurationFilier : UserControl
     {
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         public configurationFilier()
         {
             InitializeComponent();
@@ -71,7 +71,7 @@ namespace GDelib2._0
                     command.Parameters.AddWithValue("@id_eleve", dataGridView2.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView2.Rows[i].Cells[1].Value);
                     command.Parameters.AddWithValue("@prenom", dataGridView2.Rows[i].Cells[2].Value);
-                    command.Parameters.AddWithValue("@claS", dataGridView2.Rows[i].Cells[3].Value);
+                    command.Parameters.AddWithValue("@claS", comboBox4.SelectedItem.ToString());
                     command.Parameters.AddWithValue("@cne", dataGridView2.Rows[i].Cells[4].Value);
                     command.Parameters.AddWithValue("@NappoG", dataGridView2.Rows[i].Cells[5].Value);
                     command.Parameters.AddWithValue("@photo", dataGridView2.Rows[i].Cells[6].Value);
@@ -209,6 +209,112 @@ namespace GDelib2._0
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_MouseEnter(object sender, EventArgs e)
+        {
+            button12.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button12_MouseLeave(object sender, EventArgs e)
+        {
+            button12.BackColor = Color.Gray;
+        }
+
+        private void button11_MouseEnter(object sender, EventArgs e)
+        {
+            button11.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button11_MouseLeave(object sender, EventArgs e)
+        {
+            button11.BackColor = Color.Gray;
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.Gray;
+        }
+
+        private void button9_MouseEnter(object sender, EventArgs e)
+        {
+            button9.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button9_MouseLeave(object sender, EventArgs e)
+        {
+            button9.BackColor = Color.Gray;
+        }
+
+        private void button8_MouseEnter(object sender, EventArgs e)
+        {
+            button8.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            button8.BackColor = Color.Gray;
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.Gray;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(2, 127, 143);
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.Gray;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Gray;
+            button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.PowderBlue;
+            button1.ForeColor = Color.Black;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Gray;
+            button2.ForeColor = Color.White;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.PowderBlue;
+            button2.ForeColor = Color.Black;
+        }
+
+        private void button6_MouseEnter(object sender, EventArgs e)
+        {
+            button6.BackColor = Color.Gray;
+            button6.ForeColor = Color.White;
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            button6.BackColor = Color.PowderBlue;
+            button6.ForeColor = Color.Black;
         }
     }
 }

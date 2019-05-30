@@ -96,15 +96,44 @@ namespace GDelib2._0
                         b++;
                     }
 
-                    dataGridView1.Rows[i].Cells["NOTE"].Value = f/12;
-                    if ((f / 12) >= 12) { 
-                    dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value ="VALIDE";
+                    if (clas == "GI-5" ) {
+
+                        dataGridView1.Rows[i].Cells["NOTE"].Value = f / 7;
+                        if ((f / 7) >= 12)
+                        {
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
+
+                            String UpDatQuery = "UPDATE notes set diplome='diplome' WHERE Id_eleve = '@Id_eleve' ";
+                            SqlCommand command3 = new SqlCommand();
+                            command2.Connection = conX;
+                            command2.CommandText = UpDatQuery;
+
+
+                                command2.Parameters.AddWithValue("@Id_eleve", dataGridView1.Rows[j].Cells["Id_eleve"].Value);
+
+                                command2.ExecuteNonQuery();
+
+                        }
+                        else
+                        {
+
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                        }
+
                     }
                     else
                     {
+                        dataGridView1.Rows[i].Cells["NOTE"].Value = f / 12;
+                        if ((f / 12) >= 12)
+                        {
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
 
-                        dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                        }
+                        else { 
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+                        }
                     }
+
 
                 }
 

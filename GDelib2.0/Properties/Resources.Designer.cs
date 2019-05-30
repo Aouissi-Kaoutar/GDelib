@@ -73,6 +73,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12 {
+            get {
+                object obj = ResourceManager.GetObject("12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _144_512__1_ {
             get {
                 object obj = ResourceManager.GetObject("144-512 (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace GDelib2._0.Properties {
         internal static System.Drawing.Bitmap _1492790945_39minimize_842422 {
             get {
                 object obj = ResourceManager.GetObject("1492790945-39minimize_842422", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _22 {
+            get {
+                object obj = ResourceManager.GetObject("22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,16 @@ namespace GDelib2._0.Properties {
         internal static System.Drawing.Bitmap couverture_hp1_1_1300x560 {
             get {
                 object obj = ResourceManager.GetObject("couverture-hp1-1-1300x560", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap diplomBlanc {
+            get {
+                object obj = ResourceManager.GetObject("diplomBlanc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

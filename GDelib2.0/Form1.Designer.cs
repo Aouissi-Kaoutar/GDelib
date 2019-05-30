@@ -63,10 +63,10 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.PowderBlue;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Gray;
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(171, 254);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(332, 42);
@@ -74,6 +74,8 @@
             this.button6.Text = "Login";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
             // 
             // panel1
             // 
@@ -128,17 +130,19 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.BackgroundImage = global::GDelib2._0.Properties.Resources._12;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.PowderBlue;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(609, 78);
+            this.button3.Location = new System.Drawing.Point(628, 78);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 48);
+            this.button3.Size = new System.Drawing.Size(35, 37);
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // textPassword
             // 

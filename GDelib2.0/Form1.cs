@@ -14,7 +14,7 @@ namespace GDelib2._0
 {
     public partial class Form1 : Form
     {
-        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -276,28 +276,57 @@ namespace GDelib2._0
 
         private void textLogin_MouseEnter(object sender, EventArgs e)
         {
-            textLogin.ForeColor = Color.FromArgb(215, 4, 51);
+            textLogin.ForeColor = Color.FromArgb(59, 132, 134);
+            textLogin.Font = new Font("Century Gothic", 11, FontStyle.Bold); //"Century Gothic; 11,25pt; style = Italic";
+
         }
 
         private void textLogin_MouseLeave(object sender, EventArgs e)
         {
             textLogin.ForeColor = Color.FromArgb(90, 90, 90);
+            textLogin.Font = new Font("Century Gothic", 11, FontStyle.Italic); //"Century Gothic; 11,25pt; style = Italic";
+
         }
 
         private void textPassword_MouseEnter(object sender, EventArgs e)
         {
-            textPassword.ForeColor = Color.FromArgb(215, 4, 51);
+            textPassword.ForeColor = Color.FromArgb(59, 132, 134);
+            textPassword.Font = new Font("Century Gothic", 11,FontStyle.Bold); //"Century Gothic; 11,25pt; style = Italic";
         }
 
         private void textPassword_MouseLeave(object sender, EventArgs e)
         {
 
             textPassword.ForeColor = Color.FromArgb(90, 90, 90);
+            textPassword.Font = new Font("Century Gothic",11, FontStyle.Italic);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_MouseEnter(object sender, EventArgs e)
+        {
+            button6.BackColor = Color.PowderBlue;
+            button6.ForeColor = Color.FromArgb(80, 80, 80);
+
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            button6.BackColor =  Color.FromArgb(80, 80, 80);
+            button6.ForeColor = Color.Wheat;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackgroundImage = Properties.Resources._22;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackgroundImage = Properties.Resources._12;
         }
     }
 }

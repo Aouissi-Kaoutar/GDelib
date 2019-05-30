@@ -127,11 +127,23 @@
   <data name="611552" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\611552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="itextsharp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\itextsharp.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="seo-analysis4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seo-analysis4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="office" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\office.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="1492790945-39minimize_842421" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1492790945-39minimize_842421.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\100.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Etudiants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Etudiants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +159,9 @@
   </data>
   <data name="Entypo_e716(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e716(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Microsoft_Office_Interop_Excel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Microsoft.Office.Interop.Excel.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Sans titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sans_titre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +190,17 @@
   <data name="Entypo_2699(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_2699(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="itextsharp_xtra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\itextsharp.xtra.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="blue-winter-snow-lights-bridges-blurred-branches-cities-pics-183284" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue-winter-snow-lights-bridges-blurred-branches-cities-pics-183284.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-information-technology-consulting-consultant-manag-5af11f74cda371.3158595015257516688423" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-information-technology-consulting-consultant-manag-5af11f74cda371.3158595015257516688423.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Microsoft_Office_Interop_Excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Microsoft.Office.Interop.Excel.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="640531_14138396_2623888_6b9a5839_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\640531_14138396_2623888_6b9a5839_image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +220,20 @@
   <data name="ensaoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ensaoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dllme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\dllme.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Entypo_e758(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e758(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_d83d(1)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_d83d(1)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="couverture-hp1-1-1300x560" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\couverture-hp1-1-1300x560.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="itextsharp_pdfa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\itextsharp.pdfa.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Entypo_e729(0)_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_e729(0)_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,11 +271,14 @@
   <data name="61155" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\61155.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zzzzzz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zzzzzz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="seo-analysis2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seo-analysis2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\100.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="couverture-hp1-1-1300x560" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\couverture-hp1-1-1300x560.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entypo_d83d(0)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entypo_d83d(0).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,28 +286,7 @@
   <data name="284-2849807_the-time-for-mobile-site-is-now-digital-learning-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\284-2849807_the-time-for-mobile-site-is-now-digital-learning-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zzzzzz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zzzzzz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dllme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\dllme.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="itextsharp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\itextsharp.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="itextsharp_pdfa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\itextsharp.pdfa.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="itextsharp_xtra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\itextsharp.xtra.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Microsoft_Office_Interop_Excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Microsoft.Office.Interop.Excel.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Microsoft_Office_Interop_Excel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Microsoft.Office.Interop.Excel.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="office" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\office.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="diplomBlanc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diplomBlanc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
