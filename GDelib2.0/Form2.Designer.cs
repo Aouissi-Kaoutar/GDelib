@@ -139,7 +139,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(3, 522);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 60);
+            this.panel1.Size = new System.Drawing.Size(957, 60);
             this.panel1.TabIndex = 24;
             // 
             // Form2
