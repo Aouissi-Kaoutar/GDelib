@@ -69,7 +69,7 @@ namespace GDelib2._0
             {
                 label4.Text = d["date_naissance"].ToString();
                 label3.Text = d["id_eleve"].ToString();
-
+                label5.Text= d["nationalite"].ToString();
             }
             con.Close();
             

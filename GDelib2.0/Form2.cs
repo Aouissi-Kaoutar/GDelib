@@ -46,7 +46,7 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            
 
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {

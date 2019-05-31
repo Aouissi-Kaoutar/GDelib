@@ -64,9 +64,9 @@ namespace GDelib2._0
 
             for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
             {
-               // try
+                try
                 {
-                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,semester,date_naissance,email,etat) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email,@,etat)";
+                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,nationalite,date_naissance,email,etat) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email,@etat)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView2.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView2.Rows[i].Cells[1].Value);
@@ -83,9 +83,9 @@ namespace GDelib2._0
                     command.ExecuteNonQuery();
                     conX.Close();
                 }
-             //   catch (System.Data.SqlClient.SqlException expe)
+               catch (System.Data.SqlClient.SqlException expe)
                 {
-              //      MessageBox.Show("une valeur id_eleve est deja inserer verifier votre Doc  \n \n \n \n" + expe.Message);
+                   MessageBox.Show( expe.Message);
                 }
 
 
@@ -192,20 +192,20 @@ namespace GDelib2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dbEleve db = new dbEleve("SELECT * From Eleves", @"DELETE FROM Eleves ");
+            DB db = new DB("SELECT * From Eleves", @"DELETE FROM Eleves ");
             db.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-          //  dbEleve db = new dbEleve("SELECT * From notes", @"DELETE FROM notes ");
-           // db.Show();
+            DB db = new DB("SELECT * From notes", @"DELETE FROM notes ");
+            db.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-         //dbEleve db = new dbEleve("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
-           // db.Show();
+         DB db = new DB("SELECT * From ElementPDG", @"DELETE FROM ElementPDG ");
+            db.Show();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)

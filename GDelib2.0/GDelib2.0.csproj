@@ -87,11 +87,11 @@
     <Compile Include="configurationFilier.Designer.cs">
       <DependentUpon>configurationFilier.cs</DependentUpon>
     </Compile>
-    <Compile Include="dbEleve.cs">
+    <Compile Include="DB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dbEleve.Designer.cs">
-      <DependentUpon>dbEleve.cs</DependentUpon>
+    <Compile Include="DB.Designer.cs">
+      <DependentUpon>DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Diplome.cs">
       <SubType>Form</SubType>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="configurationFilier.resx">
       <DependentUpon>configurationFilier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dbEleve.resx">
-      <DependentUpon>dbEleve.cs</DependentUpon>
+    <EmbeddedResource Include="DB.resx">
+      <DependentUpon>DB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diplome.resx">
       <DependentUpon>Diplome.cs</DependentUpon>
@@ -381,6 +381,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diplomBlanc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lkk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
