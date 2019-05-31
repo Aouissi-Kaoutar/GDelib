@@ -17,21 +17,26 @@ namespace GDelib2._0
         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         public string query;
         public string SupretionQuery;
+        public string note;
         SqlDataAdapter adap;
         SqlConnection con;
         DataSet ds;
         SqlCommandBuilder cmdbl;
 
-        public DB(string s, string k)
+        public DB(string s, string k,string n)
         {
             InitializeComponent();
             this.query = s;
             this.SupretionQuery = k;
+            this.note = n;
 
         }
 
         private void DB_Load(object sender, EventArgs e)
         {
+            if (note == "note")
+            {
+                button2.Hide();}
             try
             {
                 con = new SqlConnection();

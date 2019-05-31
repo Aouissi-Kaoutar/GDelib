@@ -43,9 +43,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GDelib2._0.Properties.Resources.lkk;
-            this.pictureBox1.Location = new System.Drawing.Point(-24, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1102, 563);
+            this.pictureBox1.Size = new System.Drawing.Size(1105, 573);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -105,9 +105,9 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
             this.label3.Location = new System.Drawing.Point(331, 536);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 21);
+            this.label3.Size = new System.Drawing.Size(100, 21);
             this.label3.TabIndex = 30;
-            this.label3.Text = "label3";
+            this.label3.Text = "**********";
             // 
             // label4
             // 
@@ -116,9 +116,9 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(265, 395);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.Size = new System.Drawing.Size(100, 21);
             this.label4.TabIndex = 31;
-            this.label4.Text = "label4";
+            this.label4.Text = "**********";
             // 
             // label1
             // 
@@ -127,9 +127,9 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(331, 366);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
+            this.label1.Size = new System.Drawing.Size(91, 21);
             this.label1.TabIndex = 32;
-            this.label1.Text = "label1";
+            this.label1.Text = "*********";
             // 
             // label5
             // 
@@ -138,9 +138,9 @@
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(306, 425);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
+            this.label5.Size = new System.Drawing.Size(91, 21);
             this.label5.TabIndex = 33;
-            this.label5.Text = "label5";
+            this.label5.Text = "*********";
             // 
             // Diplome
             // 
