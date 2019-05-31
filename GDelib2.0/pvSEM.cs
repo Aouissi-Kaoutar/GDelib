@@ -58,7 +58,7 @@ namespace GDelib2._0
 
            
                 conX.Open();
-                string listeEleve = "select Id_eleve from Eleves where claS='" + clas + "'and semester='" + semestre + "'";
+                string listeEleve = "select Id_eleve from Eleves where claS='" + clas+ "'";
                 SqlCommand command = new SqlCommand();
                 command.Connection = conX;
                 command.CommandText = listeEleve;

@@ -385,5 +385,35 @@
   <ItemGroup>
     <None Include="Resources\lkk.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kkk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lklklk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lolo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loloko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loloko1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loloko2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loloko3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

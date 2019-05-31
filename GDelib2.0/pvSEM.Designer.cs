@@ -198,7 +198,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::GDelib2._0.Properties.Resources.loloko3;
             this.button2.Location = new System.Drawing.Point(734, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 48);
@@ -230,7 +230,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.PowderBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           // this.Name = "pvSEM";
+            //this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

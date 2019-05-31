@@ -56,7 +56,7 @@ namespace GDelib2._0
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
-            String query = "SELECT nom_elemPDG FROM  ElementPDG WHERE clas='"+clas+"' and semestre='"+semestre+"'" ;
+            String query = "SELECT nom_elemPDG FROM  ElementPDG WHERE clas='"+ comboBox5.SelectedItem.ToString() + "' and semestre='"+semestre+"'" ;
 
             command.CommandText = query;
 
@@ -93,6 +93,7 @@ namespace GDelib2._0
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             ElemPDG  = comboBox6.SelectedItem.ToString();
         }
 

@@ -62,11 +62,15 @@ namespace GDelib2._0
         private void button5_Click(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
-            {
+           
                 try
                 {
-                    String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,nationalite,date_naissance,email,etat) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email,@etat)";
+                conX.Open();
+                for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+                {
+                    if (dataGridView2.Rows[i].Cells[0].Value.ToString() != "")
+                    {
+                        String query = "INSERT INTO dbo.Eleves (id_eleve,nom,prenom,claS,cne,NappoG,nationalite,date_naissance,email,etat) VALUES (@id_eleve,@nom,@prenom,@claS,@cne,@NappoG,@photo,@date_naissance,@email,@etat)";
                     SqlCommand command = new SqlCommand(query, conX);
                     command.Parameters.AddWithValue("@id_eleve", dataGridView2.Rows[i].Cells[0].Value);
                     command.Parameters.AddWithValue("@nom", dataGridView2.Rows[i].Cells[1].Value);
@@ -79,20 +83,28 @@ namespace GDelib2._0
                     command.Parameters.AddWithValue("@email", dataGridView2.Rows[i].Cells[7].Value);
                     command.Parameters.AddWithValue("@etat", dataGridView2.Rows[i].Cells[8].Value);
 
-                    conX.Open();
+                  
                     command.ExecuteNonQuery();
-                    conX.Close();
+
+                    }
                 }
-               catch (System.Data.SqlClient.SqlException expe)
+
+            }
+            catch (System.Data.SqlClient.SqlException expe)
                 {
-                   MessageBox.Show( expe.Message);
-                }
+                MessageBox.Show("Valeurs deja inserer \n\n\n"+expe.Message);
+               
+                    }
+                    finally
+                    {
+                        conX.Close();
+                        MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
 
 
 
             }
-            MessageBox.Show("enregistrement est bient efectuer pour les " + comboBox4.SelectedItem.ToString());
-
+         
+           
 
 
         }
@@ -160,7 +172,7 @@ namespace GDelib2._0
                     command.Parameters.AddWithValue("@type", dataGridView1.Rows[i].Cells[3].Value);
                     command.Parameters.AddWithValue("@coefficient", dataGridView1.Rows[i].Cells[4].Value);
                     command.Parameters.AddWithValue("@noteElim", dataGridView1.Rows[i].Cells[5].Value);
-                    command.Parameters.AddWithValue("@seuil_valida", dataGridView1.Rows[i].Cells[7].Value);
+                    command.Parameters.AddWithValue("@seuil_valida", dataGridView1.Rows[i].Cells[6].Value);
 
                     conX.Open();
                     command.ExecuteNonQuery();

@@ -51,7 +51,7 @@ namespace GDelib2._0
 
 
             conX.Open();
-            string listeEleve = "select Id_eleve from Eleves where claS='" + clas + "'";
+            string listeEleve = "select * from Eleves where claS='" + clas + "'";
             SqlCommand command = new SqlCommand();
             command.Connection = conX;
             command.CommandText = listeEleve;
@@ -61,14 +61,10 @@ namespace GDelib2._0
             for (int j = 0; Eleves.Read(); j++)
             {
                 liseEleves.Add(Eleves["Id_eleve"].ToString());
-               //istEtat.Add(Eleves["etat"].ToString());
-            }
-
-            for (int j = 0; Eleves.Read(); j++)
-            {
-                //seEleves.Add(Eleves["Id_eleve"].ToString());
                 listEtat.Add(Eleves["etat"].ToString());
-            }
+                  }
+
+       
             conX.Close();
             for (int i = 0; i < liseEleves.Count; i++)
             {
