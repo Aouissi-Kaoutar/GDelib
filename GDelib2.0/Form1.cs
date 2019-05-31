@@ -98,14 +98,14 @@ namespace GDelib2._0
                     }
                     else
                     {
-                        MessageBox.Show("login ou mot de passe est incorte");
+                        MessageBox.Show("login ou mot de passe est incorrect");
                     }
 
 
                 }
                 else
                 {
-                    MessageBox.Show("login ou mot de passe nexiste pas,veuiller le saisire  s'il vous plais");
+                    MessageBox.Show("login ou mot de passe n'existe pas,veuillez le saisir s'il vous plait");
                 }
             }
             catch (Exception)
@@ -177,14 +177,14 @@ namespace GDelib2._0
                     }
                     else
                     {
-                        MessageBox.Show("login ou mot de passe est incorte");
+                        MessageBox.Show("login ou mot de passe est incorrect");
                     }
 
 
                 }
                 else
                 {
-                    MessageBox.Show("login ou mot de passe nexiste pas,veuiller le saisire  s'il vous plais");
+                    MessageBox.Show("login ou mot de passe n'existe pas,veuillez le saisir s'il vous plait");
                 }
             }
             catch (Exception)
