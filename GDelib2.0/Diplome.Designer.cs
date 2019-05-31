@@ -57,22 +57,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 22);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 20);
+            this.label2.Size = new System.Drawing.Size(219, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Liste des etudiant diplomer";
+            this.label2.Text = "La liste des Etudiants diplomé";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Gray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(636, 632);
+            this.button3.Location = new System.Drawing.Point(725, 632);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 49);
+            this.button3.Size = new System.Drawing.Size(93, 32);
             this.button3.TabIndex = 28;
             this.button3.Text = "imprimer";
             this.button3.UseVisualStyleBackColor = false;
@@ -165,13 +165,14 @@
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Red;
+            this.button5.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(799, 7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(41, 35);
             this.button5.TabIndex = 39;
-            this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 

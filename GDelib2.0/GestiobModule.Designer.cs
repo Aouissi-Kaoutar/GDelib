@@ -166,14 +166,14 @@
             // button2
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(1174, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(43, 44);
             this.button2.TabIndex = 5;
-            this.button2.Text = "x";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             this.button2.Enter += new System.EventHandler(this.close_Enter);
@@ -268,7 +268,6 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.Button button3;
         private configurationFilier configurationFilier1;
         private collecteNotes collecteNotes1;
+        private System.Windows.Forms.Button button2;
     }
     }

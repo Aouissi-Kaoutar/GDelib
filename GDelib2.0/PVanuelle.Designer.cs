@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PVanuelle));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -110,7 +110,7 @@
             this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.PowderBlue;
-            this.button2.Image = global::GDelib2._0.Properties.Resources.loloko1;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(749, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 53);
@@ -168,8 +168,8 @@
             // 
             // statuM1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.statuM1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.statuM1.DefaultCellStyle = dataGridViewCellStyle3;
             this.statuM1.HeaderText = "statuM1";
             this.statuM1.Name = "statuM1";
             // 
@@ -298,7 +298,7 @@
             this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-4, 50);
+            this.label1.Location = new System.Drawing.Point(-8, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(947, 31);
             this.label1.TabIndex = 29;
@@ -307,14 +307,16 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.PowderBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(886, 3);
+            this.button5.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(898, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(41, 35);
             this.button5.TabIndex = 30;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // PVanuelle
@@ -328,7 +330,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           // this.Name = "PVanuelle";
+            this.Name = "PVanuelle";
             this.Text = "PVanuelle";
             this.Load += new System.EventHandler(this.PVanuelle_Load);
             this.panel1.ResumeLayout(false);
