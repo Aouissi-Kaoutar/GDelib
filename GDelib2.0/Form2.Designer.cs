@@ -60,7 +60,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(3, 4);
+            this.button8.Location = new System.Drawing.Point(3, 1);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 29);
             this.button8.TabIndex = 3;
@@ -75,7 +75,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Image = global::GDelib2._0.Properties.Resources._1492790945_39minimize_842421;
-            this.button9.Location = new System.Drawing.Point(30, 3);
+            this.button9.Location = new System.Drawing.Point(39, 3);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(30, 29);
             this.button9.TabIndex = 2;
@@ -87,8 +87,8 @@
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = global::GDelib2._0.Properties.Resources._611552;
-            this.button11.Location = new System.Drawing.Point(66, 3);
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(75, 4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 29);
             this.button11.TabIndex = 0;
