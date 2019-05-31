@@ -368,7 +368,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(242, 233);
             this.button6.TabIndex = 4;
-            this.button6.Text = "Element Pedagogoque";
+            this.button6.Text = "Element Pédagogique";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
@@ -403,9 +403,9 @@
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(196, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(432, 38);
+            this.label3.Size = new System.Drawing.Size(418, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "les tables des base de donne ";
+            this.label3.Text = "les tables de base de donne ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
