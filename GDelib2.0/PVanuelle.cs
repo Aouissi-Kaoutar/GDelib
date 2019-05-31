@@ -21,6 +21,18 @@ namespace GDelib2._0
         string clas;
         string libele;
 
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// ///////////////
+        /// </summary>
+
         List<string> listModule;
         List<string> listId_Module;
         List<string> liseEleves;
