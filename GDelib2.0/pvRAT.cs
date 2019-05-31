@@ -108,35 +108,9 @@ namespace GDelib2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /* if (dataGridView1.Rows.Count > 0)
-             {
-                 Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
-                 xcelApp.Application.Workbooks.Add(Type.Missing);
-                 for (int i =1; i<dataGridView1.Columns.Count+1;i++)
-                 {
-                     xcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
-
-                 }
-                 for (int i = 0; i < dataGridView1.Rows.Count- 1; i++)
-                 {
-                     for (int j = 0; j < dataGridView1.Columns.Count-1 ; j++)
-                     {
-                         xcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
-
-
-                     }
-
-
-
-                 xcelApp.Columns.AutoFit();
-                 xcelApp.Visible = true;
-
-             }*/
-
-
-            SaveFileDialog sfd = new SaveFileDialog();
+SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Document(*.xls)|*.xls";
-            sfd.FileName = "export.xls";
+            sfd.FileName = "listRtt.xls";
             if (sfd.ShowDialog() == DialogResult.OK) { 
                 ToExcel(dataGridView1, sfd.FileName);
             }
@@ -159,21 +133,23 @@ namespace GDelib2._0
                 pdftable.AddCell(cell);
 
             }
-           
-            foreach (DataGridViewRow row in dgv.Rows)
-            { 
-                foreach (DataGridViewCell cell in row.Cells )
-                {
-                        pdftable.AddCell(new Phrase(cell.Value.ToString(), text));
+            try { 
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            pdftable.AddCell(new Phrase(cell.Value.ToString(), text));
 
 
+                        }
+            
+                    }
+               }catch(System.NullReferenceException exx){
                 }
 
 
-            }
-            
 
-            var savefiledialoge=new SaveFileDialog();
+    var savefiledialoge =new SaveFileDialog();
             savefiledialoge.FileName = filename;
             savefiledialoge.DefaultExt = ".pdf";
             if (savefiledialoge.ShowDialog() == DialogResult.OK)
@@ -194,7 +170,7 @@ namespace GDelib2._0
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            exportToPdf(dataGridView1,"RAT liste");
+            exportToPdf(dataGridView1, "liste RAT ");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -253,6 +229,16 @@ namespace GDelib2._0
                 MessageBox.Show("veuilez choisir un element");
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

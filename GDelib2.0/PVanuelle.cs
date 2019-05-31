@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace GDelib2._0
 {
@@ -198,7 +200,7 @@ namespace GDelib2._0
         {
             if (e.RowIndex == -1 && e.ColumnIndex > -1)
             {
-                Rectangle r2 = e.CellBounds;
+                System.Drawing.Rectangle r2 = e.CellBounds;
                 r2.Y += e.CellBounds.Height / 2;
                 r2.Height = e.CellBounds.Height / 2;
                 e.PaintBackground(r2, true);
@@ -218,7 +220,7 @@ namespace GDelib2._0
                 for (int i = 1; i < 24; i = i + 2)
                 {
 
-                    Rectangle r1 = dataGridView1.GetCellDisplayRectangle(i, -1, true);
+                    System.Drawing.Rectangle r1 = dataGridView1.GetCellDisplayRectangle(i, -1, true);
                     int w2 = dataGridView1.GetCellDisplayRectangle(i + 1, -1, true).Width;
                     r1.X += 1;
                     r1.Y += 1;
@@ -251,13 +253,13 @@ namespace GDelib2._0
 
         public void dataDridView1_Scroll(object sender, ScrollEventArgs e)
         {
-            Rectangle rtHeader = dataGridView1.DisplayRectangle;
+            System.Drawing.Rectangle rtHeader = dataGridView1.DisplayRectangle;
             rtHeader.Height = dataGridView1.ColumnHeadersHeight / 2;
             dataGridView1.Invalidate(rtHeader);
         }
         public void dataGridView1_ColumnWhidthChanged(object sender, DataGridViewColumnEventArgs e)
         {
-            Rectangle rtHeader = dataGridView1.DisplayRectangle;
+            System.Drawing.Rectangle rtHeader = dataGridView1.DisplayRectangle;
             rtHeader.Height = dataGridView1.ColumnHeadersHeight / 2;
             dataGridView1.Invalidate(rtHeader);
         }
@@ -267,7 +269,7 @@ namespace GDelib2._0
 
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Document(*.xls)|*.xls";
-            sfd.FileName = "export.xls";
+            sfd.FileName = "PVannuelle.xls";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 ToExcel(dataGridView1, sfd.FileName);
@@ -275,7 +277,7 @@ namespace GDelib2._0
         }
 
 
-        public void ToExcel(DataGridView dGV, string filename)
+       public void ToExcel(DataGridView dGV, string filename)
         {
             string stOutput = "";
             string sHeaders = "";
@@ -306,6 +308,72 @@ namespace GDelib2._0
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void exportToPdf(DataGridView dgv, string filename)
+        {
+            BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+            PdfPTable pdftable = new PdfPTable(dgv.Columns.Count);
+            pdftable.DefaultCell.Padding = 3;
+            pdftable.WidthPercentage = 100;
+            pdftable.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdftable.DefaultCell.BorderWidth = 1;
+            iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                pdftable.AddCell(cell);
+
+            }
+            try
+            {
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        pdftable.AddCell(new Phrase(cell.Value.ToString(), text));
+
+
+                    }
+
+                }
+            }
+            catch (System.NullReferenceException exx)
+            {
+            }
+
+
+
+            var savefiledialoge = new SaveFileDialog();
+            savefiledialoge.FileName = filename;
+            savefiledialoge.DefaultExt = ".pdf";
+            if (savefiledialoge.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(savefiledialoge.FileName, FileMode.Create))
+                {
+                    Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfdoc, stream);
+                    pdfdoc.Open();
+                    pdfdoc.Add(pdftable);
+                    pdfdoc.Close();
+                    stream.Close();
+
+
+                }
+
+            }
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            exportToPdf(dataGridView1, "PV Annuelle");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
