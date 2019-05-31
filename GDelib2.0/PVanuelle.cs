@@ -138,7 +138,7 @@ namespace GDelib2._0
 
                         }
                         else {
-                            if (listEtat[i] == "doublan")
+                            if (listEtat[i] == "doublon")
                             {
                                 dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "Exclus";
 
