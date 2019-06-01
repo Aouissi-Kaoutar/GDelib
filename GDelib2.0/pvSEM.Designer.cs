@@ -231,7 +231,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.PowderBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "pvSEM";
+            //this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
