@@ -125,9 +125,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.PowderBlue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(825, 0);
+            this.button1.Location = new System.Drawing.Point(864, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 60);
+            this.button1.Size = new System.Drawing.Size(79, 54);
             this.button1.TabIndex = 21;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
