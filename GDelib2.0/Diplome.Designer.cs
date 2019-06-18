@@ -66,15 +66,15 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(725, 632);
+            this.button3.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(740, 622);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 32);
+            this.button3.Size = new System.Drawing.Size(78, 53);
             this.button3.TabIndex = 28;
-            this.button3.Text = "imprimer";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -160,7 +160,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(12, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 573);
+            this.panel1.Size = new System.Drawing.Size(806, 559);
             this.panel1.TabIndex = 34;
             // 
             // button5

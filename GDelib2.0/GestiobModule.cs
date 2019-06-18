@@ -384,5 +384,10 @@ namespace GDelib2._0
         {
 
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
