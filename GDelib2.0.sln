@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDelib2.0", "GDelib2.0\GDelib2.0.csproj", "{F87E8B8F-ED3E-4CD1-BB66-D6E2104F0D83}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup4", "Setup4\Setup4.vdproj", "{5D37E8FD-35F3-41A4-A723-C212FFFA367B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{F87E8B8F-ED3E-4CD1-BB66-D6E2104F0D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F87E8B8F-ED3E-4CD1-BB66-D6E2104F0D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F87E8B8F-ED3E-4CD1-BB66-D6E2104F0D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D37E8FD-35F3-41A4-A723-C212FFFA367B}.Debug|Any CPU.ActiveCfg = Debug
+		{5D37E8FD-35F3-41A4-A723-C212FFFA367B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,37 +12,39 @@ using System.IO;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 
+
 namespace GDelib2._0
 {
-    public partial class PVanuelle : Form
+    public partial class PvAnnuelleGI5 : Form
     {
+
         //OUISSAL CONNEX
         //    public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         //KAWTAR CONX
         // public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         //DataBase1
-         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
-
-/*
-        static string path = Path.GetFullPath(Environment.CurrentDirectory);
-        static string dataBseName = "GDelibe2.mdf";
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
-*/
-        string clas;
-        string libele;
-
-        IDictionary<string, string> dict = new Dictionary<string, string>();
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
 
 
         List<string> listModule;
         List<string> listId_Module;
         List<string> liseEleves;
         List<string> listEtat;
-        public PVanuelle(string clas,string libele)
+        string clas;
+        string libele;
+
+        IDictionary<int, string> dict = new Dictionary<int, string>();
+
+
+        public PvAnnuelleGI5(string clas, string libele)
         {
             InitializeComponent();
             this.clas = clas;
             this.libele = libele;
+        }
+        public PvAnnuelleGI5()
+        {
+            InitializeComponent();
         }
 
         private void kkkk2()
@@ -75,9 +77,9 @@ namespace GDelib2._0
             {
                 liseEleves.Add(Eleves["Id_eleve"].ToString());
                 listEtat.Add(Eleves["etat"].ToString());
-                  }
+            }
 
-       
+
             conX.Close();
             for (int i = 0; i < liseEleves.Count; i++)
             {
@@ -119,13 +121,27 @@ namespace GDelib2._0
                     //  conX.Close();
 
 
-             
-                        dataGridView1.Rows[i].Cells["NOTE"].Value = f / 12;
-                        if ((f / 12) >= 12)
+                        dataGridView1.Rows[i].Cells["NOTE"].Value = f / 7;
+                        if ((f / 7) >= 12)
                         {
                             dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
 
+                        /*  String UpDatQuery = "UPDATE notes set diplome='diplome' WHERE Id_eleve = '@Id_eleve' ";
+                          SqlCommand cd = new SqlCommand();
+                          cd.Connection = conX;
+                          cd.CommandText = UpDatQuery;
+
+
+                          cd.Parameters.AddWithValue("@Id_eleve", Notes["id_eleve"].ToString());
+
+                          cd.ExecuteNonQuery();
+*/
+                        try { 
+                        dict.Add(int.Parse(Notes["id_eleve"].ToString()), "diplome");
+
                         }
+                       catch (System.ArgumentException rdrd) { }
+                    }
                         else
                         {
                             if (listEtat[i] == "doublon")
@@ -143,42 +159,31 @@ namespace GDelib2._0
 
 
                 }
-                  conX.Close();
-              
+                conX.Close();
+
             }
-            
+
+            foreach (KeyValuePair<int, string> item in dict)
+            {
+                conX.Open();
+                String UpDatQuery = "UPDATE Eleves set diplom='diplome' WHERE Id_eleve =" +int.Parse(item.Key.ToString());
+                SqlCommand cd = new SqlCommand();
+                cd.Connection = conX;
+                cd.CommandText = UpDatQuery;
+
+
+                //cd.Parameters.AddWithValue("@Id_eleve",(int) item.Key);
+
+                cd.ExecuteNonQuery();
+                conX.Close();
+            }
+
 
 
         }
 
         private void PVanuelle_Load(object sender, EventArgs e)
         {
-            kkkk2();
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.ColumnHeadersHeight = 30;
-            label1.Text = libele;
-
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView1.BackgroundColor = Color.White;
-
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-
-
-            dataGridView1.ColumnHeadersHeight = dataGridView1.ColumnHeadersHeight * 2;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
-            dataGridView1.CellPainting += new DataGridViewCellPaintingEventHandler(dataGridView1_CellPainting);
-            dataGridView1.Paint += new PaintEventHandler(dataDridView1_Paint);
-            dataGridView1.Scroll += new ScrollEventHandler(dataDridView1_Scroll);
-            dataGridView1.ColumnWidthChanged += new DataGridViewColumnEventHandler(dataGridView1_ColumnWhidthChanged);
-
-
 
         }
 
@@ -264,7 +269,7 @@ namespace GDelib2._0
         }
 
 
-       public void ToExcel(DataGridView dGV, string filename)
+        public void ToExcel(DataGridView dGV, string filename)
         {
             string stOutput = "";
             string sHeaders = "";
@@ -367,5 +372,46 @@ namespace GDelib2._0
         {
 
         }
+        private void PvAnnuelleGI5_Load(object sender, EventArgs e)
+            {
+
+            kkkk2();
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.ColumnHeadersHeight = 30;
+            label1.Text = libele;
+
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+            dataGridView1.ColumnHeadersHeight = dataGridView1.ColumnHeadersHeight * 2;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
+            dataGridView1.CellPainting += new DataGridViewCellPaintingEventHandler(dataGridView1_CellPainting);
+            dataGridView1.Paint += new PaintEventHandler(dataDridView1_Paint);
+            dataGridView1.Scroll += new ScrollEventHandler(dataDridView1_Scroll);
+            dataGridView1.ColumnWidthChanged += new DataGridViewColumnEventHandler(dataGridView1_ColumnWhidthChanged);
+
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /*   private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+           {
+
+           }*/
+
     }
 }

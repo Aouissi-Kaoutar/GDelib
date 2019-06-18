@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.configurationFilier1 = new GDelib2._0.configurationFilier();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
+            this.configurationFilier2 = new GDelib2._0.configurationFilier();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -221,11 +222,19 @@
             // collecteNotes1
             // 
             this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
-            this.collecteNotes1.Location = new System.Drawing.Point(198, 65);
+            this.collecteNotes1.Location = new System.Drawing.Point(198, 67);
             this.collecteNotes1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(10181, 5228);
             this.collecteNotes1.TabIndex = 13;
+            // 
+            // configurationFilier2
+            // 
+            this.configurationFilier2.Location = new System.Drawing.Point(198, 68);
+            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.configurationFilier2.Name = "configurationFilier2";
+            this.configurationFilier2.Size = new System.Drawing.Size(1014, 604);
+            this.configurationFilier2.TabIndex = 14;
             // 
             // GestiobModule
             // 
@@ -234,7 +243,7 @@
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1216, 674);
-            this.Controls.Add(this.configurationFilier1);
+            this.Controls.Add(this.configurationFilier2);
             this.Controls.Add(this.collecteNotes1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -276,5 +285,6 @@
         private configurationFilier configurationFilier1;
         private collecteNotes collecteNotes1;
         private System.Windows.Forms.Button button2;
+        private configurationFilier configurationFilier2;
     }
     }

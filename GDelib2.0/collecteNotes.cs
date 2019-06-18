@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace GDelib2._0
 {
     public partial class collecteNotes : UserControl
     {
+        //OUISSAL CONNEX
+        //    public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        //KAWTAR CONX
+        //public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        /*
+                static string path = Path.GetFullPath(Environment.CurrentDirectory);
+                static string dataBseName = "GDelibe2.mdf";
+                public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
+        */
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
 
         public string semestre=null;
         public string clas;
@@ -34,8 +44,6 @@ namespace GDelib2._0
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 textBox2.Text = ofd.FileName;
-
-
             }
         }
 
@@ -163,8 +171,14 @@ namespace GDelib2._0
         {
             try
             {
-                PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
-                pv.Show();
+                if (comboBox1.SelectedItem.ToString() == "GI-5") {
+                    PvAnnuelleGI5 pv = new PvAnnuelleGI5(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+                    pv.Show();
+                }
+                else {
+                    PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+                    pv.Show();
+                }
 
             }
             catch (System.NullReferenceException exx)
@@ -227,6 +241,11 @@ namespace GDelib2._0
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             button5.BackColor = Color.Gray;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

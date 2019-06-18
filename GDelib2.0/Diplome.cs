@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,19 @@ namespace GDelib2._0
 {
     public partial class Diplome : Form
     {
-        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        //OUISSAL CONNEX
+        //    public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pc\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+        //KAWTAR CONX
+        // public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
+
+        /*
+                static string path = Path.GetFullPath(Environment.CurrentDirectory);
+                static string dataBseName = "GDelibe2.mdf";
+                public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
+                */
+
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
+
         List<string> s;
         int c = 0;
         string prenom = "";
@@ -31,7 +44,7 @@ namespace GDelib2._0
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
-            String query = "SELECT * FROM  notes WHERE clas='GI-5' and diplome='diplome'";
+            String query = "SELECT * FROM  Eleves WHERE clas='GI-5' and diplom='diplome'";
 
             command.CommandText = query;
 
@@ -40,7 +53,10 @@ namespace GDelib2._0
             for (int i = 0; d.Read(); i++)
             {
                 s.Add(d["id_eleve"].ToString());
-                comboBox1.Items.Add(d["prenom"] + " " + d["nom"]); 
+                       String nom = d["nom"].ToString().Replace(" ", "");
+                String prenom = d["prenom"].ToString().Replace(" ", "");
+
+            comboBox1.Items.Add(@prenom + " " +@nom); 
             }
             con.Close();
 
@@ -68,9 +84,9 @@ namespace GDelib2._0
 
             for (int i = 0; d.Read(); i++)
             {
-                label4.Text = d["date_naissance"].ToString();
-                label3.Text = d["id_eleve"].ToString();
-                label5.Text= d["nationalite"].ToString();
+                label4.Text = d["date_naissance"].ToString().Replace(" ", "");
+                label3.Text = d["id_eleve"].ToString().Replace(" ", "");
+                label5.Text= d["nationalite"].ToString().Replace(" ", "");
             }
             con.Close();
             

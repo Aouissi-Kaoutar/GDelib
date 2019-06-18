@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,41 +43,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Location = new System.Drawing.Point(864, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 42);
             this.panel2.TabIndex = 18;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.PowderBlue;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(3, 1);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 29);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.PowderBlue;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Image = global::GDelib2._0.Properties.Resources._1492790945_39minimize_842421;
-            this.button9.Location = new System.Drawing.Point(39, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 29);
-            this.button9.TabIndex = 2;
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -167,8 +135,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
