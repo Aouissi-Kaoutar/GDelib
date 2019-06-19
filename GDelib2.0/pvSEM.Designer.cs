@@ -65,7 +65,6 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "La liste des notes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          //  this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -230,9 +229,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.Color.PowderBlue;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-       //     this.Name = "pvSEM";
+         //   this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

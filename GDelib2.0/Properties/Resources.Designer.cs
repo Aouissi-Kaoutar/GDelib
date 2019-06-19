@@ -223,6 +223,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _c {
+            get {
+                object obj = ResourceManager.GetObject(",c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_winter_snow_lights_bridges_blurred_branches_cities_pics_183284 {
             get {
                 object obj = ResourceManager.GetObject("blue-winter-snow-lights-bridges-blurred-branches-cities-pics-183284", resourceCulture);
