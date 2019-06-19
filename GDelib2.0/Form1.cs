@@ -108,7 +108,7 @@ namespace GDelib2._0
                     }
                     else
                     {
-                        MessageBox.Show("login ou mot de passe est incorrect");
+                        MessageBox.Show("Login ou mot de passe incorrect");
                     }
 
 
@@ -187,7 +187,7 @@ namespace GDelib2._0
                     }
                     else
                     {
-                        MessageBox.Show("login ou mot de passe est incorrect");
+                        MessageBox.Show("Login ou mot de passe  incorrect");
                     }
 
 
