@@ -247,5 +247,77 @@ namespace GDelib2._0
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            String query = "SELECT Id_eleve,nom,prenom FROM  Eleves WHERE claS='" + clas + "'";
+
+            command.CommandText = query;
+
+            SqlDataReader d = command.ExecuteReader();
+
+
+
+            for (int i = 0; d.Read(); i++)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[i].Cells["id_eleve"].Value = d["Id_eleve"];
+
+                dataGridView1.Rows[i].Cells["nom"].Value = d["nom"];
+
+                dataGridView1.Rows[i].Cells["prenom"].Value = d["prenom"];
+
+            }
+            con.Close();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Document(*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ToExcel(dataGridView1, sfd.FileName);
+            }
+        }
+
+
+        public void ToExcel(DataGridView dGV, string filename)
+        {
+            string stOutput = "";
+            string sHeaders = "";
+            for (int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+            stOutput += sHeaders + "\r\n";
+
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+            {
+                string stline = "";
+                for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+
+                    stline = stline.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                stOutput += stline + "\t \n";
+            }
+            Encoding utf16 = Encoding.GetEncoding(1254);
+
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length);
+            bw.Flush();
+            bw.Close();
+            fs.Close();
+
+        }
+
     }
 }

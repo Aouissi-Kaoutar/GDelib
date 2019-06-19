@@ -84,7 +84,7 @@ namespace GDelib2._0
 
             for (int i = 0; d.Read(); i++)
             {
-                label4.Text = d["date_naissance"].ToString().Replace(" ", "");
+                label4.Text = @d["date_naissance"].ToString().Replace(" ", "");
                 label3.Text = d["id_eleve"].ToString().Replace(" ", "");
                 label5.Text= d["nationalite"].ToString().Replace(" ", "");
             }

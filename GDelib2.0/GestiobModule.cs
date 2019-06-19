@@ -389,5 +389,12 @@ namespace GDelib2._0
         {
             this.Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f = new Form1();
+            f.Show();
+        }
     }
 }

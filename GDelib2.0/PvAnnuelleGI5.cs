@@ -76,7 +76,12 @@ namespace GDelib2._0
             for (int j = 0; Eleves.Read(); j++)
             {
                 liseEleves.Add(Eleves["Id_eleve"].ToString());
-                listEtat.Add(Eleves["etat"].ToString());
+               // listEtat.Add(Eleves["etat"].ToString().Replace(" ", ""));
+            }
+            for (int j = 0; Eleves.Read(); j++)
+            {
+                //liseEleves.Add(Eleves["Id_eleve"].ToString());
+               listEtat.Add(Eleves["etat"].ToString().Replace(" ", ""));
             }
 
 
@@ -143,18 +148,27 @@ namespace GDelib2._0
                        catch (System.ArgumentException rdrd) { }
                     }
                         else
-                        {
+                    {
+                        try { 
                             if (listEtat[i] == "doublon")
                             {
-                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "Exclus";
+                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "EXCLUS";
 
-                            }
-                            else
+                               
+                        }
+                        else
                             {
                                 dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
+
                             }
+                        }
+                        catch (System.ArgumentOutOfRangeException yy)
+                        {
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
 
                         }
+
+                    }
                     
 
 

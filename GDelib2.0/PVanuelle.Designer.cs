@@ -302,7 +302,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(947, 31);
             this.label1.TabIndex = 29;
-            this.label1.Text = "la liste des note";
+            this.label1.Text = " Liste des résultats annuels";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -331,7 +331,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-         //   this.Name = "PVanuelle";
+            this.Name = "PVanuelle";
             this.Text = "PVanuelle";
             this.Load += new System.EventHandler(this.PVanuelle_Load);
             this.panel1.ResumeLayout(false);
