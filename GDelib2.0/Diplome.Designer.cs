@@ -60,9 +60,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 20);
+            this.label2.Size = new System.Drawing.Size(223, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "La liste des Etudiants diplomé";
+            this.label2.Text = "La liste des Étudiants  diplômé";
             // 
             // button3
             // 
@@ -135,7 +135,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 21);
             this.label5.TabIndex = 33;
-            this.label5.Text = "nationalite";
+            this.label5.Text = "nationalité";
             // 
             // printDocument1
             // 

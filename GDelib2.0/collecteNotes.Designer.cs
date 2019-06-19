@@ -297,7 +297,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(748, 436);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Calcul modulaire";
+            this.tabPage2.Text = "Calcul Modulaire";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // ListeEtd
@@ -415,7 +415,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(748, 436);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Calcul annuel";
+            this.tabPage3.Text = "Calcul Annuel";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // button5

@@ -88,7 +88,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(748, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "La liste des Etudiants";
+            this.tabPage1.Text = "La Liste des Étudiant";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -358,7 +358,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(748, 427);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Visualisation de la base de donnee";
+            this.tabPage3.Text = "Visualisation de La Base de donnée";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // button6
@@ -402,11 +402,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(196, 17);
+            this.label3.Location = new System.Drawing.Point(141, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(418, 38);
+            this.label3.Size = new System.Drawing.Size(487, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "les tables de base de donne ";
+            this.label3.Text = "Les Tables de la Base de donnée";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
@@ -417,7 +417,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(225, 233);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Liste des etudiants";
+            this.button1.Text = "Liste des étudiants";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
