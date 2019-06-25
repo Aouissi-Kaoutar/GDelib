@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pvSEM));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -102,8 +102,8 @@
             // 
             // statuM1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.statuM1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.statuM1.DefaultCellStyle = dataGridViewCellStyle1;
             this.statuM1.HeaderText = "statuM1";
             this.statuM1.Name = "statuM1";
             // 
@@ -173,9 +173,9 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(803, 7);
+            this.button3.Location = new System.Drawing.Point(832, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 56);
+            this.button3.Size = new System.Drawing.Size(63, 56);
             this.button3.TabIndex = 23;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -187,9 +187,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(868, 7);
+            this.button1.Location = new System.Drawing.Point(884, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 56);
+            this.button1.Size = new System.Drawing.Size(76, 56);
             this.button1.TabIndex = 21;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -201,9 +201,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(742, 7);
+            this.button2.Location = new System.Drawing.Point(772, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 56);
+            this.button2.Size = new System.Drawing.Size(70, 56);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
