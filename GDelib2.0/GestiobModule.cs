@@ -396,5 +396,10 @@ namespace GDelib2._0
             Form1 f = new Form1();
             f.Show();
         }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
