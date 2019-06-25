@@ -99,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(199, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(257, 31);
@@ -108,7 +108,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Location = new System.Drawing.Point(-9, -75);
@@ -119,7 +119,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 106);
@@ -129,12 +128,12 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
-            this.button3.BackgroundImage = global::GDelib2._0.Properties.Resources._12;
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button3.ForeColor = System.Drawing.Color.Silver;
             this.button3.Location = new System.Drawing.Point(628, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(35, 37);

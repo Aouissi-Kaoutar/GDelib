@@ -110,7 +110,7 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(29, 79);
             this.dataGridView2.Name = "dataGridView2";
@@ -339,7 +339,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 79);
             this.dataGridView1.Name = "dataGridView1";
@@ -348,7 +348,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.PowderBlue;
+            this.tabPage3.BackColor = System.Drawing.Color.Silver;
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.panel1);
@@ -363,7 +363,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.PowderBlue;
+            this.button6.BackColor = System.Drawing.Color.Silver;
             this.button6.Font = new System.Drawing.Font("Century Schoolbook", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(483, 123);
             this.button6.Name = "button6";
@@ -377,7 +377,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Century Schoolbook", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(244, 123);
             this.button2.Name = "button2";
@@ -411,7 +411,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Century Schoolbook", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(26, 123);
             this.button1.Name = "button1";
