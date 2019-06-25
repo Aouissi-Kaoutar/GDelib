@@ -99,7 +99,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
@@ -111,23 +111,23 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button3.ForeColor = System.Drawing.Color.Silver;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(804, 3);
+            this.button3.Location = new System.Drawing.Point(817, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 48);
+            this.button3.Size = new System.Drawing.Size(57, 48);
             this.button3.TabIndex = 23;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(872, 3);
             this.button1.Name = "button1";
@@ -139,13 +139,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button2.ForeColor = System.Drawing.Color.Silver;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(750, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 48);
+            this.button2.Size = new System.Drawing.Size(61, 48);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -166,7 +166,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PowderBlue;
+            this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 77);
             this.label2.Name = "label2";
@@ -192,7 +192,7 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button5.ForeColor = System.Drawing.Color.Silver;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(910, -2);
             this.button5.Name = "button5";
@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(951, 670);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

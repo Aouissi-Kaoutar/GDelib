@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pvSEM));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,9 +59,9 @@
             this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(8, 36);
+            this.label1.Location = new System.Drawing.Point(-8, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(947, 31);
+            this.label1.Size = new System.Drawing.Size(963, 31);
             this.label1.TabIndex = 23;
             this.label1.Text = "La liste des notes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,8 +102,8 @@
             // 
             // statuM1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.statuM1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.statuM1.DefaultCellStyle = dataGridViewCellStyle2;
             this.statuM1.HeaderText = "statuM1";
             this.statuM1.Name = "statuM1";
             // 
@@ -159,10 +159,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.ForeColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(6, 574);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 66);
@@ -174,21 +175,21 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(803, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 48);
+            this.button3.Size = new System.Drawing.Size(75, 56);
             this.button3.TabIndex = 23;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(868, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.Size = new System.Drawing.Size(65, 56);
             this.button1.TabIndex = 21;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -196,12 +197,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Silver;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(734, 7);
+            this.button2.Location = new System.Drawing.Point(742, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.Size = new System.Drawing.Size(67, 56);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -210,7 +212,7 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button5.ForeColor = System.Drawing.Color.Silver;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(908, -2);
             this.button5.Name = "button5";
@@ -223,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(951, 670);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
@@ -231,7 +233,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-         //   this.Name = "pvSEM";
+            this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

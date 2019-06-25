@@ -42,16 +42,16 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.button11);
-            this.panel2.Location = new System.Drawing.Point(864, 0);
+            this.panel2.Location = new System.Drawing.Point(858, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(110, 42);
+            this.panel2.Size = new System.Drawing.Size(116, 42);
             this.panel2.TabIndex = 18;
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.PowderBlue;
+            this.button11.BackColor = System.Drawing.Color.Silver;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,14 +88,14 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.PowderBlue;
+            this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(864, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 54);
+            this.button1.Size = new System.Drawing.Size(90, 54);
             this.button1.TabIndex = 21;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(3, 522);
             this.panel1.Name = "panel1";
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(970, 599);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
