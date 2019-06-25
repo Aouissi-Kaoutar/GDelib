@@ -193,7 +193,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GDelib2._0.Properties.Resources._c;
+            this.pictureBox2.Image = global::GDelib2._0.Properties.Resources.zxzxzxz;
             this.pictureBox2.Location = new System.Drawing.Point(198, 76);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1019, 556);
@@ -225,8 +225,8 @@
             // collecteNotes1
             // 
             this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
-            this.collecteNotes1.Location = new System.Drawing.Point(202, 121);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.collecteNotes1.Location = new System.Drawing.Point(198, 76);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(7);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(1849, 1021);
             this.collecteNotes1.TabIndex = 15;
@@ -234,7 +234,7 @@
             // configurationFilier2
             // 
             this.configurationFilier2.Location = new System.Drawing.Point(198, 76);
-            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(12);
             this.configurationFilier2.Name = "configurationFilier2";
             this.configurationFilier2.Size = new System.Drawing.Size(3205, 1767);
             this.configurationFilier2.TabIndex = 14;

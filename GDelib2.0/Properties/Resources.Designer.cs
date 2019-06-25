@@ -723,6 +723,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap zxzxzxz {
+            get {
+                object obj = ResourceManager.GetObject("zxzxzxz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap zzzzzz {
             get {
                 object obj = ResourceManager.GetObject("zzzzzz", resourceCulture);

@@ -30,6 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_eleve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -59,21 +66,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_eleve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.ListeEtd.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -111,6 +111,59 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Importation des note";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(26, 282);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(241, 42);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "exporter la liste des eleve";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_eleve,
+            this.nom,
+            this.prenom,
+            this.note});
+            this.dataGridView1.Location = new System.Drawing.Point(321, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(418, 335);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // id_eleve
+            // 
+            this.id_eleve.HeaderText = "id_eleve";
+            this.id_eleve.Name = "id_eleve";
+            // 
+            // nom
+            // 
+            this.nom.HeaderText = "nom";
+            this.nom.Name = "nom";
+            // 
+            // prenom
+            // 
+            this.prenom.HeaderText = "prénom";
+            this.prenom.Name = "prenom";
+            // 
+            // note
+            // 
+            this.note.HeaderText = "note";
+            this.note.Name = "note";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(60, 207);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(160, 42);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "afficher >";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
             // 
@@ -471,59 +524,6 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Filiére";
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(60, 207);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(160, 42);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "afficher >";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_eleve,
-            this.nom,
-            this.prenom,
-            this.note});
-            this.dataGridView1.Location = new System.Drawing.Point(321, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(418, 335);
-            this.dataGridView1.TabIndex = 17;
-            // 
-            // id_eleve
-            // 
-            this.id_eleve.HeaderText = "id_eleve";
-            this.id_eleve.Name = "id_eleve";
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "nom";
-            this.nom.Name = "nom";
-            // 
-            // prenom
-            // 
-            this.prenom.HeaderText = "prenom";
-            this.prenom.Name = "prenom";
-            // 
-            // note
-            // 
-            this.note.HeaderText = "note";
-            this.note.Name = "note";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(60, 283);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(160, 42);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "exporter";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // collecteNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,6 +535,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -544,7 +545,6 @@
             this.ListeEtd.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -584,10 +584,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_eleve;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
-        private System.Windows.Forms.Button button7;
     }
 }

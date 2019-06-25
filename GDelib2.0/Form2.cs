@@ -199,7 +199,7 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ofd.FileName + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
 
              OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" +"GI-3" + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + "export" + "$]", conn);
             DataTable dt = new DataTable();
 
             myDtAdapter.Fill(dt);
