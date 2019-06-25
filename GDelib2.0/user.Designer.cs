@@ -89,7 +89,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(239, 101);
             this.button7.TabIndex = 6;
-            this.button7.Text = " Gerer les diplomes";
+            this.button7.Text = " Gestion les diplomes";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = false;
