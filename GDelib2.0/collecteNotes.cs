@@ -25,11 +25,12 @@ namespace GDelib2._0
                 public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
         */
         public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
-
+        public string namef;
         public string semestre=null;
         public string clas;
         public string ElemPDG;
         public string session;
+        string nameFile;
 
         public OpenFileDialog ofd;
         public collecteNotes()
@@ -44,6 +45,12 @@ namespace GDelib2._0
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 textBox2.Text = ofd.FileName;
+                char[] splitters = new char[] { '\\' };
+                string[] nameFile = ofd.FileName.Split(splitters);
+               string name = nameFile[nameFile.Length-1];
+                string[] nameF = name.Split(new char[] { '.' });
+                 namef = nameF[0];
+
             }
         }
 
@@ -89,7 +96,7 @@ namespace GDelib2._0
         {
             try
             {
-                Form2 c = new Form2(clas, ElemPDG, semestre,session, ofd);
+                Form2 c = new Form2(clas, ElemPDG, semestre,session, ofd, namef);
                  c.Show();
                
             }
@@ -147,7 +154,7 @@ namespace GDelib2._0
         {
             try
             {
-                pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultet  semestrielle pour les " + comboBox2.SelectedItem.ToString());
+                pvSEM pv = new pvSEM(comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString(), "Liste des resultats  semestrielle pour les " + comboBox2.SelectedItem.ToString());
                 pv.Show();
 
             }
@@ -172,11 +179,11 @@ namespace GDelib2._0
             try
             {
                 if (comboBox1.SelectedItem.ToString() == "GI-5") {
-                    PvAnnuelleGI5 pv = new PvAnnuelleGI5(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+                    PvAnnuelleGI5 pv = new PvAnnuelleGI5(comboBox1.SelectedItem.ToString(), "Liste des resultats  annuelle pour les " + comboBox1.SelectedItem.ToString());
                     pv.Show();
                 }
                 else {
-                    PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultet  annuelle pour les " + comboBox1.SelectedItem.ToString());
+                    PVanuelle pv = new PVanuelle(comboBox1.SelectedItem.ToString(), "Liste des resultats  annuelle pour les " + comboBox1.SelectedItem.ToString());
                     pv.Show();
                 }
 
@@ -250,6 +257,18 @@ namespace GDelib2._0
 
         private void button6_Click(object sender, EventArgs e)
         {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             con.Open();
 
             SqlCommand command = new SqlCommand();

@@ -33,6 +33,7 @@ namespace GDelib2._0
         public string elemP;
         public string miS;
         public string session;
+        public string nn;
         public OpenFileDialog ofd;
         public float not;
         public Form2()
@@ -41,7 +42,7 @@ namespace GDelib2._0
         }
 
 
-        public Form2( string cls, string elmPDG, string s,string session, OpenFileDialog ofd)
+        public Form2( string cls, string elmPDG, string s,string session, OpenFileDialog ofd,string n)
         {
             InitializeComponent();
             this.clas = cls;
@@ -49,6 +50,7 @@ namespace GDelib2._0
            this.elemP = elmPDG;
             this.session = session;
             this.ofd = ofd;
+            nn = n;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,6 +80,7 @@ namespace GDelib2._0
                         command.Parameters.AddWithValue("@session", session);
                         command.Parameters.AddWithValue("@note", dataGridView1.Rows[i].Cells[3].Value);
                         not = float.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                      //  not = float.Parse((dataGridView1.Rows[i].Cells[3].Value);
                         if (not != null || not < 20 || not > 0)
                         {
                             if (not < 12) { command.Parameters.AddWithValue("@res","rattrape"); }
@@ -199,10 +202,14 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ofd.FileName + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
 
              OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + "export" + "$]", conn);
+            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + nn + "$]", conn);
+           // MessageBox.Show(nn);
             DataTable dt = new DataTable();
-
-            myDtAdapter.Fill(dt);
+            try { myDtAdapter.Fill(dt); }
+            catch (System.Data.OleDb.OleDbException cvc)
+            {
+                MessageBox.Show("veuillez s'il vous plait ouvrire le fichier excel sur votre pc avon d'afficher ");
+            }
             dataGridView1.DataSource = dt;
 
 

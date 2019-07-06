@@ -68,6 +68,7 @@ namespace GDelib2._0
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            label3.ForeColor = Color.PowderBlue;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -99,9 +100,9 @@ namespace GDelib2._0
                         else
                         {
 
-                            user B = new user();// dt.Rows[0][2].ToString());
-                            this.Hide();
-                            B.Show();
+                           // user B = new user();// dt.Rows[0][2].ToString());
+                         //   this.Hide();
+                          //  B.Show();
 
                         }
 
@@ -178,9 +179,9 @@ namespace GDelib2._0
                         else
                         {
 
-                            user B = new user();//dt.Rows[0][2].ToString());
+                          /*  user B = new user();//dt.Rows[0][2].ToString());
                             this.Hide();
-                            B.Show();
+                            B.Show();*/
 
                         }
 
@@ -331,12 +332,32 @@ namespace GDelib2._0
 
         private void button3_MouseEnter(object sender, EventArgs e)
         {
-            button3.BackgroundImage = Properties.Resources._22;
+          //  button3.BackgroundImage = Properties.Resources._22;
         }
 
         private void button3_MouseLeave(object sender, EventArgs e)
         {
-            button3.BackgroundImage = Properties.Resources._12;
+           // button3.BackgroundImage = Properties.Resources._12;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Red;
+                }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+           button1.BackColor = Color.Transparent;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

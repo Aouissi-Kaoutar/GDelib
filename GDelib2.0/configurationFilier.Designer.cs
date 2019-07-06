@@ -110,7 +110,7 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(202)))), ((int)(((byte)(134)))));
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(29, 79);
             this.dataGridView2.Name = "dataGridView2";
@@ -232,7 +232,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(748, 427);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Gestions des filières";
+            this.tabPage2.Text = "Gestions des Modules";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // ListeEtd
@@ -326,9 +326,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(107, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Filiére";
+            this.label2.Text = "Niveau";
             // 
             // panel2
             // 
@@ -339,7 +339,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(202)))), ((int)(((byte)(134)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 79);
             this.dataGridView1.Name = "dataGridView1";
@@ -348,7 +348,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.Silver;
+            this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.panel1);
@@ -391,7 +391,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(150)))), ((int)(((byte)(183)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-29, 39);
             this.panel1.Name = "panel1";

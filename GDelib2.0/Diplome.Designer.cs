@@ -66,14 +66,14 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(740, 622);
+            this.button3.Image = global::GDelib2._0.Properties.Resources.hj;
+            this.button3.Location = new System.Drawing.Point(667, 622);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 53);
+            this.button3.Size = new System.Drawing.Size(92, 60);
             this.button3.TabIndex = 28;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(843, 687);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
@@ -190,6 +190,7 @@
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Diplome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diplome";
             this.Load += new System.EventHandler(this.Diplome_Load);
             this.panel1.ResumeLayout(false);

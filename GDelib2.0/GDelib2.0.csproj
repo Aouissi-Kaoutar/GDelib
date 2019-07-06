@@ -97,12 +97,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="admin.Designer.cs">
-      <DependentUpon>admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="collecteNotes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,15 +165,6 @@
     <Compile Include="pvSEM.Designer.cs">
       <DependentUpon>pvSEM.cs</DependentUpon>
     </Compile>
-    <Compile Include="user.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="user.Designer.cs">
-      <DependentUpon>user.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="admin.resx">
-      <DependentUpon>admin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="collecteNotes.resx">
       <DependentUpon>collecteNotes.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pvSEM.resx">
       <DependentUpon>pvSEM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="user.resx">
-      <DependentUpon>user.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GDelib2.0_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -473,6 +455,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\hj.png" />
+    <None Include="Resources\LOGO8.PNG" />
+    <None Include="Resources\LOGO7.PNG" />
+    <None Include="Resources\gestion-electronique-documents.jpg" />
+    <None Include="Resources\LOGO6.PNG" />
+    <None Include="Resources\grad.png" />
+    <None Include="Resources\dip.png" />
+    <None Include="Resources\exam.png" />
+    <None Include="Resources\conf.png" />
+    <None Include="Resources\LOGO5.PNG" />
+    <None Include="Resources\LOGO4.PNG" />
+    <None Include="Resources\LOGO3.PNG" />
+    <None Include="Resources\LOGO2.PNG" />
+    <None Include="Resources\LOGO1.PNG" />
+    <None Include="Resources\logoG.PNG" />
     <None Include="Resources\zxzxzxz.jpeg" />
     <None Include="Resources\,c.PNG" />
   </ItemGroup>

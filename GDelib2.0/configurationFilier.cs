@@ -63,11 +63,16 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox3.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox3.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            string s = comboBox4.SelectedItem.ToString();
+            try {  string s = comboBox4.SelectedItem.ToString();
+            }
+            catch (System.NullReferenceException cc) { MessageBox.Show("veuiller svp entrer le fichier Excel"); }
             OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + comboBox4.SelectedItem.ToString() + "$]", conn);
             DataTable dt = new DataTable();
+           
+           try { myDtAdapter.Fill(dt); } catch(System.Data.OleDb.OleDbException cvc) {
+                MessageBox.Show("veuillez s'il vous plait ouvrire le fichier excel sur votre pc avon d'afficher \n Message: " + cvc.Message);
+            }
 
-            myDtAdapter.Fill(dt);
             dataGridView2.DataSource = dt;
         }
 
@@ -161,10 +166,20 @@ namespace GDelib2._0
             string path = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             string pat = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 12.0;";
             OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + comboBox1.SelectedItem.ToString() + "$]", conn);
-            DataTable dt = new DataTable();
 
-            myDtAdapter.Fill(dt);
+            DataTable dt = new DataTable();
+            try
+            {
+                OleDbDataAdapter myDtAdapter = new OleDbDataAdapter("Select * from [" + comboBox1.SelectedItem.ToString() + "$]", conn);
+            
+          
+                myDtAdapter.Fill(dt);
+            }
+            catch (System.Data.OleDb.OleDbException cvc)
+            {
+                MessageBox.Show("veuillez s'il vous plait ouvrire le fichier excel sur votre pc avon d'afficher \n  Message: " + cvc.Message);
+            }
+
             dataGridView1.DataSource = dt;
         }
 
@@ -315,7 +330,7 @@ namespace GDelib2._0
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = Color.PowderBlue;
+            button1.BackColor = Color.FromArgb(192, 192, 192);
             button1.ForeColor = Color.Black;
         }
 
@@ -327,7 +342,7 @@ namespace GDelib2._0
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            button2.BackColor = Color.PowderBlue;
+            button2.BackColor = Color.FromArgb(192, 192, 192);
             button2.ForeColor = Color.Black;
         }
 
@@ -339,7 +354,7 @@ namespace GDelib2._0
 
         private void button6_MouseLeave(object sender, EventArgs e)
         {
-            button6.BackColor = Color.PowderBlue;
+            button6.BackColor = Color.FromArgb(192, 192, 192);
             button6.ForeColor = Color.Black;
         }
 

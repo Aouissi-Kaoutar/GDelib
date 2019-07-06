@@ -253,7 +253,6 @@ namespace GDelib2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Document(*.xls)|*.xls";
             sfd.FileName = "PVannuelle.xls";

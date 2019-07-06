@@ -114,17 +114,20 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Gray;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(26, 282);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(241, 42);
             this.button7.TabIndex = 18;
             this.button7.Text = "exporter la liste des eleve";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(202)))), ((int)(((byte)(134)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_eleve,
@@ -158,12 +161,15 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(60, 207);
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(84, 202);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(160, 42);
+            this.button6.Size = new System.Drawing.Size(123, 38);
             this.button6.TabIndex = 16;
-            this.button6.Text = "afficher >";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Text = "afficher  >>";
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
@@ -181,7 +187,7 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(194, 4);
+            this.radioButton5.Location = new System.Drawing.Point(202, 10);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(95, 21);
             this.radioButton5.TabIndex = 13;
@@ -352,9 +358,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 110);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.Size = new System.Drawing.Size(51, 16);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Filiére";
+            this.label8.Text = "Niveau";
             // 
             // tabPage2
             // 
@@ -461,9 +467,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Filiére";
+            this.label2.Text = "Niveau";
             // 
             // panel2
             // 

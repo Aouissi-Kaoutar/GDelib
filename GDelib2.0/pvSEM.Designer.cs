@@ -56,7 +56,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Gray;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(150)))), ((int)(((byte)(183)))));
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(-8, 36);
@@ -173,7 +173,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(832, 7);
+            this.button3.Location = new System.Drawing.Point(822, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(63, 56);
             this.button3.TabIndex = 23;
@@ -187,7 +187,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(884, 7);
+            this.button1.Location = new System.Drawing.Point(873, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 56);
             this.button1.TabIndex = 21;
@@ -201,7 +201,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(772, 7);
+            this.button2.Location = new System.Drawing.Point(756, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 56);
             this.button2.TabIndex = 22;
@@ -233,7 +233,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-         //   this.Name = "pvSEM";
+          //  this.Name = "pvSEM";
             this.Text = "pvSEM";
             this.Load += new System.EventHandler(this.pvSEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

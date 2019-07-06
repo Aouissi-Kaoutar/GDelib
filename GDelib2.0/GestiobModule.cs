@@ -169,14 +169,13 @@ namespace GDelib2._0
             this.BackgroundImage = null;
             collecteNotes1.Show();
 
+            button6.BackColor = Color.FromArgb(49, 147, 157);
+            button1.BackColor = Color.FromArgb(134, 210, 224);
+            button3.BackColor = Color.FromArgb(134, 210, 224);
 
-
-            button6.BackColor = Color.FromArgb(2, 127, 143);
-            button1.BackColor = Color.PowderBlue;
-            button3.BackColor = Color.PowderBlue;
 
             panel9.BackColor = Color.FromArgb(80, 80, 80);
-            panel3.BackColor = Color.FromArgb(128, 228, 228);
+            panel3.BackColor = Color.FromArgb(228, 228, 228);
             panel8.BackColor = Color.FromArgb(228, 228, 228);
 
 
@@ -223,12 +222,12 @@ namespace GDelib2._0
             this.BackgroundImage = null;
             collecteNotes1.Hide();
 
-            button1.BackColor = Color.FromArgb(2, 127, 143);
-            button3.BackColor = Color.PowderBlue;
-            button6.BackColor = Color.PowderBlue;
+            button1.BackColor = Color.FromArgb(49, 147, 157);
+            button3.BackColor = Color.FromArgb(134, 210, 224);
+            button6.BackColor = Color.FromArgb(134, 210, 224);
 
             panel8.BackColor = Color.FromArgb(80, 80, 80);
-            panel9.BackColor = Color.FromArgb(128, 228, 228);
+            panel9.BackColor = Color.FromArgb(228, 228, 228);
             panel3.BackColor = Color.FromArgb(228, 228, 228);
         }
 
@@ -315,15 +314,16 @@ namespace GDelib2._0
             configurationFilier2.Hide();
             this.BackgroundImage = null;
            new Diplome().Show();
-            
-           
 
-            button3.BackColor = Color.FromArgb(2, 127, 143);
-            button1.BackColor = Color.PowderBlue;
-            button6.BackColor = Color.PowderBlue;
-         
+
+            button3.BackColor = Color.FromArgb(49, 147, 157);
+            button1.BackColor = Color.FromArgb(134, 210, 224);
+            button6.BackColor = Color.FromArgb(134, 210, 224);
+
+
+
             panel3.BackColor = Color.FromArgb(80, 80, 80);
-            panel9.BackColor = Color.FromArgb(128, 228, 228);
+            panel9.BackColor = Color.FromArgb(228, 228, 228);
             panel8.BackColor = Color.FromArgb(228, 228, 228);
         }
 
@@ -400,6 +400,16 @@ namespace GDelib2._0
         private void button2_Click_3(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_MouseEnter_1(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Red;
+        }
+
+        private void button2_MouseLeave_1(object sender, EventArgs e)
+        {
+            button2.BackColor= Color.Transparent; 
         }
     }
 }
