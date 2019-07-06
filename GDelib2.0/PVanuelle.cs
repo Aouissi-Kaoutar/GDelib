@@ -21,13 +21,13 @@ namespace GDelib2._0
         //KAWTAR CONX
         // public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Documents\GDelibe2.mdf;Integrated Security=True;Connect Timeout=30");
         //DataBase1
-         public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
+        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\asus\Desktop\kawtar\aaaaa\GDelib2.0-2019\GDelib2.0\Database1.mdf;Integrated Security=True");
 
-/*
-        static string path = Path.GetFullPath(Environment.CurrentDirectory);
-        static string dataBseName = "GDelibe2.mdf";
-        public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
-*/
+        /*
+                static string path = Path.GetFullPath(Environment.CurrentDirectory);
+                static string dataBseName = "GDelibe2.mdf";
+                public SqlConnection conX = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\" + dataBseName + "; Integrated Security=True;Connect Timeout=30");
+        */
         string clas;
         string libele;
 
@@ -38,7 +38,7 @@ namespace GDelib2._0
         List<string> listId_Module;
         List<string> liseEleves;
         List<string> listEtat;
-        public PVanuelle(string clas,string libele)
+        public PVanuelle(string clas, string libele)
         {
             InitializeComponent();
             this.clas = clas;
@@ -75,9 +75,9 @@ namespace GDelib2._0
             {
                 liseEleves.Add(Eleves["Id_eleve"].ToString());
                 listEtat.Add(Eleves["etat"].ToString());
-                  }
+            }
 
-       
+
             conX.Close();
             for (int i = 0; i < liseEleves.Count; i++)
             {
@@ -119,34 +119,34 @@ namespace GDelib2._0
                     //  conX.Close();
 
 
-             
-                        dataGridView1.Rows[i].Cells["NOTE"].Value = f / 12;
-                        if ((f / 12) >= 12)
+
+                    dataGridView1.Rows[i].Cells["NOTE"].Value = f / 12;
+                    if ((f / 12) >= 12)
+                    {
+                        dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
+
+                    }
+                    else
+                    {
+                        if (listEtat[i] == "doublon")
                         {
-                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "VALIDE";
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "Exclus";
 
                         }
                         else
                         {
-                            if (listEtat[i] == "doublon")
-                            {
-                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "Exclus";
-
-                            }
-                            else
-                            {
-                                dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
-                            }
-
+                            dataGridView1.Rows[i].Cells["RESULTA_FINAL"].Value = "NON VALIDE";
                         }
-                    
+
+                    }
+
 
 
                 }
-                  conX.Close();
-              
+                conX.Close();
+
             }
-            
+
 
 
         }
@@ -263,7 +263,7 @@ namespace GDelib2._0
         }
 
 
-       public void ToExcel(DataGridView dGV, string filename)
+        public void ToExcel(DataGridView dGV, string filename)
         {
             string stOutput = "";
             string sHeaders = "";
@@ -365,6 +365,34 @@ namespace GDelib2._0
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap image = new Bitmap(panel1.Width, panel1.Height, panel1.CreateGraphics());
+            panel1.DrawToBitmap(image, new System.Drawing.Rectangle(0, 0, panel1.Width, panel1.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)image.Height / (float)image.Width);
+            e.Graphics.DrawImage(image, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+            doc.DefaultPageSettings.Landscape = true;
+            PrintDialog pdi = new PrintDialog();
+            pdi.Document = doc;
+            if (pdi.ShowDialog() == DialogResult.OK)
+            {
+                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+                doc.Print();
+            }
+            else
+            {
+                MessageBox.Show("User cancelled the print job");
+            }
         }
     }
 }

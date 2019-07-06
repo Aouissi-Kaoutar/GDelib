@@ -422,6 +422,31 @@ namespace GDelib2._0
             this.Close();
         }
 
+        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap image = new Bitmap(panel1.Width, panel1.Height, panel1.CreateGraphics());
+            panel1.DrawToBitmap(image, new System.Drawing.Rectangle(0, 0, panel1.Width, panel1.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)image.Height / (float)image.Width);
+            e.Graphics.DrawImage(image, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+            doc.DefaultPageSettings.Landscape = true;
+            PrintDialog pdi = new PrintDialog();
+            pdi.Document = doc;
+            if (pdi.ShowDialog() == DialogResult.OK)
+            {
+                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+                doc.Print();
+            }
+            else
+            {
+                MessageBox.Show("User cancelled the print job");
+            }
+        }
+
         /*   private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
            {
 
