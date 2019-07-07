@@ -209,7 +209,7 @@ namespace GDelib2._0
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             panel2.Show();
-            configurationFilier1.Hide();
+            configurationFilier2.Hide();
            // this.BackgroundImage = Properties.Resources.Sans_titre;
             collecteNotes1.Hide();
 

@@ -29,6 +29,7 @@
             private void InitializeComponent()
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiobModule));
+            GDelib2._0.configurationFilier configurationFilier1;
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,9 +43,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.configurationFilier2 = new GDelib2._0.configurationFilier();
             this.collecteNotes1 = new GDelib2._0.collecteNotes();
-            this.configurationFilier1 = new GDelib2._0.configurationFilier();
+            this.configurationFilier2 = new GDelib2._0.configurationFilier();
+            configurationFilier1 = new GDelib2._0.configurationFilier();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -157,7 +158,7 @@
             this.pictureBox1.Image = global::GDelib2._0.Properties.Resources.LOGO8;
             this.pictureBox1.Location = new System.Drawing.Point(3, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 111);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -211,31 +212,30 @@
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter_1);
             this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave_1);
             // 
-            // configurationFilier2
+            // configurationFilier1
             // 
-            this.configurationFilier2.BackColor = System.Drawing.Color.PowderBlue;
-            this.configurationFilier2.Location = new System.Drawing.Point(198, 67);
-            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(7);
-            this.configurationFilier2.Name = "configurationFilier2";
-            this.configurationFilier2.Size = new System.Drawing.Size(1845, 1054);
-            this.configurationFilier2.TabIndex = 15;
+            configurationFilier1.Location = new System.Drawing.Point(0, 0);
+            configurationFilier1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
+            configurationFilier1.Name = "configurationFilier1";
+            configurationFilier1.Size = new System.Drawing.Size(10337, 5096);
+            configurationFilier1.TabIndex = 14;
             // 
             // collecteNotes1
             // 
             this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
             this.collecteNotes1.Location = new System.Drawing.Point(198, 67);
-            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(7);
+            this.collecteNotes1.Margin = new System.Windows.Forms.Padding(0);
             this.collecteNotes1.Name = "collecteNotes1";
-            this.collecteNotes1.Size = new System.Drawing.Size(1845, 1054);
+            this.collecteNotes1.Size = new System.Drawing.Size(1038, 605);
             this.collecteNotes1.TabIndex = 14;
             // 
-            // configurationFilier1
+            // configurationFilier2
             // 
-            this.configurationFilier1.Location = new System.Drawing.Point(0, 65);
-            this.configurationFilier1.Margin = new System.Windows.Forms.Padding(37, 35, 37, 35);
-            this.configurationFilier1.Name = "configurationFilier1";
-            this.configurationFilier1.Size = new System.Drawing.Size(10337, 5096);
-            this.configurationFilier1.TabIndex = 14;
+            this.configurationFilier2.Location = new System.Drawing.Point(198, 67);
+            this.configurationFilier2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.configurationFilier2.Name = "configurationFilier2";
+            this.configurationFilier2.Size = new System.Drawing.Size(1038, 605);
+            this.configurationFilier2.TabIndex = 15;
             // 
             // GestiobModule
             // 
@@ -282,7 +282,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
-        private configurationFilier configurationFilier1;
         private System.Windows.Forms.Button button2;
         private configurationFilier configurationFilier2;
         private collecteNotes collecteNotes1;

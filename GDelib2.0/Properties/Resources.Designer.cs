@@ -470,6 +470,56 @@ namespace GDelib2._0.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ms_excel_50px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_ms_excel_50px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ms_excel_50px_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_ms_excel_50px_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_print_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_print_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_50px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_50px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
         internal static byte[] itextsharp {
@@ -707,6 +757,16 @@ namespace GDelib2._0.Properties {
             get {
                 object obj = ResourceManager.GetObject("Microsoft_Office_Interop_Excel1", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nb {
+            get {
+                object obj = ResourceManager.GetObject("nb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -214,12 +214,13 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(804, 7);
+            this.button4.Image = global::GDelib2._0.Properties.Resources.nb;
+            this.button4.Location = new System.Drawing.Point(790, 8);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(64, 56);
             this.button4.TabIndex = 24;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button1
             // 
@@ -227,7 +228,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::GDelib2._0.Properties.Resources.icons8_print_50px1;
             this.button1.Location = new System.Drawing.Point(874, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 56);
@@ -241,12 +242,13 @@
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(749, 10);
+            this.button2.Image = global::GDelib2._0.Properties.Resources.icons8_ms_excel_50px_21;
+            this.button2.Location = new System.Drawing.Point(716, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 53);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // PvAnnuelleGI5
             // 
@@ -259,7 +261,8 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-   //         this.Name = "PvAnnuelleGI5";
+       //     this.Name = "PvAnnuelleGI5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PvAnnuelleGI5";
             this.Load += new System.EventHandler(this.PvAnnuelleGI5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

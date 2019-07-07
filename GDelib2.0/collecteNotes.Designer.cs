@@ -537,6 +537,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "collecteNotes";
             this.Size = new System.Drawing.Size(761, 468);
             this.tabControl1.ResumeLayout(false);

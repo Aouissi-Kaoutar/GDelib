@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PVanuelle));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PVanuelle));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -83,8 +83,8 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(804, 7);
+            this.button4.Image = global::GDelib2._0.Properties.Resources.nb;
+            this.button4.Location = new System.Drawing.Point(766, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(64, 56);
             this.button4.TabIndex = 24;
@@ -97,8 +97,8 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(874, 7);
+            this.button1.Image = global::GDelib2._0.Properties.Resources.icons8_print_50px;
+            this.button1.Location = new System.Drawing.Point(847, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 56);
             this.button1.TabIndex = 21;
@@ -111,10 +111,10 @@
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(749, 10);
+            this.button2.Image = global::GDelib2._0.Properties.Resources.icons8_ms_excel_50px_2;
+            this.button2.Location = new System.Drawing.Point(685, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 53);
+            this.button2.Size = new System.Drawing.Size(63, 53);
             this.button2.TabIndex = 22;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -332,7 +332,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-       //     this.Name = "PVanuelle";
+           // this.Name = "PVanuelle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PVanuelle";
             this.Load += new System.EventHandler(this.PVanuelle_Load);
             this.panel1.ResumeLayout(false);

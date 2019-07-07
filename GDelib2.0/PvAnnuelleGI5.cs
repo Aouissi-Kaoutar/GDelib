@@ -447,6 +447,24 @@ namespace GDelib2._0
             }
         }
 
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            exportToPdf(dataGridView1, "PV annuelle");
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Document(*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ToExcel(dataGridView1, sfd.FileName);
+            }
+        }
+
         /*   private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
            {
 

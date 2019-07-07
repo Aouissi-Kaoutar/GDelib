@@ -455,6 +455,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\nb.png" />
+    <None Include="Resources\icons8_save_50px_2.png" />
+    <None Include="Resources\icons8_ms_excel_50px_21.png" />
+    <None Include="Resources\icons8_print_50px1.png" />
+    <None Include="Resources\icons8_print_50px.png" />
+    <None Include="Resources\icons8_ms_excel_50px_2.png" />
     <None Include="Resources\hj.png" />
     <None Include="Resources\LOGO8.PNG" />
     <None Include="Resources\LOGO7.PNG" />
