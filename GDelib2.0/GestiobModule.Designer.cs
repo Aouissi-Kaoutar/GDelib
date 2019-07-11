@@ -186,7 +186,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GDelib2._0.Properties.Resources.gestion_electronique_documents;
+            this.pictureBox2.Image = global::GDelib2._0.Properties.Resources.WhatsApp_Image_2019_07_09_at_11_20_21;
             this.pictureBox2.Location = new System.Drawing.Point(198, 67);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1038, 605);

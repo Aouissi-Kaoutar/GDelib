@@ -455,6 +455,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Sans titre.jpg" />
+    <None Include="Resources\WhatsApp Image 2019-07-09 at 11.20.21.jpeg" />
     <None Include="Resources\nb.png" />
     <None Include="Resources\icons8_save_50px_2.png" />
     <None Include="Resources\icons8_ms_excel_50px_21.png" />

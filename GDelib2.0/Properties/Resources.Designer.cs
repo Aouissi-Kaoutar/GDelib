@@ -843,6 +843,16 @@ namespace GDelib2._0.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre1 {
+            get {
+                object obj = ResourceManager.GetObject("Sans titre1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_analysis {
             get {
                 object obj = ResourceManager.GetObject("seo-analysis", resourceCulture);
@@ -926,6 +936,16 @@ namespace GDelib2._0.Properties {
         internal static System.Drawing.Bitmap Web___Design___Device_128_5121 {
             get {
                 object obj = ResourceManager.GetObject("Web_-_Design_-_Device_128-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2019_07_09_at_11_20_21 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2019-07-09 at 11.20.21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
