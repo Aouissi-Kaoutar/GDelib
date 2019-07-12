@@ -223,7 +223,7 @@
             // collecteNotes1
             // 
             this.collecteNotes1.BackColor = System.Drawing.Color.PowderBlue;
-            this.collecteNotes1.Location = new System.Drawing.Point(198, 67);
+            this.collecteNotes1.Location = new System.Drawing.Point(199, 67);
             this.collecteNotes1.Margin = new System.Windows.Forms.Padding(0);
             this.collecteNotes1.Name = "collecteNotes1";
             this.collecteNotes1.Size = new System.Drawing.Size(1038, 605);
@@ -231,7 +231,7 @@
             // 
             // configurationFilier2
             // 
-            this.configurationFilier2.Location = new System.Drawing.Point(198, 67);
+            this.configurationFilier2.Location = new System.Drawing.Point(199, 67);
             this.configurationFilier2.Margin = new System.Windows.Forms.Padding(4);
             this.configurationFilier2.Name = "configurationFilier2";
             this.configurationFilier2.Size = new System.Drawing.Size(1038, 605);
